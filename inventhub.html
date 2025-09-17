@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="InventHub 是一个专利价值聚合网络，我们通过灵活的专利组合策略与官方交易渠道，解决创新者专利闲置、议价能力弱的困境，显著提升您创新资产的变现成功率与收益率。">
+    <meta name="keywords" content="InventHub, 专利价值聚合, 专利运营, 专利组合, 专利变现, 知识产权, 启坤">
+    <title>InventHub | 聚合专利价值，激活创新回报</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2a7de1; /* A modern tech blue */
+            --secondary-color: #333;
+            --cta-color: #00c6ff;
+            --dark-color: #1a1a2e;
+            --light-color: #ffffff;
+            --gray-color: #f0f2f5;
+            --text-color: #333;
+        }
+        body { font-family: 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif; margin: 0; line-height: 1.8; color: var(--text-color); background-color: var(--light-color); }
+        .container { max-width: 1100px; margin: auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        h1, h2, h3 { color: var(--dark-color); font-weight: 700; }
+        h2 { font-size: 2.2em; text-align: center; margin-bottom: 50px; }
+        .text-center { text-align: center; }
+
+        /* Header */
+        header { background: var(--light-color); padding: 20px 0; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 1000; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8em; font-weight: bold; color: var(--dark-color); text-decoration: none; }
+        .logo span { color: var(--primary-color); }
+        .main-nav a { margin-left: 30px; text-decoration: none; color: var(--secondary-color); font-weight: 500; }
+        .main-nav a:hover { color: var(--primary-color); }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://www.transparenttextures.com/patterns/cubes.png'); opacity: 0.05; }
+        .hero h1 { font-size: 3.2em; color: var(--light-color); margin-bottom: 20px; }
+        .hero p { font-size: 1.2em; max-width: 750px; margin: 0 auto 30px auto; opacity: 0.9; }
+        .btn {
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: var(--light-color);
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 198, 255, 0.2); }
+
+        /* Section Shared */
+        .section-intro { max-width: 800px; margin: 0 auto 50px auto; text-align: center; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature-card { background: var(--light-color); padding: 30px; border-radius: 8px; box-shadow: 0 4px Spx rgba(0,0,0,0.07); }
+        .feature-card i { font-size: 2.5em; color: var(--primary-color); margin-bottom: 20px; }
+        .feature-card h3 { font-size: 1.5em; }
+
+        /* About Section (From V1) */
+        .about-section { background: var(--gray-color); }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-content ul { list-style: none; padding: 0; }
+        .about-content li { background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%232a7de1"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>') no-repeat left center; background-size: 20px; padding-left: 30px; margin-bottom: 15px; font-weight: 500; }
+
+        /* Partners Section (From V2) */
+        .partners { text-align: center; margin-top: 80px; }
+        .partners h4 { color: #888; font-weight: normal; margin-bottom: 30px; font-size: 1.1em; }
+        .partner-logos { display: flex; justify-content: center; align-items: center; gap: 40px; filter: grayscale(100%); opacity: 0.7; }
+        .partner-logos img { max-height: 40px; }
+
+        /* Process Section (Merged Style) */
+        .process { background: var(--gray-color); }
+        .timeline { display: flex; justify-content: space-between; position: relative; margin-top: 50px; }
+        .timeline::before { content: ''; position: absolute; top: 25px; left: 5%; width: 90%; height: 2px; background: #ddd; }
+        .step { width: 23%; text-align: center; position: relative; }
+        .step-icon {
+            width: 50px; height: 50px; line-height: 50px; border-radius: 50%;
+            background: var(--light-color);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            margin: 0 auto 15px auto; font-size: 1.5em; font-weight: bold;
+        }
+        .step h3 { font-size: 1.2em; }
+        .step p { font-size: 0.9em; color: #666; }
+
+        /* FAQ Section (From V1) */
+        .faq-container { max-width: 800px; margin: auto; }
+        .faq-item { border-bottom: 1px solid #e0e0e0; margin-bottom: 15px; }
+        .faq-question { width: 100%; background: none; border: none; text-align: left; font-size: 1.1em; padding: 15px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: bold; color: var(--dark-color); }
+        .faq-question .icon { transition: transform 0.3s; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out; padding: 0 15px; color: #555; }
+        
+        /* CTA Section */
+        .cta-section { background: var(--dark-color); color: var(--light-color); text-align: center; }
+        .cta-section h2 { font-size: 2.5em; color: var(--light-color); max-width: 700px; margin: 0 auto 30px auto; }
+
+        /* Footer (From V1) */
+        footer { background: #1C1C1C; text-align: center; padding: 30px 0; font-size: 0.9em; color: #aaa; }
+        footer p { margin: 5px 0; }
+        footer a { color: var(--light-color); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h2 { font-size: 1.8em; }
+            section { padding: 60px 0; }
+            .hero { padding: 80px 20px; }
+            .hero h1 { font-size: 2.2em; }
+            .about-content { grid-template-columns: 1fr; }
+            .timeline { flex-direction: column; align-items: center; gap: 30px; }
+            .step { width: 80%; }
+            .timeline::before { display: none; } /* Hide line on mobile for cleaner look */
+            .main-nav { display: none; } /* Could be replaced with a hamburger menu */
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "InventHub 专利价值聚合网络",
+      "serviceType": "专利运营服务",
+      "description": "InventHub 是一个专利价值聚合网络，致力于解决创新者面临的专利闲置、回报率低、议价能力弱等困境。我们通过将分散的专利构建成具备攻防能力的高价值专利组合，显著提升其商业价值和变现成功率。",
+      "provider": {
+        "@type": "Organization",
+        "name": "启坤知识产权",
+        "url": "https://www.qikunip.com"
+      },
+      "url": "https://www.inventhub.cn"
+    }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">Invent<span>Hub</span></a>
+            <nav class="main-nav">
+                <a href="#about">为何创立</a>
+                <a href="#how-it-works">运作方式</a>
+                <a href="#process">合作流程</a>
+                <a href="https://www.qikunip.com" target="_blank" rel="noopener">由 启坤 运营</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>单个专利变现难？加入InventHub，让您的资产聚合增值。</h1>
+                <p>我们集结分散的创新力量，共享专业资源，让您的专利从沉睡的成本中心，变为持续创造回报的价值中心。
+
+</p>
+                <a href="#contact-form" class="btn">立即提交专利，免费评估入网资格 ></a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>为何创立InventHub？直面创新者的困境</h2>
+                </div>
+                <div class="about-content">
+                    <div>
+                        <p>专利本应是创新的果实和引擎，但现实却不容乐观。我们看到太多创新者正面临着共同的挑战：</p>
+                        <ul>
+                            <li>大量专利闲置，成为持续的成本中心</li>
+                            <li>投资回报率低下，创新积极性受挫</li>
+                            <li>单一专利议价能力弱，难以实现商业价值</li>
+                            <li>独立维权成本高昂，常常有心无力</li>
+                        </ul>
+                        <p>为了打破这一局面，InventHub应运而生。我们相信，通过集结分散的创新力量，形成协作网络，能够系统性地解决这些痛点，让创新回归它应有的价值。</p>
+                    </div>
+                    <div>
+                        <img src="images/inventhub.jpg" alt="专利聚合网络概念图" style="width: 100%; border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>InventHub 如何将您的专利变为优质资产？</h2>
+                    <p>我们将分散、单一的专利，聚合成高价值专利组合，并负责其商业化运营的全过程。</br>不只是代理，更是您的资产运营官。</p>
+                </div>
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <i class="fas fa-cubes"></i>
+                        <h3>聚合专利 · 灵活打包</h3>
+                        <p>我们汇聚高价值专利，由专家进行战略性组合，形成市场吸引力更强的“专利包”。这种“化零为整”的策略，不仅能大幅提升对外许可或交易的成功率，也能增强您在行业中的防御能力，实现 1+1>2 的价值提升。</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-landmark"></i>
+                        <h3>官方平台 · 权威背书</h3>
+                        <p>您的专利资产将不再孤立无援。InventHub 与上海知识产权交易中心等权威机构已建立深度合作关系，获得了官方的认可。这为您的资产带来了更强的公信力、更广的市场曝光和更安全的交易保障。</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>专家主理 · 零风险加入</h3>
+                        <p>专利运营服务成本，包括初步评估、法律、谈判等费用，均由我们预先承担。我们只在成功变现后分享收益，真正实现您的零门槛、零风险合作。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container partners">
+                <h4>我们的合作伙伴</h4>
+                <div class="partner-logos">
+                    <img src="images/partner-logo-j.png" alt="上海知识产权交易中心 Logo">
+                    <img src="images/partner-logo-k.png" alt="国家知识产权国际运营平台 Logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="process">
+            <div class="container text-center">
+                 <div class="section-intro">
+                    <h2>简单四步，开启您的高效变现之旅</h2>
+                </div>
+                <div class="timeline">
+                    <div class="step">
+                        <div class="step-icon">1</div>
+                        <h3>提交与评估</h3>
+                        <p>您提交专利清单，我们的专家团队将进行免费的初步价值与入网可行性评估。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2</div>
+                        <h3>确认与入网</h3>
+                        <p>对于通过评估的专利，我们与您签订全风险代理协议，并将其纳入InventHub网络进行统一运营。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3</div>
+                        <h3>组合与撮合</h3>
+                        <p>我们将根据市场需求进行策略性打包，并利用全球网络和官方合作渠道进行精准的商业撮合。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">4</div>
+                        <h3>交易与分享</h3>
+                        <p>成功达成交易或许可后，我们将按照协议与您分享成果。您前期无任何资金风险。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>常见问题</h2>
+                </div>
+                <div class="faq-container">
+                     <div class="faq-item">
+                        <button class="faq-question">InventHub 和传统专利池有何不同？<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer">
+                            <p>传统专利池模式较固定。InventHub 是一个更灵活、开放的“聚合网络”。我们不要求转让专利，而是根据市场机会动态构建“专利包”。您的专利可以根据需要随时加入或退出，自主权更高。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">加入网络后，我会失去对专利的控制权吗？<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer">
+                            <p>完全不会。InventHub 不影响您对专利的自主使用、独立许可或随时出售的权利。我们是您资产变现的一个新增的高效渠道，而非限制。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">什么样的专利适合加入？<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer">
+                            <p>我们欢迎所有具备潜在商业价值的高质量专利，尤其是在互联网、云计算、无人机等前沿领域。第一步是联系我们，我们的专家团队会为您提供免费的初步评估。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-form" class="cta-section">
+            <div class="container">
+                <h2>准备好激活您的专利价值了吗？</h2>
+                <p>立即联系我们，免费评估您的专利是否适合加入 InventHub 专利价值聚合网络，开启您的零风险变现合作。</p>
+                <a href="mailto:info@inventhub.cn" class="btn" style="margin-top: 20px;">通过邮件提交 (info@inventhub.cn)</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>InventHub.cn 由 <a href="https://www.qikunip.com" target="_blank" rel="noopener">启坤 (QiKun)</a> 团队发起并运营 | 版权所有 © 2025</p>
+            <p>邮箱: info@inventhub.cn | 微信: inventhub</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('.icon');
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other FAQs for a cleaner accordion effect
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                        item.querySelector('.faq-answer').style.maxHeight = 0;
+                        item.querySelector('.icon').classList.remove('fa-minus');
+                        item.querySelector('.icon').classList.add('fa-plus');
+                    }
+                });
+
+                // Toggle the clicked FAQ
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                } else {
+                    faqItem.classList.remove('active');
+                    answer.style.maxHeight = 0;
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

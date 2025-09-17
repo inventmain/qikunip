@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="了解启坤如何从顶级律所标准起步，发展成为专利价值实现专家。我们的团队由前审查员、顶级律师和行业IP总监组成，致力于将您的专利变为真正的商业财富。">
+    <meta name="keywords" content="启坤团队, 知识产权专家, 专利律师, 罗朋, 王飞, 金杜合伙人, 国知局审查员">
+    <title>关于我们 - 启坤</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #ba9a3e;
+            --cta-color: #ff6f61;
+            --dark-color: #222831;
+            --light-color: #ffffff;
+            --gray-color: #f4f4f4;
+            --text-color: #333;
+            --header-bg: #000;
+            --footer-bg: #1C1C1C;
+        }
+        body { font-family: 'Microsoft YaHei', sans-serif; margin: 0; line-height: 1.6; color: var(--text-color); }
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        h1, h2, h3 { margin-bottom: 20px; color: var(--dark-color); }
+        h2 { text-align: center; font-size: 2.2em; }
+        
+        /* --- START: 标准化 Header & Navigation --- */
+        .navbar { background: var(--header-bg); color: var(--light-color); padding: 15px 0; position: sticky; top: 0; z-index: 1000; width: 100%; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo-area { display: flex; align-items: center; text-decoration: none; }
+        .logo-area img { max-height: 50px; margin-right: 15px; }
+        .logo-text h1 { font-size: 24px; color: var(--light-color); margin: 0; font-weight: bold; }
+        .nav-links { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; }
+        .nav-links > li { margin-left: 30px; position: relative; }
+        .nav-links a, .nav-links .dropdown-toggle { text-decoration: none; color: var(--light-color); font-weight: 500; padding: 10px 0; transition: color 0.3s; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+        .nav-links > li > a:hover, .dropdown:hover .dropdown-toggle { color: var(--secondary-color); }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--header-bg); border-radius: 4px; padding: 10px 0; list-style: none; min-width: 180px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu a { display: block; padding: 10px 20px; color: var(--light-color); white-space: nowrap; }
+        .dropdown-menu a:hover { background-color: rgba(255, 255, 255, 0.1); }
+        .nav-contact-btn {
+            padding: 12px 40px;
+            margin-left: 20px;
+            border-radius: 5px;
+            background: var(--cta-color);
+            color: var(--light-color);
+            font-weight: bold;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background .3s;
+        }
+        .nav-contact-btn:hover { background: #e65a4c; }
+        .btn-main { background: var(--cta-color); color: var(--light-color); padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; transition: background 0.3s; }
+        .btn-main:hover { background: #e65a4c; }
+        /* --- END: 标准化 Header & Navigation --- */
+
+        /* Timeline styles */
+        .timeline { position: relative; max-width: 800px; margin: 50px auto; }
+        .timeline::after { content: ''; position: absolute; width: 4px; background-color: var(--primary-color); top: 0; bottom: 0; left: 50%; margin-left: -2px; }
+        .timeline-container { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; box-sizing: border-box; }
+        .timeline-container.left { left: 0; }
+        .timeline-container.right { left: 50%; }
+        .timeline-container::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: white; border: 4px solid var(--primary-color); top: 15px; border-radius: 50%; z-index: 1; }
+        .timeline-container.right::after { left: -10px; }
+        .timeline-content { padding: 20px 30px; background-color: var(--gray-color); position: relative; border-radius: 6px; }
+        
+        /* Partners section styles */
+        .team-section { background-color: var(--gray-color); }
+        .main-partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin: 40px auto; }
+        .partner-card { background: var(--light-color); padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.07); }
+        .partner-card .header { display: flex; align-items: center; margin-bottom: 15px; }
+        .partner-card img { width: 120px; height: 120px; border-radius: 50%; margin-right: 25px; background-color: #e0e0e0; object-fit: cover; }
+        .partner-card h3 { margin: 0; font-size: 1.3em; }
+        .partner-card .title { color: #666; }
+        .other-partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
+        .partner-card-simple { background: var(--light-color); padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.07); border-top: 4px solid var(--primary-color); text-align: left; }
+        .partner-card-simple h3 { margin: 0 0 10px 0; font-size: 1.3em; display: flex; align-items: baseline; }
+        .partner-card-simple .title { color: #666; font-size: 0.85em; font-weight: normal; margin-left: 10px; }
+        .partner-card-simple p { font-size: 0.95em; margin: 0; color: #555; }
+        
+        .stats-section { padding-bottom: 80px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; margin-top: 40px; }
+        .stat-item .stat-number { font-size: 3em; font-weight: bold; color: var(--primary-color); }
+        .stat-item p { margin-top: 10px; font-size: 1.1em; }
+        
+        .final-cta { background-color: var(--dark-color); color: var(--light-color); text-align: center; }
+        .final-cta h2 { color: var(--light-color); }
+
+        /* --- START: 背景图片预留口 --- */
+        #history-section {
+            /* background-image: url('images/your-history-background.jpg'); */
+            /* background-size: cover; */
+            /* background-position: center; */
+        }
+        /* --- END: 背景图片预留口 --- */
+        
+        footer { background-color: var(--footer-bg); color: #ccc; padding: 40px 0; text-align: center; font-size: 14px; }
+        footer p { margin: 5px 0; }
+        footer a { color: #ccc; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        
+        /* --- START: 移动端汉堡菜单按钮 --- */
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 10px; }
+        .nav-toggle .hamburger { display: block; width: 25px; height: 2px; background-color: var(--light-color); position: relative; transition: transform 0.3s ease; }
+        .nav-toggle .hamburger::before, .nav-toggle .hamburger::after { content: ''; position: absolute; left: 0; width: 100%; height: 2px; background-color: var(--light-color); transition: top 0.3s ease, bottom 0.3s ease, transform 0.3s ease; }
+        .nav-toggle .hamburger::before { top: -8px; }
+        .nav-toggle .hamburger::after { bottom: -8px; }
+        body.nav-open .nav-toggle .hamburger { transform: rotate(45deg); }
+        body.nav-open .nav-toggle .hamburger::before { top: 0; transform: rotate(90deg); }
+        body.nav-open .nav-toggle .hamburger::after { bottom: 0; transform: rotate(90deg); }
+        /* --- END: 移动端汉堡菜单按钮 --- */
+
+        /* --- START: 响应式适配 --- */
+        @media (max-width: 992px) {
+            .nav-toggle { display: block; z-index: 1001; }
+            .navbar .container { flex-wrap: nowrap; }
+            .nav-links { position: fixed; top: 0; right: 0; height: 100vh; width: 280px; background: var(--header-bg); flex-direction: column; align-items: flex-start; padding: 80px 30px 30px; transform: translateX(100%); transition: transform 0.3s ease-in-out; }
+            body.nav-open .nav-links { transform: translateX(0); }
+            .nav-links > li { margin: 15px 0; width: 100%; }
+            .nav-links a.nav-contact-btn { margin: 20px 0 0 0; text-align: center; display: block; }
+            .dropdown-menu { position: static; display: none; background: #111; box-shadow: none; border-radius: 0; padding-left: 15px;}
+            .dropdown:hover .dropdown-menu { display: block; }
+        }
+
+        @media (max-width: 768px) {
+            h2 { font-size: 1.8em; }
+            section { padding: 60px 0; }
+            
+            /* 优化时间轴在移动端的显示 */
+            .timeline::after { left: 20px; margin-left: 0; }
+            .timeline-container { width: 100%; padding-left: 60px; padding-right: 15px; }
+            .timeline-container.left, .timeline-container.right { left: 0; }
+            .timeline-container::after { left: 12px; }
+            .timeline-container.right::after { left: 12px; }
+
+            .main-partners-grid { grid-template-columns: 1fr; }
+            .partner-card .header { flex-direction: column; text-align: center; }
+            .partner-card img { margin-right: 0; margin-bottom: 15px; }
+        }
+        /* --- END: 响应式适配 --- */
+    </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "启坤知识产权",
+  "alternateName": "北京启坤知识产权代理有限公司",
+  "url": "https://www.qikunip.com/",
+  "logo": "https://user-assets.sxlcdn.com/images/1191000/FrjHVpeHT7qVJm905hWVKcg62gZx.jpeg",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "contact@qikunip.com",
+    "contactType": "customer service"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "罗朋"
+  },
+  "member": [
+    {
+      "@type": "Person",
+      "name": "罗朋",
+      "jobTitle": "创始合伙人",
+      "description": "27年行业经验，曾任金杜律师事务所合伙人。他将服务跨国巨头的顶尖标准和全球视野带入启坤，确保您的每一项专利资产都能获得最大化的商业价值和最坚实的法律保障。",
+      "image": "images/team-luo-peng.jpg"
+    },
+    {
+      "@type": "Person",
+      "name": "王飞",
+      "jobTitle": "执行合伙人",
+      "description": "18年行业经验，曾任国家知识产权局专利审查员、知名跨国和独角兽企业知识产权负责人。他能在商业、政策和法律之间找到平衡点，为您的专利资产设计最佳变现和布局策略。",
+      "image": "images/team-wang-fei.jpg"
+    },
+    {
+      "@type": "Person",
+      "name": "吴晓佟",
+      "jobTitle": "合伙人"
+    },
+    {
+      "@type": "Person",
+      "name": "谭梁镌",
+      "jobTitle": "合伙人"
+    },
+    {
+      "@type": "Person",
+      "name": "黄可峻",
+      "jobTitle": "合伙人"
+    },
+    {
+      "@type": "Person",
+      "name": "周奇",
+      "jobTitle": "顾问合伙人"
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-area">
+                <img src="https://user-assets.sxlcdn.com/images/1191000/FrjHVpeHT7qVJm905hWVKcg62gZx.jpeg" alt="启坤知识产权 Logo">
+                <div class="logo-text"><h1><strong>启坤知识产权</strong></h1></div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li class="dropdown">
+                    <span class="dropdown-toggle">服务 <i class="fas fa-chevron-down fa-xs"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="high-value-patent-layout.html">高价值专利布局</a></li>
+                        <li><a href="patent-monetization.html">专利变现</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="insights.html">专业观点</a></li>
+                <li><a href="faq.html">常见问题</a></li>
+                <li><a href="mailto:contact@qikunip.com" class="nav-contact-btn">联系我们</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="history-section">
+            <div class="container">
+                <div class="text-center">
+                    <h2>始于顶级标准，忠于客户价值</h2>
+                    <p style="max-width: 800px; margin: 0 auto 40px auto;">我们的故事，是一条不断向“价值实现”进化的道路。我们从不止步于获得一张专利证书，而是致力于让它成为您最有力的商业武器和最赚钱的流动资产。</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-container left">
+                        <div class="timeline-content">
+                            <h3>2010 - 2017: 奠基 · 汉昊知识产权</h3>
+                            <p>由前金杜律师事务所合伙人罗朋先生创办。我们将顶级律所的严谨流程、精英标准和国际视野注入了团队的基因，打下了坚实的专业基础。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container right">
+                        <div class="timeline-content">
+                            <h3>2017 - 2022: 成长 · 启坤知识产权</h3>
+                            <p>全面继承汉昊业务，品牌升级为“启坤”。在服务数百家创新企业的过程中，我们积累了深厚的行业洞察，开始主动帮助客户规划和管理其知识产权资产。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container left">
+                        <div class="timeline-content">
+                            <h3>2023 - 至今: 聚焦 · 专利变现专家</h3>
+                            <p>全面升级为以“专利价值实现”为核心的专业机构。我们将业务核心全面聚焦于专利交易、许可、诉讼投资和可变现高价值专利布局，成为您真正的“专利变现合伙人”。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team-section" class="team-section">
+            <div class="container">
+                <h2 class="text-center">一群真正懂得如何将专利变为财富的专家</h2>
+                
+                <div class="main-partners-grid">
+                    <div class="partner-card">
+                        <div class="header">
+                            <img src="images/team-luo-peng.jpg" alt="罗朋, 启坤创始合伙人">
+                            <div>
+                                <h3>罗朋</h3>
+                                <div class="title">创始合伙人</div>
+                            </div>
+                        </div>
+                        <p>27年行业经验，曾任金杜律师事务所合伙人。他将服务跨国巨头的顶尖标准和全球视野带入启坤，确保您的每一项专利资产都能获得最大化的商业价值和最坚实的法律保障。</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="header">
+                            <img src="images/team-wang-fei.jpg" alt="王飞, 启坤执行合伙人">
+                            <div>
+                                <h3>王飞</h3>
+                                <div class="title">执行合伙人</div>
+                            </div>
+                        </div>
+                        <p>18年行业经验，曾任国家知识产权局专利审查员、知名跨国和独角兽企业知识产权负责人。他能在商业、政策和法律之间找到平衡点，为您的专利资产设计最佳变现和布局策略。</p>
+                    </div>
+                </div>
+
+                <div class="other-partners-grid">
+                    <div class="partner-card-simple">
+                        <h3>吴晓佟<span class="title">合伙人</span></h3>
+                        <p>13年大客户服务经验，技术与法律复合背景。她能确保您的专利变现项目获得最高效、最顺畅的管理与执行，是您最可靠的“项目管家”。</p>
+                    </div>
+                     <div class="partner-card-simple">
+                        <h3>谭梁镌<span class="title">合伙人</span></h3>
+                        <p>拥有律师执业资格，并具备爱立信研发、国家知识产权局和企业多重背景。独特的“技术发明者”+“法律守护者”背景，让他能深入技术底层，为您构建最坚固的专利壁垒。</p>
+                    </div>
+                    <div class="partner-card-simple">
+                        <h3>黄可峻<span class="title">合伙人</span></h3>
+                        <p>国内顶尖的生物医药领域IP专家，辉瑞“伟哥”专利案主办律师。在高风险、高回报的生物医药领域，他处理高复杂度诉讼的顶尖能力是您实现高额回报的关键保障。</p>
+                    </div>
+                    <div class="partner-card-simple">
+                        <h3>周奇<span class="title">顾问合伙人</span></h3>
+                        <p>国家知识产权领军人才，曾主导中国移动、百度、美团等巨头的知产战略。当您的专利需要与行业巨头博弈时，他的经验和行业地位是您至关重要的战略资源。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats-section" class="stats-section">
+            <div class="container text-center">
+                <h2>卓越服务，源于精英化的团队协作</h2>
+                <p style="max-width: 800px; margin: 0 auto;">高价值的专利变现，是一场需要精密协作的团体战。启坤的强大，不仅在于我们拥有顶级的合伙人，更在于我们有一支训练有素、经验丰富的精英服务团队。</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">30+</div>
+                        <p>专业精英</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <p>平均从业经验</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">80%+</div>
+                        <p>名校硕博</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <p>双证专家</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="final-cta">
+            <div class="container">
+                <h2>让我们的专业，成为您创新价值的放大器。</h2>
+                <a href="mailto:contact@qikunip.com" class="btn-main" style="margin-top: 20px;">立即联系我们，开启您的专利价值之旅</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved.</p>
+            <p><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备19020611号-1</a></p>
+        </div>
+    </footer>
+    
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const body = document.body;
+        navToggle.addEventListener('click', () => {
+            body.classList.toggle('nav-open');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="InventHunt 是由启坤核心合伙人运营的高价值专利交易平台。我们专注标准必要专利(SEPs)、可诉专利、国内国际专利的保密交易，为买卖双方提供匿名代理、专业尽调与谈判策略，规避风险，实现价值最大化。">
+    <meta name="keywords" content="InventHunt, 专利交易, 标准必要专利, SEP, 可诉专利, 国际专利交易, 保密交易, 知识产权交易, 启坤, 专利估值, 尽职调查">
+    <title>InventHunt | 高价值专利保密交易 · 专业操盘手</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "InventHunt",
+      "url": "https://www.inventhunt.com",
+      "logo": "https://www.inventhunt.com/logo.png",
+      "description": "高价值专利保密交易平台，专注标准必要专利(SEPs)与可诉专利交易。",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@inventhub.cn",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://www.qikunip.com"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Patent Transaction Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "InventHunt"
+      },
+      "description": "提供标准必要专利(SEPs)、可诉专利、国内国际专利的保密交易、匿名代理、专业尽职调查与谈判策略服务。",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Worldwide"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #2a7de1;
+            --secondary-color: #333;
+            --dark-color: #1a1a2e;
+            --light-color: #ffffff;
+            --gray-color: #f0f2f5;
+            --text-color: #333;
+            --success-color: #28a745;
+        }
+        body { font-family: 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif; margin: 0; line-height: 1.8; color: var(--text-color); background-color: var(--light-color); }
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        h1, h2, h3 { color: var(--dark-color); font-weight: 700; }
+        
+        /* SEO & Responsive Typography */
+        h1 { font-size: clamp(2.4rem, 5vw, 3.4rem); }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); text-align: center; margin-bottom: 10px; }
+
+        .section-intro { max-width: 800px; margin: 0 auto 60px auto; text-align: center; font-size: 1.1em; color: #555;}
+        .text-center { text-align: center; }
+
+        /* Header & Navigation */
+        header { background: var(--light-color); padding: 20px 0; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 1000; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8em; font-weight: bold; color: var(--dark-color); text-decoration: none; }
+        .logo span { color: var(--primary-color); }
+        .main-nav a { margin-left: 30px; text-decoration: none; color: var(--secondary-color); font-weight: 500; }
+        .main-nav a:hover { color: var(--primary-color); }
+        .hamburger { display: none; cursor: pointer; font-size: 1.8em; }
+        .mobile-nav { display: none; flex-direction: column; background: var(--light-color); position: absolute; top: 100%; left: 0; width: 100%; border-bottom: 1px solid #e0e0e0; padding: 10px 0; }
+        .mobile-nav a { padding: 15px 20px; text-decoration: none; color: var(--secondary-color); text-align: center; }
+        .mobile-nav.active { display: flex; }
+
+
+        /* Hero Section */
+        .hero { background-color: var(--dark-color); color: var(--light-color); padding: 120px 0; text-align: center; }
+        .hero h1 { color: var(--light-color); margin-bottom: 20px; }
+        .hero p { font-size: 1.2em; max-width: 800px; margin: 0 auto 30px auto; opacity: 0.9; }
+        .btn { background: linear-gradient(90deg, #00c6ff, #0072ff); color: var(--light-color); padding: 15px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; transition: transform 0.3s, box-shadow 0.3s; border: none; cursor: pointer; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 198, 255, 0.2); }
+        .hero-tags { margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+        .hero-tags span { display: inline-flex; align-items: center; border: 1px solid rgba(255, 255, 255, 0.5); color: rgba(255, 255, 255, 0.9); padding: 10px 25px; border-radius: 25px; font-size: 1.1em; background-color: rgba(255, 255, 255, 0.1); }
+        .hero-tags span i { margin-right: 8px; }
+
+        /* Risk/Challenge Section */
+        .risk-section { background-color: var(--gray-color); }
+        .risk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .risk-card { background: var(--light-color); padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .risk-card h3 { font-size: 1.6em; margin-bottom: 20px; display: flex; align-items: center; }
+        .risk-card h3 .icon { margin-right: 15px; font-size: 1.2em; color: var(--primary-color); }
+        .risk-card ul { list-style: none; padding-left: 0; }
+        .risk-card li { margin-bottom: 15px; display: flex; }
+        .risk-card li i { margin-right: 10px; color: var(--primary-color); margin-top: 5px; }
+
+        /* Difference Section */
+        .diff-table { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background-color: #ddd; border-radius: 8px; overflow: hidden; }
+        .diff-col { background-color: var(--light-color); padding: 30px; }
+        .diff-col.us { background-color: #eaf2fe; }
+        .diff-col h3 { font-size: 1.5em; text-align: center; margin-bottom: 25px; }
+        .diff-col ul { list-style: none; padding: 0; }
+        .diff-col li { padding: 10px 0; border-bottom: 1px solid #ddd; display: flex; }
+        .diff-col li strong { min-width: 80px; display: inline-block; color: var(--dark-color); }
+        .diff-col li span { flex: 1; }
+
+        /* Value Section */
+        .value-section { background-color: var(--gray-color); }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .feature-card { background: var(--light-color); padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center;}
+        .feature-card i { font-size: 3em; color: var(--primary-color); margin-bottom: 20px; }
+        .feature-card h3 { font-size: 1.5em; }
+        
+        /* Process Section with Tabs */
+        .tabs { display: flex; justify-content: center; margin-bottom: 40px; border-bottom: 2px solid #ddd; }
+        .tab-btn { padding: 15px 30px; cursor: pointer; background: none; border: none; font-size: 1.2em; font-weight: 500; color: #888; position: relative; }
+        .tab-btn.active { color: var(--primary-color); font-weight: bold; }
+        .tab-btn.active::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background-color: var(--primary-color); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .process-step { background: var(--light-color); padding: 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
+        .process-step .step-number { font-size: 1.5em; font-weight: bold; color: var(--primary-color); margin-bottom: 15px; display: block; }
+        .process-step h3 { font-size: 1.3em; margin-bottom: 10px; }
+
+        /* Proof Section */
+        .proof-section { background-color: var(--gray-color); }
+        .proof-metrics { display: flex; justify-content: space-around; text-align: center; margin-bottom: 80px; }
+        .metric-item .number { font-size: 3em; font-weight: bold; color: var(--primary-color); }
+        .metric-item .label { font-size: 1.1em; color: #555; }
+        .partners h4 { color: #888; font-weight: normal; margin-bottom: 30px; font-size: 1.2em; text-align: center; }
+        .partner-logos { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 50px; filter: grayscale(100%); opacity: 0.8; }
+        .partner-logos img { max-height: 45px; }
+
+        /* Promise Section */
+        .promise-section { background-color: var(--light-color); }
+        .promise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .promise-card { background: var(--gray-color); padding: 30px 40px; border-radius: 8px; }
+        .promise-card h3 { font-size: 1.8em; margin-bottom: 20px; }
+        .promise-card ul { list-style: none; padding: 0; }
+        .promise-card li { margin-bottom: 15px; display: flex; font-size: 1.1em; }
+        .promise-card li i { margin-right: 15px; color: var(--success-color); font-size: 1.2em; margin-top: 4px; }
+
+        /* FAQ Section */
+        .faq-section { background-color: var(--gray-color); }
+        .faq-container { max-width: 800px; margin: auto; }
+        .faq-item { background: var(--light-color); margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .faq-question { padding: 20px; font-size: 1.2em; font-weight: 600; cursor: pointer; }
+        .faq-answer { padding: 0 20px 20px; color: #555; display: block; /* Simplified for example */ }
+
+        /* CTA Section & Contact Form */
+        .cta-section { background: var(--dark-color); color: var(--light-color); text-align: center; }
+        .cta-section h2 { font-size: 2.5em; color: var(--light-color); max-width: 800px; margin: 0 auto 30px auto; }
+        .contact-form { max-width: 600px; margin: 40px auto 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; border-radius: 5px; border: 1px solid #555; background: #2a2a4e; color: var(--light-color); font-size: 1em; }
+        .contact-form .full-width { grid-column: 1 / -1; }
+        .contact-form .btn { grid-column: 1 / -1; width: auto; justify-self: center; }
+        ::placeholder { color: #888; }
+
+        /* Footer */
+        footer { background: #1C1C1C; text-align: center; padding: 30px 0; font-size: 0.9em; color: #aaa; }
+        footer a { color: var(--light-color); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .grid-3, .risk-grid, .promise-grid, .process-grid { grid-template-columns: 1fr; }
+            .diff-table { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            section { padding: 60px 0; }
+            .main-nav { display: none; }
+            .hamburger { display: block; }
+            .hero { padding: 80px 20px; }
+            .proof-metrics { flex-direction: column; gap: 40px; }
+            .contact-form { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">Invent<span>Hunt</span></a>
+            <nav class="main-nav">
+                <a href="#challenges">交易挑战</a>
+                <a href="#difference">服务模式</a>
+                <a href="#process">交易流程</a>
+                <a href="#proof">专业底蕴</a>
+                <a href="https://www.inventhub.com" target="_blank">专利聚合 ›</a>
+            </nav>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+        <nav class="mobile-nav">
+            <a href="#challenges">交易挑战</a>
+            <a href="#difference">服务模式</a>
+            <a href="#process">交易流程</a>
+            <a href="#proof">专业底蕴</a>
+            <a href="https://www.inventhub.com" target="_blank">专利聚合 ›</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>不是信息中介，而是高价值专利交易的专业操盘手。</h1>
+                <p>在标准必要专利(SEPs)与核心专利的交易中，我们为您规避法律、市场与谈判中的隐形风险，实现资产价值的最大化。</p>
+                <div class="hero-tags">
+                    <span><i class="fas fa-award"></i> 标准必要专利(SEPs)</span>
+                    <span><i class="fas fa-gavel"></i> 可诉专利</span>
+                    <span><i class="fas fa-globe-americas"></i> 国内/国际专利</span>
+                    <span><i class="fas fa-user-secret"></i> 全程保密交易</span>
+                </div>
+                <a href="#cta" class="btn" style="margin-top: 40px;">开启一次保密咨询 ></a>
+            </div>
+        </section>
+
+        <section id="challenges" class="risk-section">
+            <div class="container">
+                <h2>高价值专利交易的独特挑战</h2>
+                <p class="section-intro">标准必要专利(SEPs)和可诉专利的交易，与普通专利交易存在本质差异。其交易的复杂性和敏感性，决定了传统的公开交易模式难以适用。</p>
+                <div class="risk-grid">
+                    <div class="risk-card">
+                        <h3><span class="icon fas fa-user-shield"></span>对资产持有方 (卖方) 的挑战</h3>
+                        <ul>
+                            <li><i class="fas fa-broadcast-tower"></i><div><strong>无法广而告之的困境</strong><br>高价值专利往往涉及核心战略资产，卖方通常无法公开宣布交易意图，导致潜在买家发现困难，交易机会流失。</div></li>
+                            <li><i class="fas fa-clock"></i><div><strong>漫长的交易周期风险</strong><br>此类专利交易周期通常长达数月甚至数年，缺乏专业交易框架的情况下，极易因沟通成本过高、信息不对称而最终流产。</div></li>
+                            <li><i class="fas fa-handshake-slash"></i><div><strong>行业内信任建立成本</strong><br>买卖双方通常处于同一行业，既是潜在合作伙伴也是竞争对手，直接交易容易产生战略顾虑，影响信任建立。</div></li>
+                        </ul>
+                    </div>
+                    <div class="risk-card">
+                        <h3><span class="icon fas fa-search"></span>对意向收购方 (买方) 的挑战</h3>
+                        <ul>
+                            <li><i class="fas fa-eye-slash"></i><div><strong>优质资产发现难题</strong><br>真正有价值的专利资产往往不会公开出售，买方很难通过常规渠道发现符合战略需求的高质量标的。</div></li>
+                            <li><i class="fas fa-balance-scale"></i><div><strong>尽职调查的复杂性</strong><br>SEPs和可诉专利的价值评估极其复杂，需要深厚的技术和法律背景，普通买方难以独立完成全面的风险评估。</div></li>
+                            <li><i class="fas fa-chess-knight"></i><div><strong>战略意图暴露风险</strong><br>直接接触卖方会暴露自身的技术布局和战略方向，可能被竞争对手或卖方利用，损害长期竞争优势。</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="difference">
+            <div class="container">
+                <h2>普通撮合 vs 专业操盘：天壤之别</h2>
+                <p class="section-intro">我们专注的领域，与普通专利交易有着本质区别。我们服务的不是信息的“搬运工”，而是价值的“守护者”与“放大器”。</p>
+                <div class="diff-table">
+                    <div class="diff-col">
+                        <h3>普通专利交易</h3>
+                        <ul>
+                            <li><strong>交易标的</strong><span>单一功能改进专利</span></li>
+                            <li><strong>价值特点</strong><span>相对透明，可被替代</span></li>
+                            <li><strong>交易方式</strong><span>公开、直接对接</span></li>
+                            <li><strong>服务价值</strong><span>信息撮合</span></li>
+                        </ul>
+                    </div>
+                    <div class="diff-col us">
+                        <h3>我们专注的高价值专利交易</h3>
+                        <ul>
+                            <li><strong>交易标的</strong><span>标准必要专利(SEPs) + 可诉专利 (附带侵权比对表)</span></li>
+                            <li><strong>价值特点</strong><span>稀缺、独家、具备市场垄断效应</span></li>
+                            <li><strong>交易方式</strong><span>匿名、分阶段信息披露</span></li>
+                            <li><strong>服务价值</strong><span><span style="font-weight:bold; color: var(--primary-color);">风险规避 + 价值最大化</span></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="value" class="value-section">
+            <div class="container">
+                <h2>我们为什么是必要的？</h2>
+                <p class="section-intro">在高价值专利交易的棋局中，每一步都至关重要。我们扮演着三个核心角色，确保您的利益万无一失。</p>
+                <div class="grid-3">
+                    <div class="feature-card"> <i class="fas fa-user-secret"></i> <h3>信息与风险的守门人</h3> <p>买卖双方往往是潜在的诉讼对立方，直接接触风险巨大。我们通过匿名代理、分阶段信息披露和专业的法律框架设计，为双方建立安全的沟通防火墙。</p> </div>
+                    <div class="feature-card"> <i class="fas fa-search-dollar"></i> <h3>估值与尽调的专家</h3> <p>高价值专利估值极其复杂。我们凭借“技术+法律”双重背景，精准识别专利的“必要性”与“可诉性”，并基于全球判例和市场数据，确保资产质量与公允价值。</p> </div>
+                    <div class="feature-card"> <i class="fas fa-chess"></i> <h3>谈判与交易的策略师</h3> <p>一步走错，可能引发全球诉讼。我们凭借高超的谈判技巧、风险预判能力和交易结构设计，平衡各方利益，全力促成和平交易，避免不必要的法律纠纷。</p> </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="process-section">
+            <div class="container">
+                <h2>为买卖双方量身定制的保密流程</h2>
+                <p class="section-intro">我们深刻理解买方与卖方的不同需求与顾虑，为交易的每一个环节设计了严谨且独立的解决方案。</p>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="buyer">我是买方 (For Buyer)</button>
+                    <button class="tab-btn" data-tab="seller">我是卖方 (For Seller)</button>
+                </div>
+                
+                <div id="buyer" class="tab-content active">
+                    <div class="process-grid">
+                        <div class="process-step">
+                            <span class="step-number">1</span>
+                            <h3>需求解构与标的寻源</h3>
+                            <p>在保密协议下解构您的战略意图，匿名为您精准寻源并筛选高价值专利组合。</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-number">2</span>
+                            <h3>价值评估与风险研判</h3>
+                            <p>提供初步EoU线索，评估专利的“可诉性”与商业潜力，帮助您确定核心收购目标。</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-number">3</span>
+                            <h3>深度尽调与交易谈判</h3>
+                            <p>启动全面尽调，核查专利权利束与诉讼历史。作为首席谈判代表，为您达成最优商业条款。</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-number">4</span>
+                            <h3>协议签署与资产交割</h3>
+                            <p>构建安全的支付与转让路径，确保专利资产完整、无瑕疵地转移至您名下，完成交易闭环。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="seller" class="tab-content">
+                    <div class="process-grid">
+                        <div class="process-step">
+                            <span class="step-number">1</span>
+                            <h3>资产梳理与价值提炼</h3>
+                            <p>全面盘点您的专利组合，识别核心资产，提炼其“必要性”或“可诉性”亮点，形成专业营销材料。</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-number">2</span>
+                            <h3>匿名推介与意向匹配</h3>
+                            <p>在不暴露您身份的前提下，通过全球买家库进行一对一精准推介，筛选出最匹配的意向买家。</p>
+                        </div>
+                         <div class="process-step">
+                            <span class="step-number">3</span>
+                            <h3>协助尽调与谈判控场</h3>
+                            <p>建立安全数据室，分阶段披露信息。主导价格与条款谈判，为您争取利益最大化。</p>
+                        </div>
+                         <div class="process-step">
+                            <span class="step-number">4</span>
+                            <h3>构建交易与顺利退出</h3>
+                            <p>设计对您最有利的交易架构与付款方式，审核法律文件，确保您的权利，实现资产高效变现。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="proof" class="proof-section">
+            <div class="container">
+                <h2>我们的专业底蕴</h2>
+                <p class="section-intro">InventHunt 的核心合作伙伴拥有16年IP实战经验，以下专业成就为我们提供顶级服务的实力保障。</p>
+                <div class="proof-metrics">
+                    <div class="metric-item"> <div class="number">>$1500万</div> <div class="label">团队历史交易总额</div> </div>
+                    <div class="metric-item"> <div class="number">25+</div> <div class="label">核心团队成功案例 (专利组合交易)</div> </div>
+                    <div class="metric-item"> <div class="number">零</div> <div class="label">交易纠纷记录 (彰显交易安全性)</div> </div>
+                </div>
+                <div class="partners">
+                    <h4>核心团队曾为松下、霍尼韦尔、富士康、IBM 等世界500强企业提供深度知识产权服务</h4>
+                    <div class="partner-logos">
+                        <img src="https://placehold.co/150x50/ffffff/999?text=Panasonic" alt="Panasonic Logo">
+                        <img src="https://placehold.co/150x50/ffffff/999?text=Honeywell" alt="Honeywell Logo">
+                        <img src="https://placehold.co/150x50/ffffff/999?text=Foxconn" alt="Foxconn Logo">
+                        <img src="https://placehold.co/100x50/ffffff/999?text=IBM" alt="IBM Logo">
+                        <img src="https://placehold.co/80x50/ffffff/999?text=HP" alt="HP Logo">
+                    </div>
+                    <p style="text-align: center; color: #888; margin-top: 40px;">我们的核心合作伙伴连续3年被 ROL 美国专利交易市场报告收录</p>
+                </div>
+            </div>
+        </section>
+
+         <section class="promise-section">
+            <div class="container">
+                <h2>我们的核心价值承诺</h2>
+                <p class="section-intro">无论您是卖方还是买方，我们都致力于提供无可替代的专业价值。</p>
+                <div class="promise-grid">
+                    <div class="promise-card">
+                        <h3>致 卖方</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i><div><strong>匿名保护 & 价值最大化</strong><br>我们是您的防火墙和扩音器，保护您的身份，并利用全球网络为您找到最匹配的买家。</div></li>
+                            <li><i class="fas fa-check-circle"></i><div><strong>资深合伙人亲自操盘</strong><br>16年IP实战经验的核心合伙人亲自负责，确保您的核心资产得到最高级别的关注和专业处理。</div></li>
+                             <li><i class="fas fa-check-circle"></i><div><strong>精准估值</strong><br>深度的技术背景确保我们能真正理解您的专利价值，避免因信息不对称而被低估。</div></li>
+                        </ul>
+                    </div>
+                    <div class="promise-card">
+                        <h3>致 买方</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i><div><strong>风险可控 & 战略优势</strong><br>匿名采购保护您的商业意图不被泄露。我们通过完整的尽职调查，为您过滤无效或高风险资产。</div></li>
+                             <li><i class="fas fa-check-circle"></i><div><strong>资产精准验证</strong><br>我们提供深入的使用证据(EoU)分析，确保您购买的专利具备强大的“可诉性”，是真正的战略武器。</div></li>
+                            <li><i class="fas fa-check-circle"></i><div><strong>高效决策</strong><br>我们为您处理繁琐的前期筛选与尽调工作，让您能基于可靠的信息，快速做出正确的战略决策。</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2>常见问题解答</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">Q1: 整个交易周期通常需要多久？</div>
+                        <div class="faq-answer">高价值专利交易的复杂性决定了其周期较长，通常在6个月到2年不等。我们的专业介入旨在最大化提升效率，并在关键节点上促成决策。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q2: InventHunt 如何收费？</div>
+                        <div class="faq-answer">我们通常采用“成功佣金”模式，在交易成功后按约定比例收取费用，使我们的利益与您的利益高度一致。具体细节将在初步咨询中探讨。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q3: 如何保证整个过程的机密性？</div>
+                        <div class="faq-answer">机密性是我们的生命线。所有接触都始于严格的保密协议(NDA)，并采用匿名代理、分阶段信息披露等机制，确保您的商业秘密万无一失。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <h2>准备好开启一次安全、高效的高价值专利交易了吗？</h2>
+                <p>填写以下信息，立即开启一次完全保密的初步咨询。我们承诺，在没有签订正式协议前，您无需透露任何敏感信息。</p>
+                
+                <form action="https://formspree.io/f/mgvljzeb" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="您的姓名" required>
+                    <input type="text" name="company" placeholder="您的公司名称" required>
+                    <input type="email" name="email" class="full-width" placeholder="您的电子邮箱" required>
+                    <textarea name="message" class="full-width" rows="5" placeholder="请简单描述您的需求（例如：希望出售通信领域的SEP专利包，或寻求收购某个技术方向的专利）"></textarea>
+                    <button type="submit" class="btn">提交保密咨询</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+       <div class="container">
+            <p>InventHunt.com 由 <a href="https://www.qikunip.com" target="_blank" rel="noopener">启坤 (QiKun)</a> 核心合伙人团队运营 | 运营团队位于北京、上海、香港 | 版权所有 © 2025</p>
+            <p>关联平台: <a href="https://www.inventhub.com" target="_blank" rel="noopener">InventHub 专利聚合</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+
+        // Process Tabs
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Deactivate all
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Activate clicked
+                button.classList.add('active');
+                const targetContent = document.getElementById(button.dataset.tab);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

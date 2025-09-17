@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="解答关于启坤专利变现、高价值专利布局及全风险代理服务模式的常见问题。了解我们的收费方式、服务流程以及如何开始您的专利价值实现之旅。">
+    <meta name="keywords" content="专利变现常见问题, 高价值专利问答, 知识产权FAQ, 启坤服务模式, 专利价值评估收费">
+    <title>常见问题 - 启坤</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* [保留原有CSS不变] */
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #ba9a3e;
+            --cta-color: #ff6f61;
+            --dark-color: #222831;
+            --light-color: #ffffff;
+            --gray-color: #f4f4f4;
+            --text-color: #333;
+            --header-bg: #000;
+            --footer-bg: #1C1C1C;
+        }
+        body { font-family: 'Microsoft YaHei', sans-serif; margin: 0; line-height: 1.6; color: var(--text-color); background-color: var(--light-color); }
+        .container { max-width: 1000px; margin: auto; padding: 0 20px; }
+        .navbar { background: var(--header-bg); color: var(--light-color); padding: 15px 0; position: sticky; top: 0; z-index: 1000; width: 100%; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo-area { display: flex; align-items: center; text-decoration: none; }
+        .logo-area img { max-height: 50px; margin-right: 15px; }
+        .logo-text h1 { font-size: 24px; color: var(--light-color); margin: 0; font-weight: bold; }
+        .nav-links { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; }
+        .nav-links > li { margin-left: 30px; position: relative; }
+        .nav-links a, .nav-links .dropdown-toggle { text-decoration: none; color: var(--light-color); font-weight: 500; padding: 10px 0; transition: color 0.3s; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+        .nav-links > li > a:hover, .dropdown:hover .dropdown-toggle { color: var(--secondary-color); }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--header-bg); border-radius: 4px; padding: 10px 0; list-style: none; min-width: 180px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu a { display: block; padding: 10px 20px; color: var(--light-color); white-space: nowrap; }
+        .dropdown-menu a:hover { background-color: rgba(255, 255, 255, 0.1); }
+        .nav-contact-btn { padding: 12px 40px; margin-left: 20px; border-radius: 5px; background: var(--cta-color); color: var(--light-color); font-weight: bold; text-decoration: none; white-space: nowrap; transition: background .3s; }
+        .nav-contact-btn:hover { background: #e65a4c; }
+        footer { background-color: var(--footer-bg); color: #ccc; padding: 40px 0; text-align: center; font-size: 14px; }
+        footer p { margin: 5px 0; }
+        footer a { color: #ccc; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .page-header { background: var(--dark-color); background-size: cover; background-position: center; color: var(--light-color); text-align: center; padding: 60px 0; }
+        .page-header h1 { font-size: 2.8em; color: var(--light-color); }
+        .faq-section { padding: 80px 0; }
+        .faq-category { margin-bottom: 50px; }
+        .faq-category h2 { font-size: 1.8em; color: var(--primary-color); border-bottom: 2px solid var(--gray-color); padding-bottom: 10px; margin-bottom: 30px; }
+        .faq-item { border-bottom: 1px solid #e0e0e0; margin-bottom: 15px; }
+        .faq-question { width: 100%; background: none; border: none; text-align: left; font-size: 1.1em; padding: 15px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: bold; color: var(--dark-color); }
+        .faq-question .icon { transition: transform 0.3s; font-size: 0.8em; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out, padding 0.5s ease-out; padding: 0 15px; }
+        .faq-answer p { color: #555; margin-top: 0; }
+        .faq-item.active .faq-question .icon { transform: rotate(45deg); }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 10px; }
+        .nav-toggle .hamburger { display: block; width: 25px; height: 2px; background-color: var(--light-color); position: relative; transition: transform 0.3s ease; }
+        .nav-toggle .hamburger::before, .nav-toggle .hamburger::after { content: ''; position: absolute; left: 0; width: 100%; height: 2px; background-color: var(--light-color); transition: top 0.3s ease, bottom 0.3s ease, transform 0.3s ease; }
+        .nav-toggle .hamburger::before { top: -8px; }
+        .nav-toggle .hamburger::after { bottom: -8px; }
+        body.nav-open .nav-toggle .hamburger { transform: rotate(45deg); }
+        body.nav-open .nav-toggle .hamburger::before { top: 0; transform: rotate(90deg); }
+        body.nav-open .nav-toggle .hamburger::after { bottom: 0; transform: rotate(90deg); }
+        @media (max-width: 992px) {
+            .nav-toggle { display: block; z-index: 1001; }
+            .navbar .container { flex-wrap: nowrap; }
+            .nav-links { position: fixed; top: 0; right: 0; height: 100vh; width: 280px; background: var(--header-bg); flex-direction: column; align-items: flex-start; padding: 80px 30px 30px; transform: translateX(100%); transition: transform 0.3s ease-in-out; }
+            body.nav-open .nav-links { transform: translateX(0); }
+            .nav-links > li { margin: 15px 0; width: 100%; }
+            .nav-links a.nav-contact-btn { margin: 20px 0 0 0; text-align: center; display: block; }
+            .dropdown-menu { position: static; display: none; background: #111; box-shadow: none; border-radius: 0; padding-left: 15px;}
+            .dropdown:hover .dropdown-menu { display: block; }
+        }
+        @media (max-width: 768px) {
+            .page-header { padding: 40px 0; }
+            .page-header h1 { font-size: 2em; }
+            .faq-section { padding: 60px 0; }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "我的专利能卖多少钱？启坤如何进行价值评估？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "专利的价值受技术领域、权利稳定性、市场需求、侵权证据等多种因素影响。启坤会通过AI大数据初步筛选，再由我们位于北京的专家团队（前审查员、资深律师）进行深度分析，为您提供一份详细的专利价值评估报告。初步评估是免费的。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "“全风险代理”是什么意思？我需要预付费用吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "“全风险代理”是我们的核心模式。意味着在整个专利变现过程，包括分析、评估、谈判乃至诉讼的所有费用都由启坤承担。您无需支付任何前期费用，我们只在您的专利成功变现（如交易、许可）后，按照约定分享一部分收益。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "专利变现主要有哪几种方式？哪种最适合我？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "主要方式包括专利交易（直接出售）、专利许可（授权他人使用并收取许可费）和专利诉讼（在侵权发生时维权获赔）。启坤的专家会根据您的专利特性和商业目标，为您量身定制最合适的变现策略，可能是单一方式，也可能是组合策略。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "“高价值专利布局”和普通专利申请有什么不同？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "普通专利申请的目标是“获得证书”，而高价值专利布局的目标是“创造资产”。我们以终为始，从商业竞争和未来变现的角度出发，不仅是撰写技术文件，更是主动为您规划能够形成技术壁垒、具备强大商业价值的专利组合。"
+          }
+        },
+        {
+            "@type": "Question",
+            "name": "为什么需要进行专利布局，而不是申请单个专利？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "单个专利很容易被竞争对手规避。一个设计精良的专利组合（或称专利包）能形成一张保护网，从核心技术到外围应用进行全面保护，构建真正的技术护城河，这在未来的市场竞争和价值变现中至关重要。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "与启坤合作的流程是怎样的？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "第一步是联系我们进行初步沟通和免费的价值评估；第二步，如果您的专利具备变现潜力，我们将为您定制详细的合作方案；第三步，签订合作协议后，我们便会投入资源开始执行；第四步，成功变现，分享收益。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "我们的技术信息和商业机密是否安全？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "绝对安全。启坤由顶尖律所背景的合伙人创立，我们视客户的机密信息为生命线。在合作开始前，我们会签署严格的保密协议（NDA），并在所有操作中采取最高标准的安全措施，确保您的信息安全无虞。"
+            }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+             <a href="index.html" class="logo-area">
+                <img src="https://user-assets.sxlcdn.com/images/1191000/FrjHVpeHT7qVJm905hWVKcg62gZx.jpeg" alt="启坤知识产权 Logo">
+                <div class="logo-text"><h1><strong>启坤知识产权</strong></h1></div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li class="dropdown">
+                    <span class="dropdown-toggle">服务 <i class="fas fa-chevron-down fa-xs"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="high-value-patent-layout.html">高价值专利布局</a></li>
+                        <li><a href="patent-monetization.html">专利变现</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="insights.html">专业观点</a></li>
+                <li><a href="faq.html">常见问题</a></li>
+                <li><a href="mailto:contact@qikunip.com" class="nav-contact-btn">联系我们</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>常见问题 (FAQ)</h1>
+            </div>
+        </div>
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-category">
+                    <h2>关于专利变现</h2>
+                    <div class="faq-item">
+                        <button class="faq-question">我的专利能卖多少钱？启坤如何进行价值评估？<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer">
+                            <p>专利的价值受技术领域、权利稳定性、市场需求、侵权证据等多种因素影响。启坤会通过AI大数据初步筛选，再由我们位于北京的专家团队（前审查员、资深律师）进行深度分析，为您提供一份详细的专利价值评估报告。初步评估是免费的。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">“全风险代理”是什么意思？我需要预付费用吗？<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer">
+                            <p>“全风险代理”是我们的核心模式。意味着在整个专利变现过程，包括分析、评估、谈判乃至诉讼的所有费用都由启坤承担。您无需支付任何前期费用，我们只在您的专利成功变现（如交易、许可）后，按照约定分享一部分收益。</p>
+                        </div>
+                    </div>
+                     <div class="faq-item">
+                        <button class="faq-question">专利变现主要有哪几种方式？哪种最适合我？<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer">
+                            <p>主要方式包括专利交易（直接出售）、专利许可（授权他人使用并收取许可费）和专利诉讼（在侵权发生时维权获赔）。启坤的专家会根据您的专利特性和商业目标，为您量身定制最合适的变现策略，可能是单一方式，也可能是组合策略。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h2>关于高价值专利布局</h2>
+                    <div class="faq-item">
+                        <button class="faq-question">“高价值专利布局”和普通专利申请有什么不同？<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer">
+                            <p>普通专利申请的目标是“获得证书”，而高价值专利布局的目标是“创造资产”。我们以终为始，从商业竞争和未来变现的角度出发，不仅是撰写技术文件，更是主动为您规划能够形成技术壁垒、具备强大商业价值的专利组合。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">为什么需要进行专利布局，而不是申请单个专利？<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer">
+                            <p>单个专利很容易被竞争对手规避。一个设计精良的专利组合（或称专利包）能形成一张保护网，从核心技术到外围应用进行全面保护，构建真正的技术护城河，这在未来的市场竞争和价值变现中至关重要。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h2>关于启坤的服务模式</h2>
+                    <div class="faq-item">
+                        <button class="faq-question">与启坤合作的流程是怎样的？<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer">
+                            <p>第一步是联系我们进行初步沟通和免费的价值评估；第二步，如果您的专利具备变现潜力，我们将为您定制详细的合作方案；第三步，签订合作协议后，我们便会投入资源开始执行；第四步，成功变现，分享收益。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">我们的技术信息和商业机密是否安全？<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer">
+                            <p>绝对安全。启坤由顶尖律所背景的合伙人创立，我们视客户的机密信息为生命线。在合作开始前，我们会签署严格的保密协议（NDA），并在所有操作中采取最高标准的安全措施，确保您的信息安全无虞。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved.</p>
+            <p><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备19020611号-1</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const body = document.body;
+        navToggle.addEventListener('click', () => { body.classList.toggle('nav-open'); });
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const answer = button.nextElementSibling;
+                faqItem.classList.toggle('active');
+                if (faqItem.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    answer.style.padding = '15px';
+                } else {
+                    answer.style.maxHeight = 0;
+                    answer.style.padding = '0 15px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
