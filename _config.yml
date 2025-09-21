@@ -10,6 +10,6 @@ url: "" # 你的网站域名，例如 "https://yourusername.github.io"
 markdown: kramdown
 theme: minima # 你可以换成其他主题，比如 "jekyll-theme-cayman"
 plugins:
-  -jekyll-feed
-  -jekyll-sitemap
+  - jekyll-feed
+  - jekyll-sitemap
 
