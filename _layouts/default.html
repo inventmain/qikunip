@@ -54,83 +54,63 @@
         footer a:hover { text-decoration: underline; }
 
         /* 卡片列表区域 */
-        .blog-section { padding: 80px 0; }
-        .card-list {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .card-link {
-            display: block;
-            background: var(--light-color);
-            border-radius: 10px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
-            transition: box-shadow .2s, transform .2s;
-            text-decoration: none;
-            color: inherit;
-            overflow: hidden;
-            cursor: pointer;
-            padding: 0;
-        }
-        .card-link:hover {
-            box-shadow: 0 8px 32px rgba(0,0,0,0.11);
-            transform: translateY(-2px);
-        }
-        .card-content {
-            display: flex;
-            flex-direction: column;
-            padding: 32px 32px 24px 32px;
-        }
-        .card-title {
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-bottom: 18px;
-            color: #222;
-            text-align: left;
-        }
-        .card-image {
-            width: 100%;
-            border-radius: 7px;
-            overflow: hidden;
-            background: #f4f4f4;
-            margin-bottom: 18px;
-        }
-        .card-image img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-            border-radius: 7px;
-        }
-        .card-excerpt {
-            color: #444;
-            font-size: 1em;
-            line-height: 1.7;
-            margin: 0;
-            text-align: left;
-        }
-        .card-content .card-image + .card-excerpt {
-            min-height: 220px;
-            display: flex;
-            align-items: center;
-        }
-        .card-content.no-image .card-excerpt {
-            min-height: 0;
-            display: block;
-        }
-        @media (max-width: 900px) {
-            .card-list { max-width: 100%; }
-            .card-content { padding: 18px 10px 16px 10px; }
-            .card-image img { height: 140px; }
-            .card-content .card-image + .card-excerpt { min-height: 140px; }
-        }
-        @media (max-width: 600px) {
-            .card-title { font-size: 1.1em; }
-            .card-image img { height: 100px; }
-            .card-content .card-image + .card-excerpt { min-height: 100px; }
-        }
+.card-content-horizontal {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 32px 24px 32px;
+    background: var(--light-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+.card-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #222;
+    text-align: left;
+}
+.card-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+}
+.card-image-horizontal {
+    flex: 0 0 240px;
+    max-width: 240px;
+    border-radius: 7px;
+    overflow: hidden;
+    background: #f4f4f4;
+}
+.card-image-horizontal img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    border-radius: 7px;
+}
+.card-excerpt-horizontal {
+    flex: 1 1 0;
+    color: #444;
+    font-size: 1em;
+    line-height: 1.7;
+    text-align: left;
+    min-width: 0;
+    word-break: break-all;
+    display: flex;
+    align-items: flex-start;
+}
+@media (max-width: 900px) {
+    .card-content-horizontal { padding: 18px 10px 16px 10px; }
+    .card-image-horizontal { max-width: 120px; }
+    .card-image-horizontal img { height: 80px; }
+    .card-row { gap: 12px; }
+}
+@media (max-width: 600px) {
+    .card-title { font-size: 1.05em; }
+    .card-image-horizontal { max-width: 80px; }
+    .card-image-horizontal img { height: 54px; }
+}
         /* 隐藏旧卡片样式 */
         .blog-grid, .post-card, .post-card-image, .post-card-content, .post-excerpt, .read-more-link, .post-meta, .blog-feed-list, .blog-feed-card { display: none !important; }
     </style>
