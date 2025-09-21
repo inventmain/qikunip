@@ -90,17 +90,28 @@ title: 专业观点
         <div class="container">
             <div class="blog-grid">
                 
-                {% for post in site.posts %}
-                <div class="post-card">
-                    <div class="post-card-image" style="background-image: url('{{ post.image | default: '/images/default-thumb.jpg' }}');"></div>
-                    <div class="post-card-content">
-                        <p class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</p>
-                        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-                        <p class="post-excerpt">{{ post.excerpt }}</p>
-                        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more-link">阅读全文 &rarr;</a>
-                    </div>
-                </div>
-                {% endfor %}
+<!-- 请将这段代码复制到 insights.md 中，替换原有的 for 循环 -->
+<div class="blog-grid">
+    {% for post in site.posts %}
+    <article class="post-card">
+        <h3 class="post-card-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+
+        {% if post.image %}
+        <div class="post-card-body with-image">
+            <div class="post-card-image" style="background-image: url('{{ post.image | relative_url }}');"></div>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+        </div>
+        {% else %}
+        <div class="post-card-body">
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+        </div>
+        {% endif %}
+    </article>
+    {% endfor %}
+
+</div>
                 </div>
         </div>
     </section>
