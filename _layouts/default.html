@@ -60,13 +60,71 @@
         .page-header h1 { font-size: 2.8em; color: var(--light-color); }
         .page-header p { font-size: 1.1em; opacity: 0.8; }
         .blog-section { padding: 80px 0; }
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .post-card { background: var(--light-color); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s; }
-        .post-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
-        .post-card-image { height: 200px; background-size: cover; background-position: center; }
-        .post-card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
-        .post-card-content h3 { font-size: 1.4em; margin-top: 0; }
-        .post-card-content h3 a { text-decoration: none; color: var(--dark-color); }
+/* --- START: 博客列表 Feed 流样式 --- */
+
+/* 1. 将原先的网格容器改为单列弹性布局 */
+.blog-grid {
+    display: flex;
+    flex-direction: column; /* 让文章卡片垂直排列 */
+    gap: 25px; /* 设置卡片之间的垂直间距 */
+    max-width: 840px; /* 设定内容最大宽度，使其在宽屏上更易读 */
+    margin: 0 auto; /* 让整体布局居中显示 */
+}
+
+/* 2. 调整文章卡片的内部布局，实现桌面端图文左右排列 */
+.post-card {
+    display: flex;
+    flex-direction: row; /* 默认（桌面端）让图片和文字内容水平排列 */
+    background: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* 3. 设置文章图片的样式 */
+.post-card-image {
+    width: 220px;       /* 固定图片宽度 */
+    flex-shrink: 0;     /* 防止图片容器被压缩 */
+    background-size: cover;
+    background-position: center;
+}
+/* 如果文章没有图片，对应的HTML中不应包含 .post-card-image 这个 div，这样布局会自动适应 */
+
+/* 4. 确保文字内容区域能自适应伸缩 */
+.post-card-content {
+    flex-grow: 1; /* 让文字内容区域占据所有剩余空间 */
+    padding: 20px 25px;
+}
+
+/* 5. 按照您的要求，隐藏发布时间等元信息 */
+.post-meta {
+    display: none;
+}
+
+/* --- END: 博客列表 Feed 流样式 --- */
+
+
+/* --- START: 针对手机端的响应式适配 --- */
+@media (max-width: 768px) {
+    /* 在小屏幕上，将卡片布局改回垂直堆叠（图上文下） */
+    .post-card {
+        flex-direction: column; 
+    }
+
+    /* 让图片宽度充满整个卡片 */
+    .post-card-image {
+        width: 100%;
+        height: 180px; /* 在手机上给图片一个固定的高度 */
+    }
+}
+/* --- END: 响应式适配 --- */
+        
         .post-meta { font-size: 0.9em; color: #777; margin-bottom: 15px; }
         .post-excerpt { color: #555; flex-grow: 1; }
         .read-more-link { display: inline-block; margin-top: 20px; color: var(--primary-color); text-decoration: none; font-weight: bold; }
