@@ -60,21 +60,24 @@
         .page-header h1 { font-size: 2.8em; color: var(--light-color); }
         .page-header p { font-size: 1.1em; opacity: 0.8; }
         .blog-section { padding: 80px 0; }
-/* --- START: 博客列表 Feed 流样式 --- */
 
-/* 1. 将原先的网格容器改为单列弹性布局 */
+        /* --- START: 博客列表 Feed 流样式 (优化版) --- */
+
+/* 1. 容器样式不变，依然是居中的单列布局 */
 .blog-grid {
     display: flex;
-    flex-direction: column; /* 让文章卡片垂直排列 */
-    gap: 25px; /* 设置卡片之间的垂直间距 */
-    max-width: 840px; /* 设定内容最大宽度，使其在宽屏上更易读 */
-    margin: 0 auto; /* 让整体布局居中显示 */
+    flex-direction: column;
+    gap: 25px; 
+    max-width: 840px; 
+    margin: 0 auto;
 }
 
-/* 2. 调整文章卡片的内部布局，实现桌面端图文左右排列 */
+/* 2. 核心调整：为卡片设置固定高度，并设置为相对定位 */
 .post-card {
+    position: relative; /* 为实现整卡点击做准备 */
     display: flex;
-    flex-direction: row; /* 默认（桌面端）让图片和文字内容水平排列 */
+    flex-direction: row;
+    height: 210px; /* 新增：固定卡片高度，确保一屏能显示3-4个 */
     background: var(--light-color);
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
@@ -87,27 +90,83 @@
     box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-/* 3. 设置文章图片的样式 */
+/* 3. 让图片高度充满整个卡片 */
 .post-card-image {
-    width: 220px;       /* 固定图片宽度 */
-    flex-shrink: 0;     /* 防止图片容器被压缩 */
+    width: 220px;
+    height: 100%; /* 调整：让图片高度填满父容器的固定高度 */
+    flex-shrink: 0;
     background-size: cover;
     background-position: center;
 }
-/* 如果文章没有图片，对应的HTML中不应包含 .post-card-image 这个 div，这样布局会自动适应 */
 
-/* 4. 确保文字内容区域能自适应伸缩 */
+/* 4. 内容区域样式 */
 .post-card-content {
-    flex-grow: 1; /* 让文字内容区域占据所有剩余空间 */
+    flex-grow: 1;
     padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* 防止内容溢出 */
 }
 
-/* 5. 按照您的要求，隐藏发布时间等元信息 */
+/* 调整：让标题链接充满整个卡片区域，实现整卡可点击 */
+.post-card-content h3 a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+/* 使用伪元素将链接扩展到整个卡片 */
+.post-card-content h3 a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1; /* 确保它在最上层 */
+}
+
+/* 5. 新增：对摘要文字进行多行截断，防止内容溢出破坏布局 */
+.post-excerpt {
+    color: #555;
+    flex-grow: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* 最多显示4行，超出部分显示省略号 */
+    line-height: 1.6; /* 确保行高一致 */
+    margin-top: 10px;
+}
+
+/* 6. 按照您的要求，隐藏“阅读更多”按钮 */
+.read-more-link {
+    display: none;
+}
+
+/* 隐藏发布时间等元信息 (从上一版保留) */
 .post-meta {
     display: none;
 }
 
-/* --- END: 博客列表 Feed 流样式 --- */
+/* --- END: 博客列表 Feed 流样式 (优化版) --- */
+
+
+/* --- START: 响应式适配 (优化版) --- */
+@media (max-width: 768px) {
+    .post-card {
+        flex-direction: column; 
+        height: auto; /* 在手机端取消固定高度，让内容自然撑开 */
+    }
+
+    .post-card-image {
+        width: 100%;
+        height: 180px;
+    }
+
+    /* 在手机端，摘要截断的行数可以适当减少 */
+    .post-excerpt {
+        -webkit-line-clamp: 3;
+    }
+}
+/* --- END: 响应式适配 (优化版) --- */
 
 
 /* --- START: 针对手机端的响应式适配 --- */
