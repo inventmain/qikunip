@@ -61,8 +61,13 @@ title: 专业观点
 }
 .post-excerpt {
     color: #555;
-    flex-grow: 1; /* 让摘要部分占据多余空间 */
+    flex-grow: 1;
     margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 最多显示3行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .read-more-link {
     text-decoration: none;
