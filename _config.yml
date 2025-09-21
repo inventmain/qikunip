@@ -2,7 +2,7 @@
 # 这个部分是网站的基本信息
 title: 启坤专业观点
 description: 启坤专家团队的深度洞察与行业分析
-baseurl: "/qikunip" # 如果你的网站放在子目录，需要在这里填写，例如 "/my-blog"
+baseurl: "" # 如果你的网站放在子目录，需要在这里填写，例如 "/my-blog"
 url: "" # 你的网站域名，例如 "https://yourusername.github.io"
 
 # Build settings
