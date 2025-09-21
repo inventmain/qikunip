@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专利申请基础问题 - 启坤FAQ</title>
+    <meta name="description" content="解答关于专利申请的核心问题：发明、实用新型、外观设计的区别，申请流程、周期与费用，以及如何进行高价值专利布局，提升专利质量。">
+    <meta name="keywords" content="专利申请流程, 发明专利申请, 高价值专利布局, 专利申请费用, 启坤知识产权FAQ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0056b3; --secondary-color: #ba9a3e; --cta-color: #ff6f61;
+            --dark-color: #222831; --light-color: #ffffff; --gray-color: #f4f4f4;
+            --text-color: #333; --header-bg: #000; --footer-bg: #1C1C1C;
+            --brand: #005bac; --green: #07c160; --bg: #f7f8fa;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); margin: 0; color: var(--text-color); line-height: 1.75; padding-top: 80px; }
+        .container-faq { max-width: 980px; margin: auto; padding: 20px; }
+        .navbar { /* ... 粘贴启坤的导航栏样式 ... */ position: fixed; top: 0; width: 100%;}
+        .logo-area img { max-height: 50px; }
+        footer { /* ... 粘贴启坤的页脚样式 ... */ }
+
+        .title{font-size:28px;font-weight:700; margin-bottom: 8px;}
+        .meta{font-size:14px;color:#666; margin-bottom: 24px;}
+        .toc-wrap{display:grid;grid-template-columns:260px 1fr;gap:24px}
+        .toc{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:14px;position:sticky;top:100px}
+        .toc h2{font-size:16px;margin:0 0 8px 0;color:var(--brand)}
+        .toc .sec{margin:8px 0}
+        .toc a{color:var(--green);text-decoration:none}
+        .toc ul{margin:6px 0 0 18px; padding-left: 0; list-style: none;}
+        h2.section{margin:28px 0 12px;border-left:4px solid var(--brand);padding-left:10px;color:#222}
+        .faq-item{padding:14px 0;border-bottom:1px solid #eee}
+        .faq-item h3{font-size:18px;margin:6px 0;color:#222}
+        .faq-item p, .faq-item ul{margin:6px 0}
+        .tip{background:#f9fcff;border-left:4px solid var(--brand);padding:10px 12px;border-radius:6px;margin:10px 0;color:#2b3a42}
+        .back{margin-top:8px;text-align:right}
+        .back a{font-size:13px;color:#666;text-decoration:none}
+        .cta{margin:22px 0;padding:12px;border:1px dashed #cbd6e2;border-radius:10px;background:#fbfdff}
+        @media(max-width:960px){ .toc-wrap{grid-template-columns:1fr} .toc{position:static; margin-bottom: 24px;} }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"发明、实用新型和外观设计专利有什么区别？","acceptedAnswer":{"@type":"Answer","text":"发明：保护的是新的技术方案，技术含量最高，需实质审查，保护期20年。实用新型：保护产品的形状、构造的创新，也称“小发明”，只需形式审查，保护期10年。外观设计：保护产品的形状、图案、色彩等富有美感的设计，只需形式审查，保护期15年。"}},
+        {"@type":"Question","name":"申请一项发明专利需要多久？","acceptedAnswer":{"@type":"Answer","text":"在未加急的情况下，平均授权周期约22个月，但受技术领域和审查员工作量的影响。启坤擅长利用优先审查（周期6-12个月）等加速通道，为有价值的专利争取更快的授权速度。"}},
+        {"@type":"Question","name":"什么是“高价值专利布局”？","acceptedAnswer":{"@type":"Answer","text":"它不是为了申请而申请，而是以终为始，从市场竞争和未来变现（诉讼、许可、交易）的角度出发，规划能够形成技术壁垒、让对手难以规避的专利组合。这需要对技术、法律和商业都有深刻理解，是启坤的核心优势。"}},
+        {"@type":"Question","name":"专利申请的主要流程是怎样的？","acceptedAnswer":{"@type":"Answer","text":"主要流程：技术交底 → 专利检索与分析 → 撰写申请文件（权利要求书、说明书等） → 提交申请 → 受理 → 初步审查 → （发明专利）实质审查 → 授权或驳回。启坤的专家团队（前审查员、资深律师）会在撰写和审查意见答复阶段最大化您的专利价值。"}},
+        {"@type":"Question","name":"申请一项专利大概需要多少钱？","acceptedAnswer":{"@type":"Answer","text":"费用包含两部分：1. 官方费用：发明专利申请阶段合计约3450元，满足条件可申请减缴。2. 代理服务费：根据技术复杂度和撰写质量要求而定。启坤专注于高价值专利，我们的服务费反映了我们投入的专家资源和对最终授权后价值的承诺。"}},
+        {"@type":"Question","name":"如果我的专利申请被驳回了怎么办？","acceptedAnswer":{"@type":"Answer","text":"收到驳回决定后，有3个月的时间可以向国家知识产权局提出“驳回复审”请求。这是争取权利的关键程序。启坤的团队拥有丰富的复审经验，能精准分析驳回理由，撰写有说服力的意见陈述书，大大提高复审成功率。"}},
+        {"@type":"Question","name":"如何撰写高质量的权利要求书？","acceptedAnswer":{"@type":"Answer","text":"权利要求书是专利的“心脏”，界定其保护范围。高质量的撰写需要：1. 合理的布局：用独立权利要求限定最小保护范围，用从属权利要求构建层层递进的保护网。2. 精准的用词：每个词都可能影响保护范围的大小和稳定性。3. 前瞻性思考：预判竞争对手可能采取的规避设计。这正是顶级代理师价值的体现。"}},
+        {"@type":"Question","name":"什么是“优先权”？","acceptedAnswer":{"@type":"Answer","text":"指申请人在首次提出专利申请后12个月（发明、实用新型）或6个月（外观设计）内，就相同主题再次提出申请时，可以享有首次申请的申请日。这在进行国际布局或对方案进行完善时非常重要，可以避免因期间出现的新技术而丧失新颖性。"}}]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header: 保持和官网一致 -->
+    <header class="navbar">
+        <div class="container-faq" style="display: flex; justify-content: space-between; align-items: center;">
+             <a href="index.html" class="logo-area">
+                <img src="https://user-assets.sxlcdn.com/images/1191000/FrjHVpeHT7qVJm905hWVKcg62gZx.jpeg" alt="启坤知识产权 Logo">
+                <div class="logo-text"><h1 style="font-size:24px; color:#fff; margin:0;"><strong>启坤知识产权</strong></h1></div>
+            </a>
+            <a href="mailto:contact@qikunip.com" style="padding: 10px 25px; border-radius: 5px; background: var(--cta-color); color: var(--light-color); font-weight: bold; text-decoration: none;">联系我们</a>
+        </div>
+    </header>
+
+    <div class="container-faq">
+        <h1 class="title">专利申请基础问题</h1>
+        <div class="meta">启坤知识产权 · 更新日期：2025-09-21</div>
+
+        <div class="toc-wrap">
+            <nav class="toc" id="toc">
+                <h2>目录</h2>
+                <div class="sec"><a href="#sec-basic">一、基础知识</a>
+                    <ul>
+                        <li><a href="#q-basic-1">三种专利类型的区别？</a></li>
+                        <li><a href="#q-basic-2">发明专利授权周期？</a></li>
+                        <li><a href="#q-basic-3">什么是高价值专利布局？</a></li>
+                    </ul>
+                </div>
+                <div class="sec"><a href="#sec-process">二、流程与策略</a>
+                    <ul>
+                        <li><a href="#q-process-1">专利申请主要流程？</a></li>
+                        <li><a href="#q-process-2">专利申请费用构成？</a></li>
+                        <li><a href="#q-process-3">申请被驳回怎么办？</a></li>
+                        <li><a href="#q-process-4">如何撰写高质量权利要求？</a></li>
+                        <li><a href="#q-process-5">什么是“优先权”？</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main>
+                <h2 id="sec-basic" class="section">一、基础知识</h2>
+                <div class="faq-item" id="q-basic-1">
+                    <h3>发明、实用新型和外观设计专利有什么区别？</h3>
+                    <p><strong>发明：</strong>保护的是产品、方法或其改进所提出的新的技术方案。技术含量最高，需要经过实质审查，保护期为20年。</p>
+                    <p><strong>实用新型：</strong>只保护产品的形状、构造或者其结合所提出的适于实用的新的技术方案。常被称为“小发明”，只需形式审查，授权快，保护期为10年。</p>
+                    <p><strong>外观设计：</strong>保护产品的形状、图案或者其结合以及色彩与形状、图案的结合所作出的富有美感并适于工业应用的新设计。只需形式审查，保护期为15年。</p>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                <div class="faq-item" id="q-basic-2">
+                    <h3>申请一项发明专利需要多久？</h3>
+                    <p>在未加急的情况下，中国发明专利的平均授权周期约为 <strong>22个月</strong>。但具体时间受技术领域复杂性、审查员工作量和申请文件质量等多种因素影响。</p>
+                    <div class="tip">启坤擅长为真正具备核心价值的专利技术启动加速程序，如优先审查（周期可缩短至6-12个月），确保您的创新成果能尽快获得法律保护。</div>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                <div class="faq-item" id="q-basic-3">
+                    <h3>什么是“高价值专利布局”？</h3>
+                    <p>它和普通申请的根本区别在于目标不同。普通申请的目标是“拿到证书”，而高价值专利布局的目标是“创造有商业价值的资产”。</p>
+                    <p>启坤从终局出发，在申请之初就充分考虑未来的市场竞争格局和变现可能性（如诉讼、许可、交易），为您规划一系列能够形成技术壁垒、让竞争对手难以规避的专利组合。这需要对技术、法律和商业都有深刻的理解，是启坤的核心优势。</p>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+
+                <h2 id="sec-process" class="section">二、流程与策略</h2>
+                <div class="faq-item" id="q-process-1">
+                    <h3>专利申请的主要流程是怎样的？</h3>
+                    <p>主要流程：技术交底 → 专利检索与分析 → 撰写高质量申请文件（特别是权利要求书、说明书） → 提交申请 → 国家知识产权局受理 → 初步审查 → （发明专利）公开及实质审查 → 授权或驳回。</p>
+                    <p>在整个流程中，<strong>撰写质量</strong>和<strong>审查意见答复</strong>是决定专利最终价值的关键。启坤的专家团队（由前审查员、资深律师组成）将在这两个核心环节为您保驾护航。</p>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                <div class="faq-item" id="q-process-2">
+                    <h3>申请一项专利大概需要多少钱？</h3>
+                    <p>费用主要包含两部分：</p>
+                    <ul>
+                        <li><strong>官方费用：</strong>由国家知识产权局收取。以发明专利为例，申请阶段合计约3450元。符合条件的申请人可申请70%-85%的费用减缴。</li>
+                        <li><strong>代理服务费：</strong>由专利代理机构收取。服务费与投入的专家资源、技术复杂度和最终的撰写质量直接相关。启坤专注于高价值专利，我们的服务费反映了我们对专利最终商业价值的承诺。</li>
+                    </ul>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                <div class="faq-item" id="q-process-3">
+                    <h3>如果我的专利申请被驳回了怎么办？</h3>
+                    <p>收到驳回决定绝不意味着终点。自收到决定之日起<strong>3个月</strong>内，您有权向国家知识产权局提出“驳回复审”请求。这是争回专利权的关键法律程序。</p>
+                    <p>启坤的团队拥有丰富的复审案件处理经验，能够精准分析审查员的驳回理由，找到法律和技术上的突破口，撰写强有力的意见陈述书，大大提高复审的成功率。</p>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                <div class="faq-item" id="q-process-4">
+                    <h3>如何撰写高质量的权利要求书？</h3>
+                    <p>权利要求书是专利的“心脏”，直接界定了未来专利权的保护范围。一份高质量的权利要求书需要：</p>
+                    <ul>
+                        <li><strong>合理的保护层次：</strong>用独立权利要求限定最核心的保护范围，再用一系列从属权利要求构建层层递进、严密防护的保护网。</li>
+                        <li><strong>精准的法律用词：</strong>每一个技术术语的界定都可能在未来的诉讼中成为焦点。</li>
+                        <li><strong>深度的技术理解与前瞻性：</strong>不仅要保护现有技术，更要预判竞争对手可能采取的规避设计路径，并提前封堵。</li>
+                    </ul>
+                    <div class="tip">这正是顶级专利代理师与普通申请文员的核心区别，也是启坤的价值所在。</div>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                 <div class="faq-item" id="q-process-5">
+                    <h3>什么是“优先权”？</h3>
+                    <p>优先权是一项重要的专利制度。它允许申请人在首次提出专利申请后的特定期限内（发明和实用新型为12个月，外观设计为6个月），就相同主题再次提出申请时，可以合法地享有首次申请的申请日期。</p>
+                    <p>它的主要作用是：为您争取时间，以便在首次申请后继续完善技术方案或准备国际申请，同时不用担心在此期间出现的新技术会影响您专利的新颖性。</p>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                <div class="cta">
+                    需要进行高价值专利布局或对现有申请文件进行“体检”？请立即<a href="mailto:contact@qikunip.com">联系启坤</a>，获取免费的初步评估。
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- Footer: 保持和官网一致 -->
+    <footer style="background-color: var(--footer-bg); color: #ccc; padding: 40px 0; text-align: center; font-size: 14px; margin-top: 40px;">
+        <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved.</p>
+        <p><a href="https://beian.miit.gov.cn/" target="_blank" style="color: #ccc; text-decoration: none;">京ICP备19020611号-1</a></p>
+    </footer>
+</body>
+</html>
+

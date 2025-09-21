@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专利诉讼基础问题 - 启坤FAQ</title>
+    <meta name="description" content="解答专利维权的核心问题：如何判定专利侵权，专利诉讼的流程、周期与费用，侵权赔偿额的计算方法，以及被告方常见的抗辩策略。">
+    <meta name="keywords" content="专利诉讼, 专利侵权, 专利维权, 侵权赔偿, 启坤知识产权FAQ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0056b3; --secondary-color: #ba9a3e; --cta-color: #ff6f61;
+            --dark-color: #222831; --light-color: #ffffff; --gray-color: #f4f4f4;
+            --text-color: #333; --header-bg: #000; --footer-bg: #1C1C1C;
+            --brand: #005bac; --green: #07c160; --bg: #f7f8fa;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); margin: 0; color: var(--text-color); line-height: 1.75; padding-top: 80px; }
+        .container-faq { max-width: 980px; margin: auto; padding: 20px; }
+        .navbar { /* ... 粘贴启坤的导航栏样式 ... */ position: fixed; top: 0; width: 100%;}
+        .logo-area img { max-height: 50px; }
+        footer { /* ... 粘贴启坤的页脚样式 ... */ }
+
+        .title{font-size:28px;font-weight:700; margin-bottom: 8px;}
+        .meta{font-size:14px;color:#666; margin-bottom: 24px;}
+        .toc-wrap{display:grid;grid-template-columns:260px 1fr;gap:24px}
+        .toc{background:#fafafa;border:1px solid #eee;border-radius:10px;padding:14px;position:sticky;top:100px}
+        .toc h2{font-size:16px;margin:0 0 8px 0;color:var(--brand)}
+        .toc .sec{margin:8px 0}
+        .toc a{color:var(--green);text-decoration:none}
+        .toc ul{margin:6px 0 0 18px; padding-left: 0; list-style: none;}
+        h2.section{margin:28px 0 12px;border-left:4px solid var(--brand);padding-left:10px;color:#222}
+        .faq-item{padding:14px 0;border-bottom:1px solid #eee}
+        .faq-item h3{font-size:18px;margin:6px 0;color:#222}
+        .faq-item p, .faq-item ol{margin:6px 0}
+        .tip{background:#f9fcff;border-left:4px solid var(--brand);padding:10px 12px;border-radius:6px;margin:10px 0;color:#2b3a42}
+        .back{margin-top:8px;text-align:right}
+        .back a{font-size:13px;color:#666;text-decoration:none}
+        .cta{margin:22px 0;padding:12px;border:1px dashed #cbd6e2;border-radius:10px;background:#fbfdff}
+        @media(max-width:960px){ .toc-wrap{grid-template-columns:1fr} .toc{position:static; margin-bottom: 24px;} }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"如何判断我的专利是否被侵权了？","acceptedAnswer":{"@type":"Answer","text":"核心是将被控侵权的技术方案与您的专利权利要求书进行比对。如果对方的技术方案包含了您某项独立权利要求中记载的全部技术特征，就构成了“字面侵权”。即使略有不同，但构成功能、方式、效果基本相同的“等同替换”，也可能构成“等同侵权”。这是一个非常专业的法律分析过程，需要由资深专利律师完成。"}},
+        {"@type":"Question","name":"专利侵权诉讼一般在哪里打？","acceptedAnswer":{"@type":"Answer","text":"通常由被告住所地或侵权行为地的中级人民法院管辖。现在，北京、上海、广州以及海南自贸港设立了专门的知识产权法院，审理专业性强的专利等案件。"}},
+        {"@type":"Question","name":"专利维权诉讼的流程是怎样的？","acceptedAnswer":{"@type":"Answer","text":"基本流程：侵权分析与取证 → 发送警告函（可选） → 准备诉状和证据并立案 → （法院）庭前证据交换 → 开庭审理 → 判决。一个专利诉讼案件的一审周期通常在6-12个月左右。"}},
+        {"@type":"Question","name":"侵权赔偿额是怎么计算的？","acceptedAnswer":{"@type":"Answer","text":"法院会依次按照以下四种方式确定赔偿额：1. 权利人因侵权所遭受的实际损失；2. 侵权人因侵权所获得的利益；3. 参照该专利许可使用费的合理倍数；4. 法定赔偿：在无法查明上述情况时，法院在3万元到500万元之间酌情判赔。对于恶意侵权且情节严重的，还可适用1-5倍的惩罚性赔偿。"}},
+        {"@type":"Question","name":"被告方一般会如何抗辩？","acceptedAnswer":{"@type":"Answer","text":"最常见的抗辩策略有：1. 提出“专利无效宣告请求”：釜底抽薪，主张你的专利本身就不该被授权，请求国家知识产权局宣告其无效。2. 不侵权抗辩：主张其技术方案未落入你专利的保护范围。3. 现有技术抗辩：主张其使用的技术在你申请专利之前就已经公开。4. 先用权抗辩：主张在你申请专利之前，他已经制造或做好了制造的必要准备。"}},
+        {"@type":"Question","name":"诉讼成本高吗？启坤的“全风险代理”如何运作？","acceptedAnswer":{"@type":"Answer","text":"专利诉讼确实成本不菲，包括律师费、诉讼费、公证费、鉴定费等。这正是启坤“全风险代理”模式的价值所在：对于我们评估后认为具有高价值和高胜诉率的专利，所有维权成本均由启坤承担。您无需投入一分钱，我们通过分享最终获得的赔偿或和解金来获取回报。"}},
+        {"@type":"Question","name":"什么是“诉前禁令”？","acceptedAnswer":{"@type":"Answer","text":"也叫诉前行为保全，是指在正式起诉前，如果情况紧急，不立即制止侵权行为将会给权利人造成难以弥补的损害，可以向法院申请裁定，要求对方立即停止侵权行为。申请诉前禁令需要提供担保，且法院审查非常严格。"}}]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header: 保持和官网一致 -->
+    <header class="navbar">
+        <div class="container-faq" style="display: flex; justify-content: space-between; align-items: center;">
+             <a href="index.html" class="logo-area">
+                <img src="https://user-assets.sxlcdn.com/images/1191000/FrjHVpeHT7qVJm905hWVKcg62gZx.jpeg" alt="启坤知识产权 Logo">
+                <div class="logo-text"><h1 style="font-size:24px; color:#fff; margin:0;"><strong>启坤知识产权</strong></h1></div>
+            </a>
+            <a href="mailto:contact@qikunip.com" style="padding: 10px 25px; border-radius: 5px; background: var(--cta-color); color: var(--light-color); font-weight: bold; text-decoration: none;">联系我们</a>
+        </div>
+    </header>
+
+    <div class="container-faq">
+        <h1 class="title">专利诉讼基础问题</h1>
+        <div class="meta">启坤知识产权 · 更新日期：2025-09-21</div>
+
+        <div class="toc-wrap">
+            <nav class="toc" id="toc">
+                <h2>目录</h2>
+                <div class="sec"><a href="#sec-basic">一、侵权与管辖</a>
+                    <ul>
+                        <li><a href="#q-basic-1">如何判断专利被侵权？</a></li>
+                        <li><a href="#q-basic-2">专利侵权官司在哪里打？</a></li>
+                        <li><a href="#q-basic-3">专利诉讼的主要流程？</a></li>
+                    </ul>
+                </div>
+                <div class="sec"><a href="#sec-process">二、赔偿与抗辩</a>
+                    <ul>
+                        <li><a href="#q-process-1">侵权赔偿额如何计算？</a></li>
+                        <li><a href="#q-process-2">被告方常见的抗辩策略？</a></li>
+                        <li><a href="#q-process-3">诉讼成本与全风险代理？</a></li>
+                        <li><a href="#q-process-4">什么是“诉前禁令”？</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main>
+                <h2 id="sec-basic" class="section">一、侵权与管辖</h2>
+                <div class="faq-item" id="q-basic-1">
+                    <h3>如何判断我的专利是否被侵权了？</h3>
+                    <p>这是一个非常专业且严谨的法律分析过程。核心步骤是将涉嫌侵权的产品或方法的技术方案，与您的<strong>专利权利要求书</strong>进行逐一比对。</p>
+                    <p>侵权判定的两大基本原则是：</p>
+                    <ol>
+                        <li><strong>全面覆盖原则：</strong>如果对方的技术方案包含了您某项独立权利要求中记载的<strong>全部</strong>技术特征，那么就落入了专利保护范围，构成侵权。</li>
+                        <li><strong>等同原则：</strong>即使对方的技术方案有一个或多个技术特征与您的权利要求在字面上不完全相同，但如果其采用基本相同的手段、实现基本相同的功能、达到基本相同的效果，并且是本领域普通技术人员无需创造性劳动就能联想到的，那么也可能构成等同侵权。</li>
+                    </ol>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                <div class="faq-item" id="q-basic-2">
+                    <h3>专利侵权官司一般在哪里打？</h3>
+                    <p>根据法律规定，专利侵权诉讼由<strong>侵权行为地</strong>或<strong>被告住所地</strong>的知识产权法院、中级人民法院或经最高人民法院指定的基层人民法院管辖。</p>
+                    <p>目前，中国已在北京、上海、广州以及海南自贸港设立了专门的<strong>知识产权法院</strong>，集中审理技术类案件，以确保审判的专业性。</p>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                 <div class="faq-item" id="q-basic-3">
+                    <h3>专利维权诉讼的主要流程是怎样的？</h3>
+                    <p>一个典型的专利诉讼一审流程包括：</p>
+                    <p>侵权分析与取证 → 发送侵权警告函（可选） → 准备诉状和证据材料 → 向有管辖权的法院提起诉讼并立案 → 法院送达，被告提交答辩状 → 庭前证据交换 → 开庭审理（法庭调查、辩论） → 法院判决。</p>
+                    <p>整个一审周期通常在<strong>6-12个月</strong>左右，复杂案件可能会更长。</p>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+
+                <h2 id="sec-process" class="section">二、赔偿与抗辩</h2>
+                <div class="faq-item" id="q-process-1">
+                    <h3>侵权赔偿额是怎么计算的？</h3>
+                    <p>法院在确定赔偿数额时，会依次按照以下四种方式进行：</p>
+                    <ol>
+                        <li>按照权利人因被侵权所遭受的<strong>实际损失</strong>来计算；</li>
+                        <li>如果实际损失难以确定，则按照侵权人因侵权所获得的<strong>利益</strong>来计算；</li>
+                        <li>如果前两者都难以确定，则参照该专利许可使用费的<strong>合理倍数</strong>来确定；</li>
+                        <li>如果以上三种方式均无法查明，法院将在法定赔偿额（人民币<strong>3万元以上500万元以下</strong>）的范围内酌情判决。</li>
+                    </ol>
+                    <div class="tip">特别地，对于恶意侵权且情节严重的，法院可以在计算出的赔偿额基础上，再处以<strong>一到五倍的惩罚性赔偿</strong>。</div>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                <div class="faq-item" id="q-process-2">
+                    <h3>被告方一般会如何抗辩？</h3>
+                    <p>被告方在诉讼中最常见的抗辩策略包括：</p>
+                    <ul>
+                        <li><strong>专利无效宣告：</strong>这是最常用的“釜底抽薪”策略。被告会向国家知识产权局请求宣告你的专利权无效，一旦专利被无效，侵权诉讼就失去了基础。</li>
+                        <li><strong>不侵权抗辩：</strong>主张其技术方案未落入你专利的保护范围（既不构成字面侵权，也不构成等同侵权）。</li>
+                        <li><strong>现有技术/设计抗辩：</strong>主张其使用的技术在你申请专利之前就已经公开，属于公知技术。</li>
+                        <li><strong>先用权抗辩：</strong>主张在你申请专利之前，他已经制造或做好了制造的必要准备，因此有权在原有范围内继续使用。</li>
+                    </ul>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                <div class="faq-item" id="q-process-3">
+                    <h3>诉讼成本高吗？启坤的“全风险代理”如何运作？</h3>
+                    <p>专利诉讼的成本确实不菲，通常包括案件受理费、律师费、证据保全/公证费、司法鉴定费等，对专利权人是不小的负担。</p>
+                    <p>这正是启坤<strong>“全风险代理”</strong>模式的价值所在：对于我们评估后认为具有高价值和高胜诉率的专利，从取证到诉讼的<strong>所有维权成本均由启坤预先承担</strong>。您无需投入一分钱，我们通过分享最终获得的赔偿金或和解金来获取回报，真正实现与您利益绑定、风险共担。</p>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                <div class="faq-item" id="q-process-4">
+                    <h3>什么是“诉前禁令”？</h3>
+                    <p>诉前禁令，法律上称为“诉前行为保全”，是一项强有力的临时保护措施。</p>
+                    <p>它指的是，在正式起诉前，如果情况紧急，不立即制止侵权方的行为将会给专利权人造成难以弥补的损害（例如侵权产品正在参加广交会），权利人可以向法院申请裁定，要求对方立即停止生产、销售等侵权行为。</p>
+                    <div class="tip">申请诉前禁令的门槛非常高，需要提供明确的侵权证据和相应的担保，法院会进行严格审查。</div>
+                    <div class="back"><a href="#toc">返回目录 ↑</a></div>
+                </div>
+                <div class="cta">
+                    发现侵权线索，但不确定如何行动？<a href="mailto:contact@qikunip.com">联系启坤</a>，我们将为您提供免费的侵权分析和维权策略评估。
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- Footer: 保持和官网一致 -->
+    <footer style="background-color: var(--footer-bg); color: #ccc; padding: 40px 0; text-align: center; font-size: 14px; margin-top: 40px;">
+        <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved.</p>
+        <p><a href="https://beian.miit.gov.cn/" target="_blank" style="color: #ccc; text-decoration: none;">京ICP备19020611号-1</a></p>
+    </footer>
+</body>
+</html>
+
