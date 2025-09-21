@@ -60,11 +60,15 @@
         .page-header h1 { font-size: 2.8em; color: var(--light-color); }
         .page-header p { font-size: 1.1em; opacity: 0.8; }
         .blog-section { padding: 80px 0; }
+        .blog-section .container {
+            max-width: 1100px; /* 1. 缩小容器，让卡片整体变窄 */
+        }
         
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* PC端一行3个 */
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
+            align-items: start; /* 2. 让不同高度的卡片从顶部对齐 */
         }
 
         .post-card {
@@ -91,16 +95,17 @@
         }
 
         .post-card-body {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column; /* 默认垂直布局 (无图) */
+            /* 3. 移除 flex-grow，让卡片高度自适应内容 */
         }
         .post-card-body.with-image {
-            flex-direction: row; /* 有图时水平布局 */
-            gap: 20px;
+            position: relative; /* 4. 为图片绝对定位创建参照 */
+            padding-left: 140px; /* 5. 为图片留出空间，让摘要与标题对齐 */
+            min-height: 120px;   /* 确保容器至少和图片一样高 */
         }
         .post-card-image {
-            flex-shrink: 0;
+            position: absolute; /* 6. 将图片绝对定位到留出的空间里 */
+            left: 0;
+            top: 0;
             width: 120px;
             height: 120px;
             background-size: cover;
@@ -110,13 +115,8 @@
         .post-excerpt {
             color: #555;
             margin: 0;
-            /* 确保文字可以完整显示 */
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 4; /* 根据需要调整显示行数 */
-            overflow: hidden;
-            text-overflow: ellipsis;
             line-height: 1.7;
+            /* 7. 移除文字截断，显示完整摘要 */
         }
         /* --- END: 博客列表页样式 --- */
 
