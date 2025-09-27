@@ -4,7 +4,7 @@ title: 专业观点
 ---
 
 <style>
-    /* --- 专业观点页面的样式 --- */
+/* --- 专业观点页面的样式 --- */
 .page-header {
     background: var(--dark-color);
     color: var(--light-color);
@@ -19,8 +19,9 @@ title: 专业观点
     padding: 60px 0;
 }
 .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Change these properties to stack the cards vertically */
+    display: flex;
+    flex-direction: column;
     gap: 30px;
 }
 .post-card {
@@ -29,15 +30,19 @@ title: 专业观点
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    /* This will ensure the image and text are side by side */
+    flex-direction: row;
+    padding: 25px;
 }
 .post-card-image {
-    height: 200px;
+    width: 200px; /* Give the image a fixed width */
+    height: auto; /* Allow the height to adjust automatically */
     background-size: cover;
     background-position: center;
+    border-radius: 8px; /* Use the same border radius as the card */
+    margin-right: 25px; /* Add some space between the image and the text */
 }
 .post-card-content {
-    padding: 25px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -64,7 +69,7 @@ title: 专业观点
     flex-grow: 1;
     margin-bottom: 20px;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* 最多显示3行 */
+    -webkit-line-clamp: 3; /* Most browsers support this for multi-line ellipsis */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -73,13 +78,20 @@ title: 专业观点
     text-decoration: none;
     color: var(--primary-color);
     font-weight: bold;
-    align-self: flex-start; /* 链接总是在卡片底部 */
+    align-self: flex-start;
 }
 /* --- 响应式适配 --- */
 @media (max-width: 768px) {
     .page-header { padding: 40px 20px; }
     .page-header h1 { font-size: 2.2em; }
-    .blog-grid { grid-template-columns: 1fr; }
+    /* On smaller screens, stack the image and text vertically */
+    .post-card { flex-direction: column; }
+    .post-card-image {
+        width: 100%;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
 </style>
 
