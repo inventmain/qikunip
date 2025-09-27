@@ -36,7 +36,7 @@
         .nav-links > li { margin-left: 30px; position: relative; }
         .nav-links a, .nav-links .dropdown-toggle { text-decoration: none; color: var(--light-color); font-weight: 500; padding: 10px 0; transition: color 0.3s; cursor: pointer; display: flex; align-items: center; gap: 5px; }
         .nav-links > li > a:hover, .dropdown:hover .dropdown-toggle { color: var(--secondary-color); }
-        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--header-bg); border-radius: 4px; padding: 10px 0; list-style: none; min-width: 180px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--header-bg); border-radius: 4px; padding: 10px 0; list-style: none; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
         .dropdown:hover .dropdown-menu { display: block; }
         .dropdown-menu a { display: block; padding: 10px 20px; color: var(--light-color); white-space: nowrap; }
         .dropdown-menu a:hover { background-color: rgba(255, 255, 255, 0.1); }
@@ -68,31 +68,31 @@
         }
         /* --- END: 背景图片预留口 --- */
 
-/* 1. 让 .hero 成为定位容器 */
-.hero {
-    position: relative;          /* 关键：给伪元素当坐标系 */
-    background-image: url('images/your-monetization-background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: var(--light-color);
-    text-align: center;
-    padding: 100px 0;
-}
+        /* 1. 让 .hero 成为定位容器 */
+        .hero {
+            position: relative;          /* 关键：给伪元素当坐标系 */
+            background-image: url('images/your-monetization-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--light-color);
+            text-align: center;
+            padding: 100px 0;
+        }
 
-/* 2. 蒙版层 */
-.hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;                    /* 上右下左全 0，铺满容器 */
-    background: rgba(0,0,0,.60); /* 50 % 黑 = 灰色蒙版；想再暗改 0.6 */
-    z-index: 0;                  /* 盖住背景图，但低于文字 */
-}
+        /* 2. 蒙版层 */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;                    /* 上右下左全 0，铺满容器 */
+            background: rgba(0,0,0,.60); /* 50 % 黑 = 灰色蒙版；想再暗改 0.6 */
+            z-index: 0;                  /* 盖住背景图，但低于文字 */
+        }
 
-/* 3. 让文字容器浮在蒙版上方 */
-.hero .container {
-    position: relative;
-    z-index: 2;
-}
+        /* 3. 让文字容器浮在蒙版上方 */
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
 
         .hero h1 { font-size: 3em; color: var(--light-color); }
         .hero .subtitle { font-size: 1.2em; max-width: 800px; margin: 0 auto 30px auto; opacity: 0.9; }
@@ -160,56 +160,7 @@
             .grid-3, .process-flow { grid-template-columns: 1fr; } 
         }
         /* --- END: 响应式适配 --- */
-
-
     </style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "专利变现",
-  "name": "全风险代理专利变现服务",
-  "description": "启坤提供零风险的专利变现服务。我们采用全风险代理模式，为您承担所有前期费用，通过专利交易、许可或诉讼，成功唤醒您沉睡的专利价值，实现收益后再分成。",
-  "provider": {
-    "@type": "Organization",
-    "name": "启坤知识产权",
-    "url": "https://www.qikunip.com/"
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "CN"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "专利变现模式",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "专利交易"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "专利许可"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "专利诉讼"
-        }
-      }
-    ]
-  }
-}
-</script>
-
 </head>
 <body>
 
@@ -227,6 +178,8 @@
                     <ul class="dropdown-menu">
                         <li><a href="high-value-patent-layout.html">高价值专利布局</a></li>
                         <li><a href="patent-monetization.html">专利变现</a></li>
+                        <li><a href="patent-consulting.html">专利咨询服务</a></li>
+                        <li><a href="http://www.inventmain.com" target="_blank">专速通</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html">关于我们</a></li>
@@ -262,15 +215,8 @@
                                 <li>资深交易谈判专家</li>
                                 <li>擅长复杂交易的处理</li>
                             </ul>
-                                                <p style="margin-top:15px;text-decoration: underline;">
-  访问 
-      <span style="color:#1A1A1A;">Invent</span><span style="color:#2F80ED;">Hunt</span>
-  了解详情
-</p>
-
                         </div>
                     </a>
-
                     <a href="https://www.inventhub.cn" target="_blank" rel="noopener noreferrer" class="card-link">
                         <div class="card">
                             <div class="icon">🤝</div>
@@ -281,14 +227,8 @@
                                 <li>灵活的许可方案设计</li>
                                 <li>丰富的许可谈判经验</li>
                             </ul>
-                                                                            <p style="margin-top:15px;text-decoration: underline;">
-  访问 
-    <span style="color:#1A1A1A;">Invent</span><span style="color:#2F80ED;">Hub</span>
-  了解详情
-</p>
                         </div>
                     </a>
-
                     <div class="card">
                         <div class="icon">⚖️</div>
                         <h3>专利诉讼</h3>
@@ -329,21 +269,21 @@
         </section>
 
 
-<section>
-    <div class="container">
-        <h2 class="text-center">听听我们的客户怎么说</h2>
-        <div class="case-study-slider">
-            <div class="testimonial-card">
-                <h4>案例：某大型科技企业</h4>
-                <p><strong>痛点：</strong>每年在专利上花费数千万元，但此前未实现收入。而变现动作又需要支付高昂的前期法律成本。</p>
-                <p><strong>启坤方案：</strong>通过启坤的全风险代理模式，以极低的投入启动变现事宜。</p>
-                <p><strong>最终成果：</strong>达成许可收入，专利业务整体收支平衡不再是不可预期的。虽然目前尚未实现收支平衡，但启坤帮助我们看到了希望，也让我们可以向公司管理层交代进展。</p>
-                <blockquote>“启坤团队的专业性让我们放心。通过启坤的帮助，我们可以以低投入启动专利变现，没有前期法律费用。虽然还未达到收支平衡，但我们看到了未来的希望。”</blockquote>
+        <section>
+            <div class="container">
+                <h2 class="text-center">听听我们的客户怎么说</h2>
+                <div class="case-study-slider">
+                    <div class="testimonial-card">
+                        <h4>案例：某大型科技企业</h4>
+                        <p><strong>痛点：</strong>每年在专利上花费数千万元，但此前未实现收入。而变现动作又需要支付高昂的前期法律成本。</p>
+                        <p><strong>启坤方案：</strong>通过启坤的全风险代理模式，以极低的投入启动变现事宜。</p>
+                        <p><strong>最终成果：</strong>达成许可收入，专利业务整体收支平衡不再是不可预期的。虽然目前尚未实现收支平衡，但启坤帮助我们看到了希望，也让我们可以向公司管理层交代进展。</p>
+                        <blockquote>“启坤团队的专业性让我们放心。通过启坤的帮助，我们可以以低投入启动专利变现，没有前期法律费用。虽然还未达到收支平衡，但我们看到了未来的希望。”</blockquote>
 
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <section id="contact" class="final-cta">
             <div class="container">
