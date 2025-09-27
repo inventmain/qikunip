@@ -4,7 +4,7 @@ title: 专业观点
 ---
 
 <style>
-/* --- 专业观点页面的样式 --- */
+    /* --- 专业观点页面的样式 --- */
 .page-header {
     background: var(--dark-color);
     color: var(--light-color);
@@ -19,8 +19,9 @@ title: 专业观点
     padding: 60px 0;
 }
 .blog-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    /* Use repeat(auto-fit, ...) for a responsive grid with consistent width */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 .post-card {
@@ -28,64 +29,62 @@ title: 专业观点
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     overflow: hidden;
-    padding: 25px;
     display: flex;
-    flex-direction: column; /* Default to column layout for consistent spacing */
-}
-.post-card-title {
-    font-size: 1.4em;
-    margin: 0 0 15px 0;
-}
-.post-card-title a {
-    text-decoration: none;
-    color: var(--dark-color);
-}
-
-.post-card-body {
-    display: flex;
-    flex-direction: row; /* Default to horizontal layout for image + text */
-    gap: 20px;
-    align-items: flex-start; /* Aligns content to the top */
-}
-
-/* Specific styles for when there's no image */
-.post-card-body:not(.with-image) {
     flex-direction: column;
+    /* Set a fixed height for all cards for consistency */
+    height: 400px;
 }
-
 .post-card-image {
-    flex-shrink: 0;
-    width: 250px; /* Adjust the image width as needed */
-    height: 150px; /* Adjust the image height as needed */
+    height: 200px;
     background-size: cover;
     background-position: center;
-    border-radius: 6px;
 }
-
+.post-card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.post-meta {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+.post-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.post-card h3 a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 1.3em;
+}
+.post-card h3 a:hover {
+    color: var(--primary-color);
+}
 .post-excerpt {
     color: #555;
-    margin: 0;
     flex-grow: 1;
-    line-height: 1.7;
-    /* Remove text truncation for full display */
-    display: block;
-    overflow: visible;
-    text-overflow: unset;
-    -webkit-line-clamp: unset;
-    -webkit-box-orient: unset;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    /* This will truncate the text to fit within the card height */
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.read-more-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    align-self: flex-start;
 }
 /* --- 响应式适配 --- */
 @media (max-width: 768px) {
     .page-header { padding: 40px 20px; }
     .page-header h1 { font-size: 2.2em; }
     .blog-grid { grid-template-columns: 1fr; }
-    .post-card-body.with-image {
-        flex-direction: column; /* Stack image and text vertically on mobile */
-    }
-    .post-card-image {
-        width: 100%;
-        height: 200px; /* Adjust height for mobile */
-    }
+    .post-card { height: auto; } /* Auto height on mobile for better readability */
 }
 </style>
 
@@ -100,30 +99,20 @@ title: 专业观点
     <section class="blog-section">
         <div class="container">
             <div class="blog-grid">
-                
-<!-- 请将这段代码复制到 insights.md 中，替换原有的 for 循环 -->
-<div class="blog-grid">
-    {% for post in site.posts %}
-    <article class="post-card">
-        <h3 class="post-card-title">
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h3>
-
-        {% if post.image %}
-        <div class="post-card-body with-image">
-            <div class="post-card-image" style="background-image: url('{{ post.image | relative_url }}');"></div>
-            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-        </div>
-        {% else %}
-        <div class="post-card-body">
-            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-        </div>
-        {% endif %}
-    </article>
-    {% endfor %}
-
-</div>
-                </div>
+                {% for post in site.posts %}
+                <article class="post-card">
+                    {% if post.image %}
+                    <div class="post-card-image" style="background-image: url('{{ post.image | relative_url }}');"></div>
+                    {% endif %}
+                    <div class="post-card-content">
+                        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                        <div class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</div>
+                        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+                        <a href="{{ post.url | relative_url }}" class="read-more-link">阅读更多</a>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
         </div>
     </section>
 </main>
