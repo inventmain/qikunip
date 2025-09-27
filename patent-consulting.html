@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="启坤提供专业的专利咨询服务，包括专利无效宣告、FTO风险评议、专利检索分析、疑难案件处理等，为您的技术创新和商业决策保驾护航。">
+    <meta name="keywords" content="专利咨询, 专利无效, FTO, 专利检索, 疑难案件处理, 启坤知识产权">
+    <title>专利咨询服务 - 启坤知识产权</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0056b3; --secondary-color: #ba9a3e; --cta-color: #ff6f61;
+            --dark-color: #222831; --light-color: #ffffff; --gray-color: #f4f4f4;
+            --text-color: #333; --header-bg: #000; --footer-bg: #1C1C1C;
+        }
+        body { font-family: 'Microsoft YaHei', sans-serif; margin: 0; line-height: 1.6; color: var(--text-color); }
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        h1, h2, h3 { margin-bottom: 20px; color: var(--dark-color); }
+        h2 { text-align: center; font-size: 2.2em; }
+        .text-center { text-align: center; }
+
+        /* --- START: 标准化 Header & Navigation --- */
+        .navbar { background: var(--header-bg); color: var(--light-color); padding: 15px 0; position: sticky; top: 0; z-index: 1000; width: 100%; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo-area { display: flex; align-items: center; text-decoration: none; }
+        .logo-area img { max-height: 50px; margin-right: 15px; }
+        .logo-text h1 { font-size: 24px; color: var(--light-color); margin: 0; font-weight: bold; }
+        .nav-links { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; }
+        .nav-links > li { margin-left: 30px; position: relative; }
+        .nav-links a, .nav-links .dropdown-toggle { text-decoration: none; color: var(--light-color); font-weight: 500; padding: 10px 0; transition: color 0.3s; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+        .nav-links > li > a:hover, .dropdown:hover .dropdown-toggle { color: var(--secondary-color); }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--header-bg); border-radius: 4px; padding: 10px 0; list-style: none; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu a { display: block; padding: 10px 20px; color: var(--light-color); white-space: nowrap; }
+        .dropdown-menu a:hover { background-color: rgba(255, 255, 255, 0.1); }
+        .nav-contact-btn {
+            padding: 12px 40px; margin-left: 20px; border-radius: 5px; background: var(--cta-color);
+            color: var(--light-color); font-weight: bold; text-decoration: none; white-space: nowrap; transition: background .3s;
+        }
+        .nav-contact-btn:hover { background: #e65a4c; }
+        .btn-main { background: var(--cta-color); color: var(--light-color); padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; transition: background 0.3s; }
+        .btn-main:hover { background: #e65a4c; }
+        /* --- END: 标准化 Header & Navigation --- */
+        
+        .hero { 
+            background: rgba(0,0,0,.6) url('images/consulting-hero.jpg'); background-size: cover; background-position: center; background-blend-mode: darken;
+            color: var(--light-color); text-align: center; padding: 100px 0; 
+        }
+        .hero h1 { font-size: 3em; color: var(--light-color); }
+        .hero .subtitle { font-size: 1.2em; max-width: 800px; margin: 0 auto 30px auto; opacity: 0.9; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .service-item { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .service-item .icon { font-size: 2.5em; color: var(--primary-color); margin-bottom: 15px; }
+        .service-item h3 { font-size: 1.5em; margin-bottom: 10px; }
+        .service-item p { color: #555; }
+        .service-item ul { padding-left: 20px; color: #555; }
+
+        .final-cta { background: var(--dark-color); color: var(--light-color); text-align: center; }
+        .final-cta h2 { color: var(--light-color); }
+        
+        footer { background-color: var(--footer-bg); color: #ccc; padding: 40px 0; text-align: center; font-size: 14px; }
+        footer p, footer a { margin: 5px 0; color: #ccc; text-decoration: none; }
+
+        .nav-toggle { display: none; } /* Add responsive styles as needed */
+        @media (max-width: 992px) { /* Copy responsive nav styles from index.html */ }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-area">
+                <img src="https://user-assets.sxlcdn.com/images/1191000/FrjHVpeHT7qVJm905hWVKcg62gZx.jpeg" alt="启坤知识产权 Logo">
+                <div class="logo-text"><h1><strong>启坤知识产权</strong></h1></div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li class="dropdown">
+                    <span class="dropdown-toggle">服务 <i class="fas fa-chevron-down fa-xs"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="high-value-patent-layout.html">高价值专利布局</a></li>
+                        <li><a href="patent-monetization.html">专利变现</a></li>
+                        <li><a href="patent-consulting.html">专利咨询服务</a></li>
+                        <li><a href="http://www.inventmain.com" target="_blank">专速通</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="insights.html">专业观点</a></li>
+                <li><a href="faq.html">常见问题</a></li>
+                <li><a href="mailto:contact@qikunip.com" class="nav-contact-btn">联系我们</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero section-bg" style="background-image: url('images/consultant-background.png');">
+            <div class="container">
+                <h1>专利咨询服务矩阵</h1>
+                <p class="subtitle">在知识产权领域，无论遇到什么挑战，启坤的专家团队都能为您提供强有力的支持。</p>
+            </div>
+        </section>
+
+        <section style="background: var(--gray-color);">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>专利无效宣告</h3>
+                        <p>当您的核心专利遭遇挑战，或您需要扫清市场上的专利壁垒时，我们的专家（前审查员、资深律师）将是您最可靠的后盾。</p>
+                        <ul>
+                            <li>无效证据检索与分析</li>
+                            <li>无效理由精准剖析</li>
+                            <li>口头审理策略制定</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon"><i class="fas fa-search-dollar"></i></div>
+                        <h3>自由实施分析 (FTO)</h3>
+                        <p>产品上市前的“临门一脚”，也是规避重大侵权风险的关键一步。我们为您提供全面的FTO报告，确保您的商业活动安全无虞。</p>
+                         <ul>
+                            <li>全面专利风险排查</li>
+                            <li>产品技术特征拆解对比</li>
+                            <li>规避设计方案建议</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon"><i class="fas fa-database"></i></div>
+                        <h3>专利检索与分析</h3>
+                        <p>超越简单的关键词搜索。我们利用专业数据库和前审查员的独特视角，为您挖掘数据背后的战略价值。</p>
+                         <ul>
+                            <li>查新检索</li>
+                            <li>技术主题跟踪与分析</li>
+                            <li>竞争对手专利监控</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon"><i class="fas fa-globe-asia"></i></div>
+                        <h3>国际专利策略</h3>
+                        <p>全球市场需要全球化的知识产权视野。我们帮助您规划最高效、最具成本效益的国际专利申请路径。</p>
+                         <ul>
+                            <li>PCT国际申请</li>
+                            <li>巴黎公约途径</li>
+                            <li>重点国家/地区布局策略</li>
+                            <li><a href="high-value-patent-layout.html">了解更多高价值布局 &gt;</a></li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon"><i class="fas fa-puzzle-piece"></i></div>
+                        <h3>疑难案件处理</h3>
+                        <p>面对多次驳回、复审程序复杂或涉及多方利益纠葛的棘手案件，我们擅长找到突破口，为您争取最大化的权益。</p>
+                    </div>
+                     <div class="service-item">
+                        <div class="icon"><i class="fas fa-briefcase"></i></div>
+                        <h3>企业IP顾问</h3>
+                        <p>为高速成长的科技企业提供常年知识产权顾问服务，内容涵盖体系搭建、风险防控、价值管理等，成为您外部的“知识产权合伙人”。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="final-cta">
+            <div class="container">
+                <h2>遇到专利难题？</h2>
+                <p>立即联系启坤专家团队，获取一对一的专业咨询。</p>
+                <a href="mailto:contact@qikunip.com" class="btn-main" style="margin-top: 20px;">预约咨询</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer style="background-color: var(--footer-bg); color: #ccc; padding: 40px 0; text-align: center; font-size: 14px;">
+        <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved.</p>
+        <p><a href="https://beian.miit.gov.cn/" target="_blank" style="color: #ccc; text-decoration: none;">京ICP备19020611号-1</a></p>
+    </footer>
+
+</body>
+</html>
