@@ -19,7 +19,6 @@ title: 专业观点
     padding: 60px 0;
 }
 .blog-grid {
-    /* Change these properties to stack the cards vertically */
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -29,68 +28,63 @@ title: 专业观点
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     overflow: hidden;
-    display: flex;
-    /* This will ensure the image and text are side by side */
-    flex-direction: row;
     padding: 25px;
-}
-.post-card-image {
-    width: 200px; /* Give the image a fixed width */
-    height: auto; /* Allow the height to adjust automatically */
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px; /* Use the same border radius as the card */
-    margin-right: 25px; /* Add some space between the image and the text */
-}
-.post-card-content {
-    flex-grow: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Default to column layout for consistent spacing */
 }
-.post-meta {
-    color: #888;
-    font-size: 0.9em;
-    margin-bottom: 10px;
+.post-card-title {
+    font-size: 1.4em;
+    margin: 0 0 15px 0;
 }
-.post-card h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-.post-card h3 a {
+.post-card-title a {
     text-decoration: none;
     color: var(--dark-color);
-    font-size: 1.3em;
 }
-.post-card h3 a:hover {
-    color: var(--primary-color);
+
+.post-card-body {
+    display: flex;
+    flex-direction: row; /* Default to horizontal layout for image + text */
+    gap: 20px;
+    align-items: flex-start; /* Aligns content to the top */
 }
+
+/* Specific styles for when there's no image */
+.post-card-body:not(.with-image) {
+    flex-direction: column;
+}
+
+.post-card-image {
+    flex-shrink: 0;
+    width: 250px; /* Adjust the image width as needed */
+    height: 150px; /* Adjust the image height as needed */
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+}
+
 .post-excerpt {
     color: #555;
+    margin: 0;
     flex-grow: 1;
-    margin-bottom: 20px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* Most browsers support this for multi-line ellipsis */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.read-more-link {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: bold;
-    align-self: flex-start;
+    line-height: 1.7;
+    /* Remove text truncation for full display */
+    display: block;
+    overflow: visible;
+    text-overflow: unset;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
 }
 /* --- 响应式适配 --- */
 @media (max-width: 768px) {
     .page-header { padding: 40px 20px; }
     .page-header h1 { font-size: 2.2em; }
-    /* On smaller screens, stack the image and text vertically */
-    .post-card { flex-direction: column; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .post-card-body.with-image {
+        flex-direction: column; /* Stack image and text vertically on mobile */
+    }
     .post-card-image {
         width: 100%;
-        height: 200px;
-        margin-right: 0;
-        margin-bottom: 20px;
+        height: 200px; /* Adjust height for mobile */
     }
 }
 </style>
