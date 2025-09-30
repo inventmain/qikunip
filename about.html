@@ -489,22 +489,14 @@
         }
         // --- END: 客户服务弹窗逻辑 ---
 
-        // 汉堡菜单展开/收起逻辑
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+        // --- START: Mobile Navigation Toggle Logic ---
+        const navToggle = document.querySelector('.nav-toggle');
+        const body = document.body;
 
-if (navToggle && navLinks) {
-    navToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.body.classList.toggle('nav-open');
-    });
-
-    // 可选：点击菜单任意链接关闭菜单
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.body.classList.remove('nav-open');
+        navToggle.addEventListener('click', () => {
+            body.classList.toggle('nav-open');
         });
-    });
+        // --- END: Mobile Navigation Toggle Logic ---
 }
     </script>
 </body>
