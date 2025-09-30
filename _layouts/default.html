@@ -386,4 +386,27 @@
         });
         // --- END: Mobile Navigation Toggle Logic ---
 
-        //
+        // --- START: 新增客户服务弹窗逻辑 ---
+        const openModalBtn = document.getElementById('open-contact-modal');
+        const closeModalBtn = document.getElementById('close-contact-modal');
+        const contactModal = document.getElementById('contact-modal');
+
+        openModalBtn.addEventListener('click', () => {
+            contactModal.classList.add('active');
+        });
+
+        const closeModal = () => {
+            contactModal.classList.remove('active');
+        }
+
+        closeModalBtn.addEventListener('click', closeModal);
+        
+        contactModal.addEventListener('click', (event) => {
+            if (event.target === contactModal) {
+                closeModal();
+            }
+        });
+        // --- END: 新增客户服务弹窗逻辑 ---
+    </script>
+</body>
+</html>
