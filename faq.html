@@ -212,6 +212,28 @@
             .logo-slider img { height: 45px; margin: 0 20px; }
         }
         /* --- END: 响应式适配 --- */
+
+@media (max-width: 768px) {
+    /* 保证容器不超屏 */
+    .container {
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    /* FAQ 基础知识库改为单列纵向排布 */
+    .hub-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* 页脚适配小屏 */
+    footer .container {
+        padding: 0 15px;
+        text-align: left;
+    }
+}
+
+        
         }
     </style>
 </head>
