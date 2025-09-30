@@ -257,6 +257,39 @@
         }
         /* --- END: 新增客户服务入口样式 --- */
 
+        /* --- START: 移动端汉堡菜单按钮 --- */
+        .nav-toggle {
+            display: none; /* 默认隐藏 */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .nav-toggle .hamburger {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--light-color);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .nav-toggle .hamburger::before,
+        .nav-toggle .hamburger::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--light-color);
+            transition: top 0.3s ease, bottom 0.3s ease, transform 0.3s ease;
+        }
+        .nav-toggle .hamburger::before { top: -8px; }
+        .nav-toggle .hamburger::after { bottom: -8px; }
+        .nav-open .nav-toggle .hamburger { transform: rotate(45deg); }
+        .nav-open .nav-toggle .hamburger::before { top: 0; transform: rotate(90deg); }
+        .nav-open .nav-toggle .hamburger::after { bottom: 0; transform: rotate(90deg); }
+        /* --- END: 移动端汉堡菜单按钮 --- */
+        
         /* --- START: 响应式适配 --- */
         @media (max-width: 992px) {
             .blog-grid {
