@@ -6,6 +6,7 @@
     <meta name="description" content="了解启坤如何从顶级律所标准起步，发展成为专利价值实现专家。我们的团队由前审查员、顶级律师和行业IP总监组成，致力于将您的专利变为真正的商业财富。">
     <meta name="keywords" content="启坤团队, 知识产权专家, 专利律师, 罗朋, 王飞, 金杜合伙人, 国知局审查员">
     <title>关于我们 - 启坤</title>
+    <link rel="icon" href="https://user-assets.sxlcdn.com/images/1191000/FrjHVpeHT7qVJm905hWVKcg62gZx.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         :root {
@@ -110,6 +111,91 @@
         body.nav-open .nav-toggle .hamburger::before { top: 0; transform: rotate(90deg); }
         body.nav-open .nav-toggle .hamburger::after { bottom: 0; transform: rotate(90deg); }
         /* --- END: 移动端汉堡菜单按钮 --- */
+        
+        /* --- START: 新增客户服务入口样式 --- */
+        .floating-contact-btn {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 1050;
+        }
+        .floating-contact-btn button {
+            background: #07C160;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            color: var(--light-color);
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .floating-contact-btn button:hover {
+            background: #06AD56;
+        }
+        .contact-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1100;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-modal-overlay.active {
+            display: flex;
+        }
+        .contact-modal-content {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            width: 90%;
+            max-width: 320px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        .contact-modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: #888;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        .contact-modal-content h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: var(--dark-color);
+        }
+        .contact-modal-content img {
+            max-width: 180px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .contact-modal-content p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .contact-modal-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-modal-content a:hover {
+            text-decoration: underline;
+        }
+        /* --- END: 新增客户服务入口样式 --- */
 
         /* --- START: 响应式适配 --- */
         @media (max-width: 992px) {
@@ -223,7 +309,7 @@
                 <li><a href="about.html">关于我们</a></li>
                 <li><a href="insights.html">专业观点</a></li>
                 <li><a href="faq.html">常见问题</a></li>
-                <li><a href="mailto:contact@qikunip.com" class="nav-contact-btn">联系我们</a></li>
+                <li><a href="#" class="nav-contact-btn open-contact-modal-trigger">联系我们</a></li>
             </ul>
         </div>
     </header>
@@ -334,25 +420,74 @@
         <section id="contact-section" class="final-cta">
             <div class="container">
                 <h2>让我们的专业，成为您创新价值的放大器。</h2>
-                <a href="mailto:contact@qikunip.com" class="btn-main" style="margin-top: 20px;">立即联系我们，开启您的专利价值之旅</a>
+                <a href="#" class="btn-main open-contact-modal-trigger" style="margin-top: 20px;">立即联系我们，开启您的专利价值之旅</a>
             </div>
         </section>
     </main>
     
+    <div class="floating-contact-btn">
+        <button id="open-contact-modal" aria-label="联系我们">
+            <i class="fab fa-weixin"></i>
+        </button>
+    </div>
+
+    <div class="contact-modal-overlay" id="contact-modal">
+        <div class="contact-modal-content">
+            <button class="contact-modal-close" id="close-contact-modal" aria-label="关闭">&times;</button>
+            <h3>联系专属顾问</h3>
+            <img src="images/微信二维码.jpg" alt="启坤顾问微信二维码">
+            <p><strong>扫码添加顾问微信</strong></p>
+            <p>或致电：<a href="tel:010-82696906">010-8269 6906</a></p>
+            <p>或发送邮件至<br><a href="mailto:contact@qikunip.com">contact@qikunip.com</a></p>
+        </div>
+    </div>
     <footer>
         <div class="container">
-            <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved.</p>
-            <p><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备19020611号-1</a></p>
+            <p>北京启坤知识产权代理有限公司 | 国家知识产权局注册专利代理机构 机构代码：11655</p>
+            <p>北京办公室：北京市东城区王府井大街219号王府国际中心7层</p>
+            <p>上海办公室：上海市徐汇区天钥桥路333号腾飞大厦5层</p>
+            <p>联系电话: <a href="tel:010-82696906" style="color: #ccc; text-decoration: none;">010-8269 6906</a> | 邮箱: <a href="mailto:contact@qikunip.com" style="color: #ccc; text-decoration: none;">contact@qikunip.com</a></p>
+            <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved. | <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #ccc; text-decoration: none;">京ICP备19020611号-1</a></p>
         </div>
     </footer>
     
     <script>
-        const navToggle = document.querySelector('.nav-toggle');
-        const body = document.body;
-        navToggle.addEventListener('click', () => {
-            body.classList.toggle('nav-open');
-        });
-    </script>
+        // --- START: 客户服务弹窗逻辑 ---
+        const contactModal = document.getElementById('contact-modal');
+        const openModalTriggers = document.querySelectorAll('.open-contact-modal-trigger, #open-contact-modal');
+        const closeModalBtn = document.getElementById('close-contact-modal');
 
+        const openModal = () => {
+            if (contactModal) {
+                contactModal.classList.add('active');
+            }
+        }
+
+        const closeModal = () => {
+            if (contactModal) {
+                contactModal.classList.remove('active');
+            }
+        }
+
+        openModalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault(); // Stop link default behavior
+                openModal();
+            });
+        });
+
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', closeModal);
+        }
+        
+        if (contactModal) {
+            contactModal.addEventListener('click', (event) => {
+                if (event.target === contactModal) {
+                    closeModal();
+                }
+            });
+        }
+        // --- END: 客户服务弹窗逻辑 ---
+    </script>
 </body>
 </html>

@@ -6,6 +6,7 @@
     <meta name="description" content="启坤诚邀知识产权律师、同行及投资机构开展深度合作，我们提供顶尖的专利变现专业能力与全风险代理模式，共同为客户创造卓越价值。">
     <meta name="keywords" content="知识产权合作, 专利代理合作, 律师合作, 专利投资, 启坤">
     <title>合作伙伴 - 启坤知识产权 | 诚邀合作</title>
+    <link rel="icon" href="https://user-assets.sxlcdn.com/images/1191000/FrjHVpeHT7qVJm905hWVKcg62gZx.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         :root {
@@ -86,95 +87,105 @@
 
         .nav-toggle { display: none; }
         .hamburger { display: block; width: 25px; height: 2px; background-color: var(--light-color); position: relative; }
+        
+        /* --- START: 新增客户服务入口样式 --- */
+        .floating-contact-btn {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 1050;
+        }
+        .floating-contact-btn button {
+            background: #07C160;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            color: var(--light-color);
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .floating-contact-btn button:hover {
+            background: #06AD56;
+        }
+        .contact-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1100;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-modal-overlay.active {
+            display: flex;
+        }
+        .contact-modal-content {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            width: 90%;
+            max-width: 320px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        .contact-modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: #888;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        .contact-modal-content h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: var(--dark-color);
+        }
+        .contact-modal-content img {
+            max-width: 180px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .contact-modal-content p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .contact-modal-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-modal-content a:hover {
+            text-decoration: underline;
+        }
+        /* --- END: 新增客户服务入口样式 --- */
 
         @media (max-width: 992px) {
             .grid-3 { grid-template-columns: 1fr; }
             .nav-toggle { display: block; z-index: 1001; background: none; border: none; cursor: pointer; padding: 10px; }
             .navbar .container { flex-wrap: nowrap; }
             .nav-links { position: fixed; top: 0; right: 0; height: 100vh; width: 280px; background: var(--header-bg); flex-direction: column; align-items: flex-start; padding: 80px 30px 30px; transform: translateX(100%); transition: transform 0.3s ease-in-out; }
-            .nav-open .nav-links { transform: translateX(0); }
+            body.nav-open .nav-links { transform: translateX(0); }
             .nav-links > li { margin: 15px 0; width: 100%; }
             .dropdown-menu { position: static; display: none; background: #111; box-shadow: none; border-radius: 0; padding-left: 15px;}
             .dropdown:hover .dropdown-menu { display: block; }
         }
-
-        /* --- START: 移动端汉堡菜单按钮 --- */
-        .nav-toggle {
-            display: none; /* 默认隐藏 */
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-        }
-        .nav-toggle .hamburger {
-            display: block;
-            width: 25px;
-            height: 2px;
-            background-color: var(--light-color);
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-        .nav-toggle .hamburger::before,
-        .nav-toggle .hamburger::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--light-color);
-            transition: top 0.3s ease, bottom 0.3s ease, transform 0.3s ease;
-        }
-        .nav-toggle .hamburger::before { top: -8px; }
-        .nav-toggle .hamburger::after { bottom: -8px; }
-        .nav-open .nav-toggle .hamburger { transform: rotate(45deg); }
-        .nav-open .nav-toggle .hamburger::before { top: 0; transform: rotate(90deg); }
-        .nav-open .nav-toggle .hamburger::after { bottom: 0; transform: rotate(90deg); }
-        /* --- END: 移动端汉堡菜单按钮 --- */
-
-        /* --- START: 响应式适配 --- */
-        @media (max-width: 992px) {
-            .nav-toggle { display: block; z-index: 1001; }
-            .navbar .container { flex-wrap: nowrap; }
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: 0;
-                height: 100vh;
-                width: 280px;
-                background: var(--header-bg);
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 80px 30px 30px;
-                transform: translateX(100%);
-                transition: transform 0.3s ease-in-out;
-            }
-            .nav-open .nav-links { transform: translateX(0); }
-            .nav-links > li { margin: 15px 0; width: 100%; }
-            .nav-links a.nav-contact-btn { margin: 20px 0 0 0; text-align: center; display: block; }
-            .dropdown-menu { position: static; display: none; background: #111; box-shadow: none; border-radius: 0; padding-left: 15px;}
-            .dropdown:hover .dropdown-menu { display: block; }
-        }
-
-        @media (max-width: 768px) {
-            h2 { font-size: 1.8em; }
-            .hero { padding: 60px 20px; }
-            .hero h1 { font-size: 2.2em; }
-            .hero .subtitle { font-size: 1em; }
-            .problem-section, .services-section, .how-we-work-section, .case-studies, .value-promise-section, .team-section, .final-cta { padding: 60px 0; }
-            .services-section .grid, .case-studies .grid { grid-template-columns: 1fr; gap: 20px; }
-            .workflow-container { flex-direction: column; align-items: center; gap: 30px; }
-            .workflow-step { width: 80%; }
-            .workflow-container::before { left: 50%; transform: translateX(-50%); top: 25px; bottom: 25px; width: 4px; height: auto; right: auto; }
-            .main-partners-grid { grid-template-columns: 1fr; gap: 20px; }
-            .partner-card .header { flex-direction: column; text-align: center; }
-            .partner-card .header img { margin-right: 0; margin-bottom: 15px; }
-            .logo-slider img { height: 45px; margin: 0 20px; }
-        }
-        /* --- END: 响应式适配 --- */
-        
     </style>
 </head>
-<body>
+<body class="">
 
     <header class="navbar">
         <div class="container">
@@ -198,7 +209,7 @@
                 <li><a href="about.html">关于我们</a></li>
                 <li><a href="insights.html">专业观点</a></li>
                 <li><a href="faq.html">常见问题</a></li>
-                <li><a href="mailto:contact@qikunip.com" class="nav-contact-btn">联系我们</a></li>
+                <li><a href="#" class="nav-contact-btn open-contact-modal-trigger">联系我们</a></li>
             </ul>
         </div>
     </header>
@@ -304,19 +315,39 @@
             <div class="container">
                 <h2>让我们的专业能力，成为您业务增长的加速器。</h2>
                 <p style="margin: 20px 0 30px;">立即联系我们，探讨合作的可能性。</p>
-                <a href="mailto:contact@qikunip.com?subject=合作咨询" class="btn-main">发送合作意向</a>
+                <a href="#" class="btn-main open-contact-modal-trigger">发送合作意向</a>
             </div>
         </section>
     </main>
     
+    <div class="floating-contact-btn">
+        <button id="open-contact-modal" aria-label="联系我们">
+            <i class="fab fa-weixin"></i>
+        </button>
+    </div>
+
+    <div class="contact-modal-overlay" id="contact-modal">
+        <div class="contact-modal-content">
+            <button class="contact-modal-close" id="close-contact-modal" aria-label="关闭">&times;</button>
+            <h3>联系专属顾问</h3>
+            <img src="images/微信二维码.jpg" alt="启坤顾问微信二维码">
+            <p><strong>扫码添加顾问微信</strong></p>
+            <p>或致电：<a href="tel:010-82696906">010-8269 6906</a></p>
+            <p>或发送邮件至<br><a href="mailto:contact@qikunip.com">contact@qikunip.com</a></p>
+        </div>
+    </div>
     <footer>
         <div class="container">
-            <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved.</p>
-            <p><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备19020611号-1</a></p>
+            <p>北京启坤知识产权代理有限公司 | 国家知识产权局注册专利代理机构 机构代码：11655</p>
+            <p>北京办公室：北京市东城区王府井大街219号王府国际中心7层</p>
+            <p>上海办公室：上海市徐汇区天钥桥路333号腾飞大厦5层</p>
+            <p>联系电话: <a href="tel:010-82696906" style="color: #ccc; text-decoration: none;">010-8269 6906</a> | 邮箱: <a href="mailto:contact@qikunip.com" style="color: #ccc; text-decoration: none;">contact@qikunip.com</a></p>
+            <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved. | <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #ccc; text-decoration: none;">京ICP备19020611号-1</a></p>
         </div>
     </footer>
 
     <script>
+        // --- START: Mobile Navigation Toggle Logic ---
         const navToggle = document.querySelector('.nav-toggle');
         const body = document.body;
         if(navToggle) {
@@ -324,6 +355,44 @@
                 body.classList.toggle('nav-open');
             });
         }
+        // --- END: Mobile Navigation Toggle Logic ---
+
+        // --- START: 客户服务弹窗逻辑 ---
+        const contactModal = document.getElementById('contact-modal');
+        const openModalTriggers = document.querySelectorAll('.open-contact-modal-trigger, #open-contact-modal');
+        const closeModalBtn = document.getElementById('close-contact-modal');
+
+        const openModal = () => {
+            if (contactModal) {
+                contactModal.classList.add('active');
+            }
+        }
+
+        const closeModal = () => {
+            if (contactModal) {
+                contactModal.classList.remove('active');
+            }
+        }
+
+        openModalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault(); // Stop link default behavior
+                openModal();
+            });
+        });
+        
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', closeModal);
+        }
+        
+        if (contactModal) {
+            contactModal.addEventListener('click', (event) => {
+                if (event.target === contactModal) {
+                    closeModal();
+                }
+            });
+        }
+        // --- END: 客户服务弹窗逻辑 ---
     </script>
 
 </body>

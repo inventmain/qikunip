@@ -6,6 +6,7 @@
     <meta name="description" content="启坤以专利投资的视角，为您规划高价值专利资产，包括国际专利布局。我们从商业壁垒出发，构建能产生高额回报的专利组合，让您的创新成为未来的利润中心。">
     <meta name="keywords" content="高价值专利, 国际专利, 专利布局, 专利组合, 专利投资, 专利申请策略, PCT申请">
     <title>高价值专利投资与国际布局 - 启坤</title>
+    <link rel="icon" href="https://user-assets.sxlcdn.com/images/1191000/FrjHVpeHT7qVJm905hWVKcg62gZx.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         :root {
@@ -70,6 +71,92 @@
         .final-cta a.secondary-link { color: #aaa; text-decoration: underline; margin-top: 20px; display: inline-block; }
         footer { background-color: var(--footer-bg); color: #ccc; padding: 40px 0; text-align: center; font-size: 14px; }
         footer p, footer a { margin: 5px 0; color: #ccc; text-decoration: none; }
+        .nav-toggle { display: none; }
+
+        /* --- START: 新增客户服务入口样式 --- */
+        .floating-contact-btn {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 1050;
+        }
+        .floating-contact-btn button {
+            background: #07C160;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            color: var(--light-color);
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .floating-contact-btn button:hover {
+            background: #06AD56;
+        }
+        .contact-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1100;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-modal-overlay.active {
+            display: flex;
+        }
+        .contact-modal-content {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            width: 90%;
+            max-width: 320px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        .contact-modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: #888;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        .contact-modal-content h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: var(--dark-color);
+        }
+        .contact-modal-content img {
+            max-width: 180px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .contact-modal-content p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .contact-modal-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-modal-content a:hover {
+            text-decoration: underline;
+        }
+        /* --- END: 新增客户服务入口样式 --- */
 
         @media(max-width: 768px) { 
             h2 { font-size: 1.8em; }
@@ -78,80 +165,6 @@
             .hero h1 { font-size: 2.2em; }
             .comparison-section, .how-we-invest .grid { grid-template-columns: 1fr; gap: 20px; } 
         }
-        /* --- START: 移动端汉堡菜单按钮 --- */
-        .nav-toggle {
-            display: none; /* 默认隐藏 */
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-        }
-        .nav-toggle .hamburger {
-            display: block;
-            width: 25px;
-            height: 2px;
-            background-color: var(--light-color);
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-        .nav-toggle .hamburger::before,
-        .nav-toggle .hamburger::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--light-color);
-            transition: top 0.3s ease, bottom 0.3s ease, transform 0.3s ease;
-        }
-        .nav-toggle .hamburger::before { top: -8px; }
-        .nav-toggle .hamburger::after { bottom: -8px; }
-        .nav-open .nav-toggle .hamburger { transform: rotate(45deg); }
-        .nav-open .nav-toggle .hamburger::before { top: 0; transform: rotate(90deg); }
-        .nav-open .nav-toggle .hamburger::after { bottom: 0; transform: rotate(90deg); }
-        /* --- END: 移动端汉堡菜单按钮 --- */
-
-        /* --- START: 响应式适配 --- */
-        @media (max-width: 992px) {
-            .nav-toggle { display: block; z-index: 1001; }
-            .navbar .container { flex-wrap: nowrap; }
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: 0;
-                height: 100vh;
-                width: 280px;
-                background: var(--header-bg);
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 80px 30px 30px;
-                transform: translateX(100%);
-                transition: transform 0.3s ease-in-out;
-            }
-            .nav-open .nav-links { transform: translateX(0); }
-            .nav-links > li { margin: 15px 0; width: 100%; }
-            .nav-links a.nav-contact-btn { margin: 20px 0 0 0; text-align: center; display: block; }
-            .dropdown-menu { position: static; display: none; background: #111; box-shadow: none; border-radius: 0; padding-left: 15px;}
-            .dropdown:hover .dropdown-menu { display: block; }
-        }
-
-        @media (max-width: 768px) {
-            h2 { font-size: 1.8em; }
-            .hero { padding: 60px 20px; }
-            .hero h1 { font-size: 2.2em; }
-            .hero .subtitle { font-size: 1em; }
-            .problem-section, .services-section, .how-we-work-section, .case-studies, .value-promise-section, .team-section, .final-cta { padding: 60px 0; }
-            .services-section .grid, .case-studies .grid { grid-template-columns: 1fr; gap: 20px; }
-            .workflow-container { flex-direction: column; align-items: center; gap: 30px; }
-            .workflow-step { width: 80%; }
-            .workflow-container::before { left: 50%; transform: translateX(-50%); top: 25px; bottom: 25px; width: 4px; height: auto; right: auto; }
-            .main-partners-grid { grid-template-columns: 1fr; gap: 20px; }
-            .partner-card .header { flex-direction: column; text-align: center; }
-            .partner-card .header img { margin-right: 0; margin-bottom: 15px; }
-            .logo-slider img { height: 45px; margin: 0 20px; }
-        }
-        /* --- END: 响应式适配 --- */
-        
     </style>
 </head>
 <body>
@@ -178,7 +191,7 @@
                 <li><a href="about.html">关于我们</a></li>
                 <li><a href="insights.html">专业观点</a></li>
                 <li><a href="faq.html">常见问题</a></li>
-                <li><a href="mailto:contact@qikunip.com" class="nav-contact-btn">联系我们</a></li>
+                <li><a href="#" class="nav-contact-btn open-contact-modal-trigger">联系我们</a></li>
             </ul>
         </div>
     </header>
@@ -188,7 +201,7 @@
             <div class="container">
                 <h1>不仅是专利申请，而是专利投资。</h1>
                 <p class="subtitle">传统的专利申请追求“证书”，而启坤追求的是“资产”。我们从技术萌芽阶段就介入，以终为始，用投资人的眼光，为您规划和布局在未来能够产生高额回报的专利资产。</p>
-                <a href="#contact" class="btn-main">预约一次免费的专利布局咨询</a>
+                <a href="#" class="btn-main open-contact-modal-trigger">预约一次免费的专利布局咨询</a>
                 <p class="disclaimer">与兼具技术、法律、商业背景的专家1对1沟通</p>
             </div>
         </section>
@@ -231,7 +244,7 @@
                         <div class="icon">👥</div>
                         <div style="overflow: hidden;">
                             <h3>专家团队的商业重构</h3>
-                            <p>我们的专家团队（前审查员、顶级律师、行业IP总监）会深入理解您的商业模式，与您的研发团队进行头脑风暴。我们不仅仅是记录您的技术，更是帮助您从技术中提炼出最具商业壁垒的“扼喉点”，并将其转化为精准、坚固的权利要求。</p>
+                            <p>我们的专家团队（前审查员、顶级律师、行业IP总监）会深入理解您的商业模式，与您的研发团队进行头脑風暴。我们不仅仅是记录您的技术，更是帮助您从技术中提炼出最具商业壁垒的“扼喉点”，并将其转化为精准、坚固的权利要求。</p>
                         </div>
                     </div>
                     <div class="invest-module">
@@ -287,26 +300,84 @@
             <div class="container">
                 <h2>不要让您的下一个伟大创新，从一开始就埋下价值的短板。</h2>
                 <p>让启坤成为您的专利投资合伙人，从源头开始，为您的创新构建真正的商业护城河。</p>
-                <a href="mailto:contact@qikunip.com" class="btn-main" style="margin-top: 20px;">立即获取您的专属专利投资策略</a>
+                <a href="#" class="btn-main open-contact-modal-trigger" style="margin-top: 20px;">立即获取您的专属专利投资策略</a>
                 <br>
                 <a href="patent-monetization.html" class="secondary-link">了解我们的专利变现服务 &gt;</a>
             </div>
         </section>
     </main>
     
+    <div class="floating-contact-btn">
+        <button id="open-contact-modal" aria-label="联系我们">
+            <i class="fab fa-weixin"></i>
+        </button>
+    </div>
+
+    <div class="contact-modal-overlay" id="contact-modal">
+        <div class="contact-modal-content">
+            <button class="contact-modal-close" id="close-contact-modal" aria-label="关闭">&times;</button>
+            <h3>联系专属顾问</h3>
+            <img src="images/微信二维码.jpg" alt="启坤顾问微信二维码">
+            <p><strong>扫码添加顾问微信</strong></p>
+            <p>或致电：<a href="tel:010-82696906">010-8269 6906</a></p>
+            <p>或发送邮件至<br><a href="mailto:contact@qikunip.com">contact@qikunip.com</a></p>
+        </div>
+    </div>
     <footer>
         <div class="container">
-            <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved.</p>
-            <p><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备19020611号-1</a></p>
+            <p>北京启坤知识产权代理有限公司 | 国家知识产权局注册专利代理机构 机构代码：11655</p>
+            <p>北京办公室：北京市东城区王府井大街219号王府国际中心7层</p>
+            <p>上海办公室：上海市徐汇区天钥桥路333号腾飞大厦5层</p>
+            <p>联系电话: <a href="tel:010-82696906" style="color: #ccc; text-decoration: none;">010-8269 6906</a> | 邮箱: <a href="mailto:contact@qikunip.com" style="color: #ccc; text-decoration: none;">contact@qikunip.com</a></p>
+            <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved. | <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #ccc; text-decoration: none;">京ICP备19020611号-1</a></p>
         </div>
     </footer>
 
     <script>
+        // --- START: Mobile Navigation Toggle Logic ---
         const navToggle = document.querySelector('.nav-toggle');
         const body = document.body;
         navToggle.addEventListener('click', () => {
             body.classList.toggle('nav-open');
         });
+        // --- END: Mobile Navigation Toggle Logic ---
+
+        // --- START: 客户服务弹窗逻辑 ---
+        const contactModal = document.getElementById('contact-modal');
+        const openModalTriggers = document.querySelectorAll('.open-contact-modal-trigger, #open-contact-modal');
+        const closeModalBtn = document.getElementById('close-contact-modal');
+
+        const openModal = () => {
+            if (contactModal) {
+                contactModal.classList.add('active');
+            }
+        }
+
+        const closeModal = () => {
+            if (contactModal) {
+                contactModal.classList.remove('active');
+            }
+        }
+
+        openModalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault(); // Stop link default behavior
+                openModal();
+            });
+        });
+
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', closeModal);
+        }
+
+        if (contactModal) {
+            contactModal.addEventListener('click', (event) => {
+                if (event.target === contactModal) {
+                    closeModal();
+                }
+            });
+        }
+        // --- END: 客户服务弹窗逻辑 ---
     </script>
 
 </body>
