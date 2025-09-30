@@ -79,13 +79,81 @@ title: 专业观点
     font-weight: bold;
     align-self: flex-start;
 }
-/* --- 响应式适配 --- */
-@media (max-width: 768px) {
-    .page-header { padding: 40px 20px; }
-    .page-header h1 { font-size: 2.2em; }
-    .blog-grid { grid-template-columns: 1fr; }
-    .post-card { height: auto; } /* Auto height on mobile for better readability */
-}
+
+        /* --- START: 移动端汉堡菜单按钮 --- */
+        .nav-toggle {
+            display: none; /* 默认隐藏 */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .nav-toggle .hamburger {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--light-color);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .nav-toggle .hamburger::before,
+        .nav-toggle .hamburger::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--light-color);
+            transition: top 0.3s ease, bottom 0.3s ease, transform 0.3s ease;
+        }
+        .nav-toggle .hamburger::before { top: -8px; }
+        .nav-toggle .hamburger::after { bottom: -8px; }
+        .nav-open .nav-toggle .hamburger { transform: rotate(45deg); }
+        .nav-open .nav-toggle .hamburger::before { top: 0; transform: rotate(90deg); }
+        .nav-open .nav-toggle .hamburger::after { bottom: 0; transform: rotate(90deg); }
+        /* --- END: 移动端汉堡菜单按钮 --- */
+
+        /* --- START: 响应式适配 --- */
+        @media (max-width: 992px) {
+            .nav-toggle { display: block; z-index: 1001; }
+            .navbar .container { flex-wrap: nowrap; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 280px;
+                background: var(--header-bg);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 80px 30px 30px;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+            }
+            .nav-open .nav-links { transform: translateX(0); }
+            .nav-links > li { margin: 15px 0; width: 100%; }
+            .nav-links a.nav-contact-btn { margin: 20px 0 0 0; text-align: center; display: block; }
+            .dropdown-menu { position: static; display: none; background: #111; box-shadow: none; border-radius: 0; padding-left: 15px;}
+            .dropdown:hover .dropdown-menu { display: block; }
+        }
+
+        @media (max-width: 768px) {
+            h2 { font-size: 1.8em; }
+            .hero { padding: 60px 20px; }
+            .hero h1 { font-size: 2.2em; }
+            .hero .subtitle { font-size: 1em; }
+            .problem-section, .services-section, .how-we-work-section, .case-studies, .value-promise-section, .team-section, .final-cta { padding: 60px 0; }
+            .services-section .grid, .case-studies .grid { grid-template-columns: 1fr; gap: 20px; }
+            .workflow-container { flex-direction: column; align-items: center; gap: 30px; }
+            .workflow-step { width: 80%; }
+            .workflow-container::before { left: 50%; transform: translateX(-50%); top: 25px; bottom: 25px; width: 4px; height: auto; right: auto; }
+            .main-partners-grid { grid-template-columns: 1fr; gap: 20px; }
+            .partner-card .header { flex-direction: column; text-align: center; }
+            .partner-card .header img { margin-right: 0; margin-bottom: 15px; }
+            .logo-slider img { height: 45px; margin: 0 20px; }
+        }
+        /* --- END: 响应式适配 --- */
+    
 </style>
 
 <main>
