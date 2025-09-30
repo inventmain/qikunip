@@ -391,6 +391,17 @@
             });
         }
         // --- END: 客户服务弹窗逻辑 ---
+
+        // --- START: Mobile Navigation Toggle Logic ---
+        const navToggle = document.querySelector('.nav-toggle');
+        const body = document.body;
+
+        navToggle.addEventListener('click', () => {
+            body.classList.toggle('nav-open');
+        });
+        // --- END: Mobile Navigation Toggle Logic ---
+
+        
     </script>
 </body>
 </html>
