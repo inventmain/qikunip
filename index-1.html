@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="启坤专家团队，提供高价值专利申请与免费专利盘点服务。首件试写全额免单，赠送Claim Chart，重新定义专利的高质量与性价比。">
-    <meta name="keywords" content="高价值专利, 专利盘点, 专利代理, 启坤, Claim Chart, 专利申请, 专利免费盘点">
+    <meta name="description" content="启坤专家团队，提供全生命周期的专利价值管理服务。首件试写全额免单，赠送Claim Chart，重新定义专利的高质量与性价比。">
+    <meta name="keywords" content="高价值专利, 专利盘点, 专利代理, 启坤, Claim Chart, 专利申请, 专利投资">
     <title>启坤知识产权 - 重新定义专利高质量与性价比</title>
     <link rel="icon" href="https://user-assets.sxlcdn.com/images/1191000/FrjHVpeHT7qVJm905hWVKcg62gZx.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        /* --- 1. 原有样式完全保留 --- */
         :root {
-            --primary-color: #0056b3; /* 蓝色：代表专业、资产 */
-            --secondary-color: #ba9a3e; /* 金色：代表价值、性价比 */
-            --cta-color: #ff6f61; /* 红/橙色：代表进攻、高质量、行动 */
+            --primary-color: #0056b3;
+            --secondary-color: #ba9a3e;
+            --cta-color: #ff6f61;
             --dark-color: #222831;
             --light-color: #ffffff;
             --gray-color: #f4f4f4;
@@ -41,32 +42,79 @@
         .dropdown-menu a { display: block; padding: 10px 20px; color: var(--light-color); white-space: nowrap; }
         .dropdown-menu a:hover { background-color: rgba(255, 255, 255, 0.1); }
         
-        /* 按钮通用样式 */
         .btn-main { background: var(--cta-color); color: var(--light-color); padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; transition: background 0.3s; border: none; cursor: pointer; }
         .btn-main:hover { background: #e65a4c; }
         .nav-contact-btn { padding: 12px 40px; margin-left: 20px; border-radius: 5px; background: var(--cta-color); color: var(--light-color); font-weight: bold; text-decoration: none; white-space: nowrap; transition: background .3s; }
         .nav-contact-btn:hover { background: #e65a4c; }
 
-        /* Hero Section 样式优化 */
         .section-bg { position: relative; background-size: cover; background-position: center; color: var(--light-color); }
-        .section-bg::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); z-index: 1; }
+        .section-bg::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.65); z-index: 1; } /* 稍微加深遮罩以突出文字 */
         .section-bg > .container { position: relative; z-index: 2; }
+        .section-bg h1, .section-bg h2, .section-bg .subtitle { color: var(--light-color); }
         
-        /* 信任承诺版块 */
-        .trust-promise-section { background: #fff; padding: 60px 0; border-bottom: 1px solid #eee; }
-        .trust-box { border: 2px dashed var(--secondary-color); padding: 40px; border-radius: 10px; text-align: center; background: #fffcf5; max-width: 900px; margin: 0 auto; }
+        /* Hero 基础样式调整，适应新内容 */
+        .hero { padding: 80px 0 100px 0; text-align: center; } /* 底部留白给卡片 */
+        .hero h1 { font-size: 3em; margin-bottom: 20px; line-height: 1.2; }
+        .hero .subtitle { font-size: 1.2em; max-width: 800px; margin: 0 auto 30px auto; font-weight: 300; opacity: 0.9; }
 
-        /* 通用板块样式 */
-        .logo-wall-section { padding: 60px 0; background-color: #fcfcfc; }
+        /* --- 2. 新增：Hero区域专用样式 (保持简洁) --- */
+        .hero-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 25px;
+            border-radius: 50px;
+            margin-bottom: 50px;
+            backdrop-filter: blur(5px);
+        }
+        
+        /* Hero内部的双卡片 Grid */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            text-align: left; /* 卡片内部左对齐 */
+            margin-top: 20px;
+        }
+
+        /* Hero 卡片样式 (基于 service-card 微调) */
+        .hero-card {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            color: var(--dark-color);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .hero-card:hover { transform: translateY(-5px); }
+        .hero-card h2 { text-align: left; font-size: 1.6em; margin-bottom: 10px; color: var(--dark-color); }
+        .hero-card p { color: #555; margin-bottom: 20px; font-size: 1em; }
+        
+        /* 价值标签样式 */
+        .value-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* --- 3. 后续板块复用原有样式类 --- */
+        .logo-wall-section { padding: 60px 0; background-color: var(--light-color); }
         .logo-wall-section h3 { text-align: center; font-style: italic; color: #777; margin-bottom: 40px; font-weight: normal; }
         .logo-wall { overflow: hidden; position: relative; }
         .logo-slider { display: flex; width: fit-content; }
         .logo-slider.row-1 { animation: scroll-left 40s linear infinite; }
         .logo-slider.row-2 { animation: scroll-right 40s linear infinite; }
-        .logo-slider img { height: 60px; margin: 0 40px; filter: grayscale(100%); opacity: 0.6; transition: all 0.3s ease; }
-        .logo-slider img:hover { filter: grayscale(0%); opacity: 1; }
+        .logo-slider img { height: 70px; margin: 0 40px; filter: grayscale(30%); opacity: 0.85; transition: all 0.3s ease; }
+        .logo-slider img:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
         @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         @keyframes scroll-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+
+        .trust-section { padding: 80px 0; background: #fffcf5; border-bottom: 1px solid #eee; }
+        .trust-content { max-width: 800px; margin: 0 auto; text-align: center; border: 2px dashed var(--secondary-color); padding: 40px; border-radius: 10px; background: #fff; }
 
         .team-section { background: var(--gray-color); padding: 80px 0; }
         .main-partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px; margin-top: 40px; }
@@ -80,15 +128,17 @@
         .partner-card-simple { background: var(--light-color); padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
         .partner-card-simple h3 { font-size: 1.3em; margin-top: 0; margin-bottom: 5px; }
         .partner-card-simple .title { font-size: 0.9em; color: var(--primary-color); font-weight: bold; margin-left: 8px; }
+        .partner-card-simple p { font-size: 0.95em; color: #444; margin-bottom: 0; }
 
         .final-cta { padding: 80px 0; background: var(--dark-color); color: var(--light-color); text-align: center; }
-        .final-cta h2 { color: var(--light-color); margin-bottom: 10px; }
+        .final-cta h2 { color: var(--light-color); }
         
         footer { background-color: var(--footer-bg); color: #ccc; padding: 40px 0; text-align: center; font-size: 14px; }
+        footer p { margin: 5px 0; }
         footer a { color: #ccc; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
 
-        /* 移动端菜单 */
+        /* Mobile Nav & Responsive */
         .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 10px; }
         .nav-toggle .hamburger { display: block; width: 25px; height: 2px; background-color: var(--light-color); position: relative; transition: transform 0.3s ease; }
         .nav-toggle .hamburger::before, .nav-toggle .hamburger::after { content: ''; position: absolute; left: 0; width: 100%; height: 2px; background-color: var(--light-color); transition: top 0.3s ease, bottom 0.3s ease, transform 0.3s ease; }
@@ -98,7 +148,6 @@
         .nav-open .nav-toggle .hamburger::before { top: 0; transform: rotate(90deg); }
         .nav-open .nav-toggle .hamburger::after { bottom: 0; transform: rotate(90deg); }
 
-        /* 响应式 */
         @media (max-width: 992px) {
             .nav-toggle { display: block; z-index: 1001; }
             .nav-links { position: fixed; top: 0; right: 0; height: 100vh; width: 280px; background: var(--header-bg); flex-direction: column; align-items: flex-start; padding: 80px 30px 30px; transform: translateX(100%); transition: transform 0.3s ease-in-out; }
@@ -106,15 +155,21 @@
             .nav-links > li { margin: 15px 0; width: 100%; }
             .nav-links a.nav-contact-btn { margin: 20px 0 0 0; text-align: center; display: block; }
             .dropdown-menu { position: static; display: none; background: #111; box-shadow: none; padding-left: 15px;}
+            .dropdown:hover .dropdown-menu { display: block; }
         }
         @media (max-width: 768px) {
             h2 { font-size: 1.8em; }
+            .hero { padding: 60px 0; }
+            .hero h1 { font-size: 2em; }
             .hero-grid { grid-template-columns: 1fr; }
-            .main-partners-grid { grid-template-columns: 1fr; }
-            .trust-box { padding: 20px; }
+            .trust-content { padding: 20px; }
+            .main-partners-grid { grid-template-columns: 1fr; gap: 20px; }
+            .partner-card .header { flex-direction: column; text-align: center; }
+            .partner-card .header img { margin-right: 0; margin-bottom: 15px; }
+            .logo-slider img { height: 45px; margin: 0 20px; }
         }
 
-        /* 客服悬浮窗 & 弹窗 */
+        /* Contact Modal & Floating Button */
         .floating-contact-btn { position: fixed; right: 25px; bottom: 25px; z-index: 1050; }
         .floating-contact-btn button { background: #07C160; border: none; border-radius: 50%; width: 60px; height: 60px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); color: var(--light-color); font-size: 24px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background-color 0.3s; }
         .floating-contact-btn button:hover { background: #06AD56; }
@@ -126,7 +181,6 @@
         .contact-modal-content img { max-width: 180px; width: 100%; margin-bottom: 15px; }
         .contact-modal-content p { margin: 10px 0; font-size: 1.1em; }
         .contact-modal-content a { color: var(--primary-color); text-decoration: none; font-weight: bold; }
-
     </style>
 </head>
 <body>
@@ -150,91 +204,79 @@
                 </li>
                 <li><a href="partners.html">合作伙伴</a></li>
                 <li><a href="about.html">关于我们</a></li>
+                <li><a href="insights.html">专业观点</a></li>
+                <li><a href="faq.html">常见问题</a></li>
                 <li><a href="#" class="nav-contact-btn open-contact-modal-trigger">联系我们</a></li>
             </ul>
         </div>
     </header>
     
     <main>
-        <section class="hero section-bg" style="background-image: url('images/hero-background.jpg'); padding: 80px 0;">
+        <section class="hero section-bg" style="background-image: url('images/hero-background.jpg');">
             <div class="container">
-                
-                <h1 style="margin-bottom: 15px;">
-                    重新定义专利的<span style="color: var(--cta-color);">高质量</span>与<span style="color: #ffeb3b;">性价比</span>
+                <h1>
+                    重新定义专利的<span style="color: var(--cta-color);">高质量</span>与<span style="color: var(--secondary-color);">性价比</span>
                 </h1>
+                <p class="subtitle">用可视化标准验证每项专利的质量，用增值服务发掘每项专利的潜力。</p>
                 
-                <p class="subtitle" style="font-size: 1.2em; max-width: 800px; margin: 0 auto 20px; font-weight: 300;">
-                    用可视化标准验证每项专利的质量，用增值服务发掘每项专利的潜力。
-                </p>
-                
-                <div style="margin-bottom: 50px; display: inline-block; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.3); padding: 10px 25px; border-radius: 50px;">
-                    <span style="color: #ffeb3b; font-weight: bold; font-size: 1.1em; letter-spacing: 1px;">
-                        <i class="fas fa-crown"></i> 👑 首件试写全额免单
+                <div class="hero-tag">
+                    <span style="color: #ffeb3b; font-weight: bold; font-size: 1.1em;">
+                        <i class="fas fa-crown"></i> 首件试写全额免单
                     </span>
-                    <span style="color: #ddd; font-size: 0.8em; margin-left: 10px; font-weight: normal;">(注：限年发明申请量 > 10件的企业客户)</span>
+                    <span style="color: #ddd; font-size: 0.9em; margin-left: 10px;">(注：限年发明申请量 > 10件的企业客户)</span>
                 </div>
-                
-                <div class="hero-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+
+                <div class="hero-grid">
                     
-                    <div class="hero-card" style="background: rgba(255,255,255,0.96); padding: 35px; border-radius: 8px; color: var(--dark-color); text-align: left; border-top: 5px solid var(--cta-color); box-shadow: 0 10px 30px rgba(0,0,0,0.2); position: relative;">
-                        
-                        <div style="margin-bottom:15px;">
-                            <h2 style="font-size: 1.6em; margin:0 0 10px 0; text-align: left;">用 CC (权利要求对照表)<br>验证专利实际效用</h2>
-                            <span style="background: #fff0f0; color: #d93025; border: 1px solid #ffcdd2; padding: 5px 12px; border-radius: 4px; font-size: 0.9em; font-weight:bold; display: inline-block;">
-                                CC市场价 ¥5,000 - ¥10,000 /件
-                            </span>
+                    <div class="hero-card" style="border-top: 5px solid var(--cta-color);">
+                        <h2>用 CC (权利要求对照表)<br>验证专利实际效用</h2>
+                        <div class="value-tag" style="background: #fff0f0; color: #d93025; border: 1px solid #ffcdd2;">
+                            CC市场价 ¥5,000 - ¥10,000 /件
                         </div>
-
-                        <p style="font-size: 1em; color: #444; margin-bottom: 20px; line-height: 1.6;">
-                            <strong>真正的专利质量不仅仅是授权，而是能保护。</strong><br>
-                            我们拒绝“为了申请而申请”。在撰写阶段，我们即通过 <strong>Claim Chart (CC)</strong> 将权利要求与<span style="border-bottom: 2px solid var(--cta-color);">您的产品</span>或<span style="border-bottom: 2px solid var(--cta-color);">竞争对手</span>进行比对，确保专利能发挥实际效用。
+                        <p>
+                            真正的专利质量不仅仅是授权，而是能保护。<br>
+                            我们拒绝“为了申请而申请”。在撰写阶段，我们即通过 <strong>Claim Chart (CC)</strong> 将权利要求与<span style="color: var(--cta-color); font-weight:bold;">您的产品</span>或<span style="color: var(--cta-color); font-weight:bold;">竞争对手</span>进行比对，确保专利能发挥实际效用。
                         </p>
-
-                        <div style="border-top: 1px solid #eee; padding-top: 15px; margin-top: auto;">
-                            <p style="font-size: 0.8em; color: #888; margin-bottom: 10px;">(注：专利保护客户专属权益)</p>
-                            <a href="#" class="btn-main open-contact-modal-trigger" style="width: 100%; text-align: center;">预约高质量申请</a>
+                        <div style="border-top: 1px solid #eee; padding-top: 15px; margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                            <small style="color: #999;">(专利保护客户专属权益)</small>
+                            <a href="#" class="btn-main open-contact-modal-trigger" style="padding: 8px 20px; font-size: 0.9em;">预约高质量申请</a>
                         </div>
                     </div>
 
-                    <div class="hero-card" style="background: rgba(255,255,255,0.96); padding: 35px; border-radius: 8px; color: var(--dark-color); text-align: left; border-top: 5px solid var(--primary-color); box-shadow: 0 10px 30px rgba(0,0,0,0.2); position: relative;">
-                        
-                        <div style="margin-bottom:15px;">
-                            <h2 style="font-size: 1.6em; margin:0 0 10px 0; text-align: left;">用免费盘点<br>发掘专利潜力</h2>
-                            <span style="background: #e8f0fe; color: var(--primary-color); border: 1px solid #b3d7ff; padding: 5px 12px; border-radius: 4px; font-size: 0.9em; font-weight:bold; display: inline-block;">
-                                包含服务市值 ¥200 /件
-                            </span>
+                    <div class="hero-card" style="border-top: 5px solid var(--primary-color);">
+                        <h2>用免费盘点<br>发掘专利潜力</h2>
+                        <div class="value-tag" style="background: #e8f0fe; color: var(--primary-color); border: 1px solid #b3d7ff;">
+                            包含服务市值 ¥200 /件
                         </div>
-
-                        <p style="font-size: 1em; color: #444; margin-bottom: 20px; line-height: 1.6;">
-                            <strong>真正的性价比除了低价，还有增值。</strong><br>
-                            我们不希望您的专利在档案库沉睡。签约即享免费专利资产盘点服务，帮您识别核心资产，制定<span style="border-bottom: 2px solid var(--primary-color);">维持、放弃或运营</span>策略，让专利从成本中心转化为利润中心。
+                        <p>
+                            真正的性价比除了低价，还有增值。<br>
+                            我们不希望您的专利在档案库沉睡。签约即享免费专利资产盘点服务，帮您识别核心资产，制定<span style="color: var(--primary-color); font-weight:bold;">维持、放弃或运营</span>策略，让专利从成本中心转化为利润中心。
                         </p>
-
-                        <div style="border-top: 1px solid #eee; padding-top: 15px; margin-top: auto;">
-                            <p style="font-size: 0.8em; color: #888; margin-bottom: 10px;">(注：签约客户专享，限200件以内)</p>
-                            <a href="#" class="btn-main open-contact-modal-trigger" style="background: var(--dark-color); width: 100%; text-align: center;">咨询合作权益</a>
+                        <div style="border-top: 1px solid #eee; padding-top: 15px; margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+                            <small style="color: #999;">(签约客户专享，限200件以内)</small>
+                            <a href="#" class="btn-main open-contact-modal-trigger" style="background: var(--dark-color); padding: 8px 20px; font-size: 0.9em;">咨询合作权益</a>
                         </div>
                     </div>
 
                 </div>
             </div>
         </section>
-        
-        <section class="trust-promise-section">
+
+        <section class="trust-section">
             <div class="container">
-                <div class="trust-box">
+                <div class="trust-content">
                     <h2 style="font-size: 1.8em; margin-bottom: 20px;">我们敢于承诺，因为对品质绝对自信</h2>
                     <div style="font-size: 1.2em; color: var(--cta-color); font-weight: bold; margin-bottom: 15px;">
                         <i class="fas fa-hand-holding-heart"></i> 首件试写全额免单
                     </div>
-                    <p style="font-size: 1.05em; color: #555; max-width: 700px; margin: 0 auto; line-height: 1.8;">
+                    <p style="font-size: 1.05em; color: #555; line-height: 1.8; margin: 0;">
                         欢迎有持续研发能力的优质企业免费试写合作。<br>
                         无论您是否满意都无需付费，让您验证我们的服务品质。
                     </p>
                 </div>
             </div>
         </section>
-
+        
         <section class="logo-wall-section">
             <div class="container">
                 <h3>我们服务的客户与合作伙伴</h3>
@@ -249,7 +291,8 @@
 
         <section class="team-section">
             <div class="container">
-                <h2 class="text-center">一群真正懂得将专利变为财富的专家</h2>
+                <h2 class="text-center">一群真正懂得如何将专利变为财富的专家</h2>
+                
                 <div class="main-partners-grid">
                     <div class="partner-card">
                         <div class="header">
@@ -266,6 +309,25 @@
                         <p>18年行业经验，曾任国家知识产权局专利审查员。他能在商业、政策和法律之间找到平衡点。</p>
                     </div>
                 </div>
+
+                <div class="other-partners-grid">
+                    <div class="partner-card-simple">
+                        <h3>谭梁镌<span class="title">合伙人</span></h3>
+                        <p>独特的“技术发明者”+“法律守护者”背景。</p>
+                    </div>
+                    <div class="partner-card-simple">
+                        <h3>吴晓佟<span class="title">合伙人</span></h3>
+                        <p>13年大客户服务经验，您最可靠的“项目管家”。</p>
+                    </div>
+                    <div class="partner-card-simple">
+                        <h3>黄可峻<span class="title">合伙人</span></h3>
+                        <p>国内顶尖的生物医药领域IP专家。</p>
+                    </div>
+                     <div class="partner-card-simple">
+                        <h3>周奇<span class="title">顾问合伙人</span></h3>
+                        <p>曾主导中国移动、百度、美团等巨头的知产战略。</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -273,7 +335,7 @@
             <div class="container">
                 <h2>好服务，试试便知。</h2>
                 <p style="margin: 20px 0 30px; font-size: 1.2em; opacity: 0.9;">立即联系我们，预约首件免费高价值申请体验。</p>
-                <a href="#" class="btn-main open-contact-modal-trigger" style="padding: 15px 50px; font-size: 1.2em;">联系专属顾问</a>
+                <a href="#" class="btn-main open-contact-modal-trigger">联系专属顾问</a>
             </div>
         </section>
     </main>
@@ -296,13 +358,15 @@
     <footer>
         <div class="container">
             <p>北京启坤知识产权代理有限公司 | 机构代码：11655</p>
-            <p>联系电话: <a href="tel:010-82696906">010-8269 6906</a> | 邮箱: <a href="mailto:contact@qikunip.com">contact@qikunip.com</a></p>
-            <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved. | <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备19020611号-1</a></p>
+            <p>北京办公室：北京市东城区王府井大街219号王府国际中心7层</p>
+            <p>上海办公室：上海市徐汇区天钥桥路333号腾飞大厦5层</p>
+            <p>联系电话: <a href="tel:010-82696906" style="color: #ccc; text-decoration: none;">010-8269 6906</a> | 邮箱: <a href="mailto:contact@qikunip.com" style="color: #ccc; text-decoration: none;">contact@qikunip.com</a></p>
+            <p>版权所有 © 北京启坤知识产权代理有限公司. All rights reserved. | <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #ccc; text-decoration: none;">京ICP备19020611号-1</a></p>
         </div>
     </footer>
 
     <script>
-        // 移动端菜单逻辑
+        // 移动端菜单
         const navToggle = document.querySelector('.nav-toggle');
         const body = document.body;
         navToggle.addEventListener('click', () => { body.classList.toggle('nav-open'); });
