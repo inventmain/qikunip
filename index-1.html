@@ -48,46 +48,45 @@
         .nav-contact-btn:hover { background: #e65a4c; }
 
         .section-bg { position: relative; background-size: cover; background-position: center; color: var(--light-color); }
-        .section-bg::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.65); z-index: 1; } /* 稍微加深遮罩以突出文字 */
+        .section-bg::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.65); z-index: 1; }
         .section-bg > .container { position: relative; z-index: 2; }
         .section-bg h1, .section-bg h2, .section-bg .subtitle { color: var(--light-color); }
         
-        /* Hero 基础样式调整，适应新内容 */
-        .hero { padding: 80px 0 100px 0; text-align: center; } /* 底部留白给卡片 */
+        /* Hero 基础样式 */
+        .hero { padding: 80px 0 100px 0; text-align: center; } 
         .hero h1 { font-size: 3em; margin-bottom: 20px; line-height: 1.2; }
         .hero .subtitle { font-size: 1.2em; max-width: 800px; margin: 0 auto 30px auto; font-weight: 300; opacity: 0.9; }
 
-        /* --- 2. 新增：Hero区域专用样式 (保持简洁) --- */
-        .hero-tag {
+        /* --- 2. 新增/修改：针对您需求的定点 CSS 补充 --- */
+        
+        /* Hero Tag 变为链接后的样式修正 */
+        a.hero-tag {
             display: inline-block;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 10px 30px; /* 增加一点内边距 */
+            padding: 10px 30px; /* 增加内边距 */
             border-radius: 50px;
             margin-bottom: 50px;
             backdrop-filter: blur(5px);
             text-decoration: none; /* 去掉下划线 */
             transition: transform 0.3s, background 0.3s;
-            text-align: center; /* 确保内部文字居中 */
             cursor: pointer;
         }
-        .hero-tag:hover {
+        a.hero-tag:hover {
             transform: scale(1.05);
             background: rgba(255, 255, 255, 0.2);
         }
         
-        /* Hero内部的双卡片 Grid */
         .hero-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
-            text-align: left; /* 卡片内部左对齐 */
+            text-align: left;
             margin-top: 20px;
         }
 
-        /* Hero 卡片样式 (基于 service-card 微调) */
-        /* 修改为 a 标签支持的样式 */
-        .hero-card {
+        /* Hero Card 变为链接后的样式修正 */
+        a.hero-card {
             background: rgba(255, 255, 255, 0.98);
             padding: 40px;
             border-radius: 8px;
@@ -96,17 +95,16 @@
             position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none; /* 去掉链接下划线 */
-            display: block; /* 占满 Grid 单元格 */
+            display: block; /* 确保占满格子 */
             cursor: pointer;
         }
-        .hero-card:hover { 
+        a.hero-card:hover { 
             transform: translateY(-5px); 
             box-shadow: 0 15px 40px rgba(0,0,0,0.3);
         }
         .hero-card h2 { text-align: left; font-size: 1.6em; margin-bottom: 10px; color: var(--dark-color); }
         .hero-card p { color: #555; margin-bottom: 20px; font-size: 1em; line-height: 1.8; }
         
-        /* 价值标签样式 */
         .value-tag {
             display: inline-block;
             padding: 4px 10px;
@@ -116,7 +114,7 @@
             margin-bottom: 15px;
         }
 
-        /* --- 3. 后续板块复用原有样式类 --- */
+        /* --- 3. 后续板块 --- */
         .logo-wall-section { padding: 60px 0; background-color: var(--light-color); }
         .logo-wall-section h3 { text-align: center; font-style: italic; color: #777; margin-bottom: 40px; font-weight: normal; }
         .logo-wall { overflow: hidden; position: relative; }
@@ -128,22 +126,21 @@
         @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         @keyframes scroll-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
 
-        /* Trust Section 调整 */
+        /* Trust Section: 去掉了 .trust-content 的边框样式 */
         .trust-section { padding: 80px 0; background: #fffcf5; border-bottom: 1px solid #eee; }
-        /* 移除了 trust-content 的边框样式，改为简单布局 */
         
-        .trust-link {
+        /* 信任板块链接样式 */
+        a.trust-link {
             text-decoration: none;
             color: var(--cta-color);
-            font-size: 1.4em;
+            font-size: 1.4em; /* 增大字号 */
             font-weight: bold;
-            display: inline-block;
             margin-bottom: 15px;
+            display: inline-block;
             transition: color 0.3s;
         }
-        .trust-link:hover {
+        a.trust-link:hover {
             color: #e65a4c;
-            text-decoration: underline;
         }
 
         .team-section { background: var(--gray-color); padding: 80px 0; }
@@ -192,10 +189,7 @@
             .hero { padding: 60px 0; }
             .hero h1 { font-size: 2em; }
             .hero-grid { grid-template-columns: 1fr; }
-            .main-partners-grid { grid-template-columns: 1fr; gap: 20px; }
-            .partner-card .header { flex-direction: column; text-align: center; }
-            .partner-card .header img { margin-right: 0; margin-bottom: 15px; }
-            .logo-slider img { height: 45px; margin: 0 20px; }
+            /* Mobile adjustments */
         }
 
         /* Contact Modal & Floating Button */
