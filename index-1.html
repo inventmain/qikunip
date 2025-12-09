@@ -62,10 +62,18 @@
             display: inline-block;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 8px 25px;
+            padding: 10px 30px; /* 增加一点内边距 */
             border-radius: 50px;
             margin-bottom: 50px;
             backdrop-filter: blur(5px);
+            text-decoration: none; /* 去掉下划线 */
+            transition: transform 0.3s, background 0.3s;
+            text-align: center; /* 确保内部文字居中 */
+            cursor: pointer;
+        }
+        .hero-tag:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
         }
         
         /* Hero内部的双卡片 Grid */
@@ -78,6 +86,7 @@
         }
 
         /* Hero 卡片样式 (基于 service-card 微调) */
+        /* 修改为 a 标签支持的样式 */
         .hero-card {
             background: rgba(255, 255, 255, 0.98);
             padding: 40px;
@@ -85,11 +94,17 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             color: var(--dark-color);
             position: relative;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none; /* 去掉链接下划线 */
+            display: block; /* 占满 Grid 单元格 */
+            cursor: pointer;
         }
-        .hero-card:hover { transform: translateY(-5px); }
+        .hero-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
         .hero-card h2 { text-align: left; font-size: 1.6em; margin-bottom: 10px; color: var(--dark-color); }
-        .hero-card p { color: #555; margin-bottom: 20px; font-size: 1em; }
+        .hero-card p { color: #555; margin-bottom: 20px; font-size: 1em; line-height: 1.8; }
         
         /* 价值标签样式 */
         .value-tag {
@@ -113,8 +128,23 @@
         @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         @keyframes scroll-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
 
+        /* Trust Section 调整 */
         .trust-section { padding: 80px 0; background: #fffcf5; border-bottom: 1px solid #eee; }
-        .trust-content { max-width: 800px; margin: 0 auto; text-align: center; border: 2px dashed var(--secondary-color); padding: 40px; border-radius: 10px; background: #fff; }
+        /* 移除了 trust-content 的边框样式，改为简单布局 */
+        
+        .trust-link {
+            text-decoration: none;
+            color: var(--cta-color);
+            font-size: 1.4em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            transition: color 0.3s;
+        }
+        .trust-link:hover {
+            color: #e65a4c;
+            text-decoration: underline;
+        }
 
         .team-section { background: var(--gray-color); padding: 80px 0; }
         .main-partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px; margin-top: 40px; }
@@ -162,7 +192,6 @@
             .hero { padding: 60px 0; }
             .hero h1 { font-size: 2em; }
             .hero-grid { grid-template-columns: 1fr; }
-            .trust-content { padding: 20px; }
             .main-partners-grid { grid-template-columns: 1fr; gap: 20px; }
             .partner-card .header { flex-direction: column; text-align: center; }
             .partner-card .header img { margin-right: 0; margin-bottom: 15px; }
@@ -219,16 +248,17 @@
                 </h1>
                 <p class="subtitle">用可视化标准验证每项专利的质量，用增值服务发掘每项专利的潜力。</p>
                 
-                <div class="hero-tag">
-                    <span style="color: #ffeb3b; font-weight: bold; font-size: 1.1em;">
+                <a href="#" class="hero-tag open-contact-modal-trigger">
+                    <span style="color: #ffeb3b; font-weight: bold; font-size: 1.2em;">
                         <i class="fas fa-crown"></i> 首件试写全额免单
                     </span>
-                    <span style="color: #ddd; font-size: 0.9em; margin-left: 10px;">(注：限年发明申请量 > 10件的企业客户)</span>
-                </div>
+                    <br>
+                    <span style="color: #ddd; font-size: 0.9em;">(注：限年发明申请量 > 10件的企业客户)</span>
+                </a>
 
                 <div class="hero-grid">
                     
-                    <div class="hero-card" style="border-top: 5px solid var(--cta-color);">
+                    <a href="#" class="hero-card open-contact-modal-trigger" style="border-top: 5px solid var(--cta-color);">
                         <h2>用CC(权利要求对照表)<br>直观验证专利质量</h2>
                         <div class="value-tag" style="background: #fff0f0; color: #d93025; border: 1px solid #ffcdd2;">
                             CC市场价¥5,000 - ¥10,000，现免费提供给专利保护签约客户
@@ -237,12 +267,9 @@
                             真正的专利质量不仅仅是授权，而是能保护。<br>
                             在撰写阶段，我们即通过 <strong>Claim Chart (CC)</strong> 将权利要求与<span style="color: var(--cta-color); font-weight:bold;">您的产品</span>或<span style="color: var(--cta-color); font-weight:bold;">竞争对手</span>进行比对，确保专利的实际效用。
                         </p>
-                        <div style="border-top: 1px solid #eee; padding-top: 15px; margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
-                            <a href="#" class="btn-main open-contact-modal-trigger" style="padding: 8px 20px; font-size: 0.9em;">预约高质量申请</a>
-                        </div>
-                    </div>
+                    </a>
 
-                    <div class="hero-card" style="border-top: 5px solid var(--primary-color);">
+                    <a href="#" class="hero-card open-contact-modal-trigger" style="border-top: 5px solid var(--primary-color);">
                         <h2>用免费盘点<br>发掘专利潜力</h2>
                         <div class="value-tag" style="background: #e8f0fe; color: var(--primary-color); border: 1px solid #b3d7ff;">
                             专利盘点市场价¥200/件，签约客户赠送200件专利盘点
@@ -251,27 +278,24 @@
                             启坤不仅提供极致性价比的专利代理申请服务，更重视为您增值。<br>
                             帮您识别核心资产，制定<span style="color: var(--primary-color); font-weight:bold;">专利转化、运营或诉讼</span>策略，让专利从成本中心转化为利润中心。
                         </p>
-                        <div style="border-top: 1px solid #eee; padding-top: 15px; margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
-                            <a href="#" class="btn-main open-contact-modal-trigger" style="background: var(--dark-color); padding: 8px 20px; font-size: 0.9em;">咨询合作权益</a>
-                        </div>
-                    </div>
+                    </a>
 
                 </div>
             </div>
         </section>
 
         <section class="trust-section">
-            <div class="container">
-                <div class="trust-content">
-                    <h2 style="font-size: 1.8em; margin-bottom: 20px;">我们敢于承诺，因为对品质绝对自信</h2>
-                    <div style="font-size: 1.2em; color: var(--cta-color); font-weight: bold; margin-bottom: 15px;">
-                        <i class="fas fa-hand-holding-heart"></i> 首件试写全额免单
-                    </div>
-                    <p style="font-size: 1.05em; color: #555; line-height: 1.8; margin: 0;">
-                        欢迎有持续研发能力的优质企业免费试写合作。<br>
-                        无论您是否满意都无需付费，让您验证我们的服务品质。
-                    </p>
-                </div>
+            <div class="container text-center">
+                <h2 style="font-size: 1.8em; margin-bottom: 20px;">我们敢于承诺，因为对品质绝对自信</h2>
+                
+                <a href="#" class="trust-link open-contact-modal-trigger">
+                    <i class="fas fa-hand-holding-heart"></i> 首件试写全额免单
+                </a>
+                
+                <p style="font-size: 1.1em; color: #555; line-height: 1.8; margin: 0 auto; max-width: 800px;">
+                    欢迎有持续研发能力的优质企业免费试写合作。<br>
+                    无论您是否满意都无需付费，让您验证我们的服务品质。
+                </p>
             </div>
         </section>
         
@@ -280,13 +304,8 @@
                 <h3>我们服务的客户与合作伙伴</h3>
                 <div class="logo-wall">
                     <div class="logo-slider row-1">
-                        <img src="images/client-logo-a.png" alt="客户A公司Logo"><img src="images/client-logo-b.png" alt="客户B公司Logo"><img src="images/client-logo-c.png" alt="客户C公司Logo"><img src="images/client-logo-d.png" alt="客户D公司Logo"><img src="images/client-logo-e.png" alt="客户E公司Logo"><img src="images/client-logo-f.png" alt="客户F公司Logo">
-                        <img src="images/client-logo-a.png" alt="客户A公司Logo"><img src="images/client-logo-b.png" alt="客户B公司Logo"><img src="images/client-logo-c.png" alt="客户C公司Logo"><img src="images/client-logo-d.png" alt="客户D公司Logo"><img src="images/client-logo-e.png" alt="客户E公司Logo"><img src="images/client-logo-f.png" alt="客户F公司Logo">
-                    </div>
-                    <div style="height: 20px;"></div>
-                    <div class="logo-slider row-2">
-                         <img src="images/partner-logo-g.png" alt="合作伙伴G公司Logo"><img src="images/partner-logo-h.png" alt="合作伙伴H公司Logo"><img src="images/partner-logo-i.png" alt="合作伙伴I公司Logo"><img src="images/partner-logo-j.png" alt="合作伙伴J公司Logo"><img src="images/partner-logo-k.png" alt="合作伙伴K公司Logo"><img src="images/partner-logo-l.png" alt="合作伙伴L公司Logo">
-                         <img src="images/partner-logo-g.png" alt="合作伙伴G公司Logo"><img src="images/partner-logo-h.png" alt="合作伙伴H公司Logo"><img src="images/partner-logo-i.png" alt="合作伙伴I公司Logo"><img src="images/partner-logo-j.png" alt="合作伙伴J公司Logo"><img src="images/partner-logo-k.png" alt="合作伙伴K公司Logo"><img src="images/partner-logo-l.png" alt="合作伙伴L公司Logo">
+                        <img src="images/client-logo-a.png" alt="Client Logo"><img src="images/client-logo-b.png" alt="Client Logo"><img src="images/client-logo-c.png" alt="Client Logo"><img src="images/client-logo-d.png" alt="Client Logo"><img src="images/client-logo-e.png" alt="Client Logo"><img src="images/client-logo-f.png" alt="Client Logo">
+                        <img src="images/client-logo-a.png" alt="Client Logo"><img src="images/client-logo-b.png" alt="Client Logo"><img src="images/client-logo-c.png" alt="Client Logo"><img src="images/client-logo-d.png" alt="Client Logo"><img src="images/client-logo-e.png" alt="Client Logo"><img src="images/client-logo-f.png" alt="Client Logo">
                     </div>
                 </div>
             </div>
@@ -323,19 +342,19 @@
                 <div class="other-partners-grid">
                     <div class="partner-card-simple">
                         <h3>谭梁镌<span class="title">合伙人</span></h3>
-                        <p>拥有律师执业资格，并具备爱立信研发、国家知识产权局和企业多重背景。独特的“技术发明者”+“法律守护者”背景，让他能深入技术底层，为您构建最坚固的专利壁垒。</p>
+                        <p>拥有律师执业资格，并具备爱立信研发、国家知识产权局和企业多重背景。独特的“技术发明者”+“法律守护者”背景。</p>
                     </div>
                     <div class="partner-card-simple">
                         <h3>吴晓佟<span class="title">合伙人</span></h3>
-                        <p>13年大客户服务经验，技术与法律复合背景。她能确保您的专利变现项目获得最高效、最顺畅的管理与执行，是您最可靠的“项目管家”。</p>
+                        <p>13年大客户服务经验，技术与法律复合背景。是您最可靠的“项目管家”。</p>
                     </div>
                     <div class="partner-card-simple">
                         <h3>黄可峻<span class="title">合伙人</span></h3>
-                        <p>国内顶尖的生物医药领域IP专家，辉瑞“伟哥”专利案主办律师。在高风险、高回报的生物医药领域，他处理高复杂度诉讼的顶尖能力是您实现高额回报的关键保障。</p>
+                        <p>国内顶尖的生物医药领域IP专家，辉瑞“伟哥”专利案主办律师。</p>
                     </div>
                      <div class="partner-card-simple">
                         <h3>周奇<span class="title">顾问合伙人</span></h3>
-                        <p>国家知识产权领军人才，曾主导中国移动、百度、美团等巨头的知产战略。当您的专利需要与行业巨头博弈时，他的经验和行业地位是您至关重要的战略资源。</p>
+                        <p>国家知识产权领军人才，曾主导中国移动、百度、美团等巨头的知产战略。</p>
                     </div>
                 </div>
             </div>
