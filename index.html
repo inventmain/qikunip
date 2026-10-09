@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="启坤知识产权由前金杜合伙人领衔，重新定义专利代理的高质量与性价比。我们提供分级定制的专利申请服务：针对下证需求专注授权率提升，针对维权需求通过Claim Chart加强保护。拒绝品牌溢价，首件试写不满意免单，让您用二线预算享一线专家服务。">
+    <meta name="description" content="启坤知识产权由前金杜合伙人与前国知局审查员领衔，专注高价值专利代理的高质量与高性价比。我们提供分级定制服务：针对下证需求强化授权率，针对维权需求出具Claim Chart可诉性比对。剔除传统大所冗余品牌溢价，面向高新技术企业支持签约前首件试写体验，满意后再建立长期合作。">
     <meta name="keywords" content="专利代理, 专利申请, 授权率提升, 专利保护, 高价值专利, 知识产权代理, 专利布局, 专利挖掘, 专利变现, Claim Chart, 启坤知识产权">
     <title>启坤知识产权 - 专业专利申请与代理服务 | 重新定义代理服务的高质量与性价比</title>
     <link rel="icon" href="images/favicon.png">
@@ -95,7 +95,9 @@
             position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none; /* 去掉链接下划线 */
-            display: block; /* 确保占满格子 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             cursor: pointer;
         }
         a.hero-card:hover { 
@@ -126,16 +128,16 @@
         @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         @keyframes scroll-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
 
-        /* Trust Section: 去掉了 .trust-content 的边框样式 */
-        .trust-section { padding: 80px 0; background: #fffcf5; border-bottom: 1px solid #eee; }
+        /* Trust Section: 紧凑精致布局 */
+        .trust-section { padding: 42px 0; background: #fffcf5; border-bottom: 1px solid #eee; }
         
         /* 信任板块链接样式 */
         a.trust-link {
             text-decoration: none;
             color: var(--cta-color);
-            font-size: 1.4em; /* 增大字号 */
+            font-size: 1.18em;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             display: inline-block;
             transition: color 0.3s;
         }
@@ -261,42 +263,40 @@
         <div style="margin-bottom: 50px;">
             <a href="#" class="open-contact-modal-trigger" style="text-decoration: none; display: inline-block;">
                 <div style="
-                    background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%); 
-                    border: 1px solid #FFC107; 
-                    padding: 12px 35px; 
+                    background: rgba(96, 165, 250, 0.14); 
+                    border: 1px solid rgba(96, 165, 250, 0.6); 
+                    padding: 13px 38px; 
                     border-radius: 50px; 
-                    box-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), inset 0 0 14px rgba(96, 165, 250, 0.12);
+                    backdrop-filter: blur(10px);
                     transition: all 0.3s ease;
                     cursor: pointer;
-                    position: relative;
-                    top: 0;
-                " onmouseover="this.style.top='-3px'; this.style.boxShadow='0 10px 25px rgba(255, 193, 7, 0.6)';" 
-                   onmouseout="this.style.top='0'; this.style.boxShadow='0 0 20px rgba(255, 193, 7, 0.4)';">
-                    
-                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-                        <span style="background: #D97706; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; text-transform: uppercase;">Limited Offer</span>
-                        <span style="font-size: 1.25em; font-weight: bold; color: #854d0e;">
-                            <i class="fas fa-crown" style="margin-right: 5px;"></i> 首件试写不满意免单
-                        </span>
-                    </div>
-                    <div style="font-size: 0.85em; color: #92400e; margin-top: 4px; opacity: 0.9;">
-                        (点击立即预约)
-                    </div>
+                " onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(96, 165, 250, 0.22)'; this.style.borderColor='rgba(96, 165, 250, 0.95)'; this.style.boxShadow='0 8px 25px rgba(96, 165, 250, 0.35), inset 0 0 16px rgba(96, 165, 250, 0.2)';" 
+                   onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(96, 165, 250, 0.14)'; this.style.borderColor='rgba(96, 165, 250, 0.6)'; this.style.boxShadow='0 4px 20px rgba(0, 0, 0, 0.25), inset 0 0 14px rgba(96, 165, 250, 0.12)';">
+                    <span style="font-size: 1.15em; font-weight: 600; color: #ffffff; letter-spacing: 0.5px;">
+                        <i class="fas fa-feather-alt" style="color: #60a5fa; margin-right: 8px;"></i>签约前 · 支持首件试写体验
+                    </span>
                 </div>
             </a>
+            <div style="font-size: 0.85em; color: rgba(224, 242, 254, 0.85); margin-top: 10px; letter-spacing: 0.5px;">
+                面向高新技术企业 · 满意后再签约长期合作
+            </div>
         </div>
 
         <div class="hero-grid">
             
             <a href="#" class="hero-card open-contact-modal-trigger" style="border-top: 5px solid var(--cta-color);">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                    <h2 style="margin: 0; font-size: 1.5em; color: #222; color: var(--primary-color);">高质量，看得见</h2>
-                    <span style="background: #fff0f0; color: #d93025; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold; white-space: nowrap;">业界独家</span>
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h2 style="margin: 0; font-size: 1.5em; color: var(--primary-color);">高质量，看得见</h2>
+                        <span style="background: #fff0f0; color: #d93025; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold; white-space: nowrap;">业界独家</span>
+                    </div>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 20px;">
+                        注入<strong>诉讼变现经验</strong>，以终为始，只做高价值专利。<br>
+                        针对<strong>保护</strong>需求，免费提供 <strong>Claim Chart</strong> 清晰核验质量。<br>
+                        <strong>让专利交付质量，不再等于“开盲盒”。</strong>
+                    </p>
                 </div>
-                <p style="min-height: 72px; color: #555;">
-                    将<strong>诉讼变现经验</strong>注入撰写流程，以终为始，只做有用的专利。<br>
-                    针对<strong>保护</strong>需求，免费提供 <strong>Claim Chart</strong>，让您直观看到专利质量。<br>
-                    <strong>让专利质量不再等于“开盲盒”。</strong>            </p>
                 <div style="border-top: 1px solid #eee; padding-top: 15px; font-size: 0.95em; color: #666; display: flex; align-items: center; font-weight: 500;">
                     <i class="fas fa-search-plus" style="color: var(--cta-color); margin-right: 8px;"></i>
                     <span>支持低成本盘点和全风险变现，兑现专利价值</span>
@@ -304,15 +304,17 @@
             </a>
 
             <a href="#" class="hero-card open-contact-modal-trigger" style="border-top: 5px solid var(--primary-color);">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                    <h2 style="margin: 0; font-size: 1.5em; color: #222; color: var(--primary-color);">性价比，很极致</h2>
-                    <span style="background: #e8f0fe; color: var(--primary-color); padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold; white-space: nowrap;">降本增效</span>
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h2 style="margin: 0; font-size: 1.5em; color: var(--primary-color);">性价比，很极致</h2>
+                        <span style="background: #e8f0fe; color: var(--primary-color); padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold; white-space: nowrap;">降本增效</span>
+                    </div>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 20px;">
+                        红圈所合伙人与前审查员把关，<strong>无需承担大所溢价</strong>。<br>
+                        针对<strong>获权</strong>需求，依审查尺度严控驳回风险，显著提升授权率。<br>
+                        <strong>以务实商业定价，享受顶尖一线交付品质。</strong>
+                    </p>
                 </div>
-                <p style="min-height: 72px; color: #555;">
-                    您可以购买媲美红圈所的服务，但<strong>无需为品牌溢价买单</strong>。<br>
-                    针对<strong>下证</strong>需求，免费提供专利挖掘和提升服务，提高授权率。<br>
-                    让您<strong>用二线预算，享一线服务</strong>。<br>
-                </p>
                 <div style="border-top: 1px solid #eee; padding-top: 15px; font-size: 0.95em; color: #666; display: flex; align-items: center; font-weight: 500;">
                     <i class="fas fa-hand-holding-usd" style="color: var(--primary-color); margin-right: 8px;"></i>
                     <span>支持专利布局、加快授权和全风险代理模式</span>
@@ -324,16 +326,16 @@
 </section>
 
         <section class="trust-section">
-            <div class="container text-center">
-                <h2 style="font-size: 1.8em; margin-bottom: 20px;">我们敢于承诺，因为对品质绝对自信</h2>
+            <div class="container text-center" style="max-width: 860px;">
+                <h2 style="font-size: 1.45em; margin-bottom: 10px; font-weight: 600;">敢于接受检验，源于对交付品质的自信</h2>
                 
-                <a href="#" class="trust-link open-contact-modal-trigger">
-                    <i class="fas fa-hand-holding-heart"></i> 首件试写不满意免单
+                <a href="#" class="trust-link open-contact-modal-trigger" style="color: var(--primary-color);">
+                    <i class="fas fa-shield-alt" style="color: var(--secondary-color);"></i> 签约前 · 接受首件试写体验
                 </a>
                 
-                <p style="font-size: 1.1em; color: #555; line-height: 1.8; margin: 0 auto; max-width: 800px;">
-                    欢迎有持续研发能力的优质企业试写合作。<br>
-                    如不满意无需付费，让您验证我们的服务品质。
+                <p style="font-size: 0.98em; color: #475569; line-height: 1.6; margin: 0 auto;">
+                    面向高新技术企业：先行出具保密承诺，签合同前支持首件核心技术试写。<br>
+                    由前审查员与专利律师联合交付，贵司满意后再签约长期合作。
                 </p>
             </div>
         </section>
@@ -413,8 +415,8 @@
                 <p>某上市公司需要构建技术壁垒，我们高效构建专利组合，并实现专利商业闭环。</p>
             </div>
             <div class="case-card">
-                <h4>案例二：质量不变，预算减半</h4>
-                <p>某科技企业切换至启坤服务后，我们通过分级定制策略。在<strong>保持专利质量不下降</strong>的前提下，成功帮助客户将<strong>年度预算降低了一半</strong>。</p>
+                <h4>案例二：专利分级管理与综合成本优化</h4>
+                <p>某成长期科技企业切换至启坤服务后，我们引入“高价值核心案重度防御 + 基础防御案高效获权”的分级定制策略，在严守核心技术司法稳定性的同时，成功帮助客户优化了 <strong>40% 以上的年度专利综合支出</strong>。</p>
             </div>
             <div class="case-card">
                 <h4>案例三：收购标准专利</h4>
@@ -451,6 +453,9 @@
             <p><strong>扫码添加顾问微信</strong></p>
             <p>或致电：<a href="tel:010-82696906">010-8269 6906</a></p>
             <p>或发送邮件至<br><a href="mailto:contact@qikunip.com">contact@qikunip.com</a></p>
+            <p style="font-size: 0.82em; color: #64748b; margin-top: 12px; line-height: 1.5; border-top: 1px solid #eee; padding-top: 10px;">
+                高新技术企业试写预约（支持签署保密协议），请备注<strong>“公司全称 + 研发领域”</strong>
+            </p>
         </div>
     </div>
 
