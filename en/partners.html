@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join QiKun's strategic partner network. Empowering law firms, IP agencies, tech incubators, and investors through complementary technical and monetization capabilities.">
+    <meta name="keywords" content="知识产权合作, 专利代理合作, 律师合作, 专利投资, 启坤">
+    <title>Partners & Alliance - QiKun IP | Strategic Cooperation</title>
+    <link rel="icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #ba9a3e;
+            --cta-color: #ff6f61;
+            --dark-color: #222831;
+            --light-color: #ffffff;
+            --gray-color: #f4f4f4;
+            --text-color: #333;
+            --header-bg: #000;
+            --footer-bg: #1C1C1C;
+        }
+        body { font-family: 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif; margin: 0; line-height: 1.6; color: var(--text-color); background-color: var(--light-color); }
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+        h1, h2, h3 { margin-bottom: 20px; color: var(--dark-color); }
+        h2 { text-align: center; font-size: 2.2em; }
+        .text-center { text-align: center; }
+
+        /* Header & Navigation */
+        .navbar { background: var(--header-bg); color: var(--light-color); padding: 15px 0; position: sticky; top: 0; z-index: 1000; width: 100%; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo-area { display: flex; align-items: center; text-decoration: none; }
+        .logo-area img { max-height: 50px; margin-right: 15px; }
+        .logo-text h1 { font-size: 24px; color: var(--light-color); margin: 0; font-weight: bold; }
+        .nav-links { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; }
+        .nav-links > li { margin-left: 30px; position: relative; }
+        .nav-links a, .nav-links .dropdown-toggle { text-decoration: none; color: var(--light-color); font-weight: 500; padding: 10px 0; transition: color 0.3s; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+        .nav-links > li > a:hover, .dropdown:hover .dropdown-toggle, .nav-links > li > a.active { color: var(--secondary-color); }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--header-bg); border-radius: 4px; padding: 10px 0; list-style: none; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu a { display: block; padding: 10px 20px; color: var(--light-color); white-space: nowrap; }
+        .dropdown-menu a:hover { background-color: rgba(255, 255, 255, 0.1); }
+        .btn-main { background: var(--cta-color); color: var(--light-color); padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; transition: background 0.3s; }
+        .btn-main:hover { background: #e65a4c; }
+        .nav-contact-btn { padding: 12px 40px; margin-left: 20px; border-radius: 5px; background: var(--cta-color); color: var(--light-color); font-weight: bold; text-decoration: none; white-space: nowrap; transition: background .3s; }
+        .nav-contact-btn:hover { background: #e65a4c; }
+        
+        .section-bg { position: relative; background-size: cover; background-position: center bottom; color: var(--light-color); }
+        .section-bg::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); z-index: 1; }
+        .section-bg > .container { position: relative; z-index: 2; }
+        .section-bg h1, .section-bg h2, .section-bg .subtitle { color: var(--light-color); }
+        
+        .hero { padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 3.2em; margin-bottom: 15px; }
+        .hero .subtitle { font-size: 1.2em; max-width: 800px; margin: 0 auto 30px auto; }
+
+        section { padding: 80px 0; }
+        .partner-types-section { background: var(--gray-color); }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .partner-card { background: var(--light-color); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column; }
+        .partner-card .icon { font-size: 2.5em; color: var(--primary-color); margin-bottom: 20px; }
+        .partner-card h3 { font-size: 1.5em; margin-bottom: 15px; }
+        .partner-card p.intro { font-size: 1.1em; font-weight: bold; color: var(--dark-color); margin-bottom: 20px; }
+        .partner-card ul { list-style: none; padding-left: 0; text-align: left; flex-grow: 1; }
+        .partner-card ul li { margin-bottom: 10px; position: relative; padding-left: 25px; }
+        .partner-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-color); font-weight: bold; }
+        
+        .support-section .grid-3 .partner-card { text-align: center; }
+        
+        /* New Section for Principles - Optimized */
+        .principles-section { padding: 40px 0; background: var(--gray-color); text-align: center; }
+        .principles-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; list-style: none; padding: 0; max-width: 800px; margin: 0 auto; }
+        .principles-list li { background: var(--light-color); padding: 12px 25px; border-radius: 50px; font-weight: 500; color: var(--text-color); box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+
+
+        .commitment-section { background-color: var(--dark-color); color: var(--light-color); }
+        .commitment-section h2, .commitment-section h3 { color: var(--light-color); }
+        .commitment-item { text-align: center; }
+        .commitment-item .icon { font-size: 3em; color: var(--secondary-color); margin-bottom: 15px; }
+
+        .final-cta { padding: 80px 0; background: var(--gray-color); text-align: center; }
+
+        footer { background-color: var(--footer-bg); color: #ccc; padding: 40px 0; text-align: center; font-size: 14px; }
+        footer p { margin: 5px 0; }
+        footer a { color: #ccc; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        .nav-toggle { display: none; }
+        .hamburger { display: block; width: 25px; height: 2px; background-color: var(--light-color); position: relative; }
+        
+        /* --- START: 新增客户服务入口样式 --- */
+        .floating-contact-btn {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 1050;
+        }
+        .floating-contact-btn button {
+            background: #07C160;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            color: var(--light-color);
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .floating-contact-btn button:hover {
+            background: #06AD56;
+        }
+        .contact-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1100;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-modal-overlay.active {
+            display: flex;
+        }
+        .contact-modal-content {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            width: 90%;
+            max-width: 320px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        .contact-modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: #888;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        .contact-modal-content h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: var(--dark-color);
+        }
+        .contact-modal-content img {
+            max-width: 180px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .contact-modal-content p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .contact-modal-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-modal-content a:hover {
+            text-decoration: underline;
+        }
+        /* --- END: 新增客户服务入口样式 --- */
+
+        @media (max-width: 992px) {
+            .grid-3 { grid-template-columns: 1fr; }
+            .nav-toggle { display: block; z-index: 1001; background: none; border: none; cursor: pointer; padding: 10px; }
+            .navbar .container { flex-wrap: nowrap; }
+            .nav-links { position: fixed; top: 0; right: 0; height: 100vh; width: 280px; background: var(--header-bg); flex-direction: column; align-items: flex-start; padding: 80px 30px 30px; transform: translateX(100%); transition: transform 0.3s ease-in-out; }
+            body.nav-open .nav-links { transform: translateX(0); }
+            .nav-links > li { margin: 15px 0; width: 100%; }
+            .dropdown-menu { position: static; display: none; background: #111; box-shadow: none; border-radius: 0; padding-left: 15px;}
+            .dropdown:hover .dropdown-menu { display: block; }
+        }
+    
+        /* --- Language Switcher Button --- */
+        .lang-switch-item { display: inline-flex; align-items: center; margin-left: 10px; }
+        .lang-btn {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 20px !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            color: #ffffff !important;
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            transition: all 0.25s ease !important;
+            text-decoration: none !important;
+            cursor: pointer !important;
+            line-height: 1.4 !important;
+        }
+        .lang-btn:hover {
+            background: rgba(186, 154, 62, 0.25) !important;
+            border-color: #ba9a3e !important;
+            color: #ba9a3e !important;
+            transform: translateY(-1px);
+        }
+        .lang-btn .flag { font-size: 14px; line-height: 1; }
+        @media (max-width: 768px) {
+            .lang-switch-item { margin: 12px 0 5px 0; justify-content: center; }
+        }
+
+    </style>
+    <script src="../js/lang-detector.js"></script>
+</head>
+<body class="">
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-area">
+                <img src="../images/qikun-logo-dark.png" alt="QiKun Intellectual Property Logo">
+                <div class="logo-text"><h1><strong>QiKun IP</strong></h1></div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <span class="dropdown-toggle">Services <i class="fas fa-chevron-down fa-xs"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="high-value-patent-layout.html">High-Value Prosecution (Domestic & PCT)</a></li>
+                        <li><a href="patent-monetization.html">Patent Monetization (Sales | Licensing | Litigation)</a></li>
+                        <li><a href="patent-consulting.html">Patent Consulting (Invalidation | FTO | Appeals)</a></li>
+                        <li><a href="http://www.inventmain.com" target="_blank">ZhuanSuTong™️</a></li>
+                    </ul>
+                </li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="credentials.html">Credentials</a></li>
+                <li><a href="insights.html">专业观点</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#" class="nav-contact-btn open-contact-modal-trigger">Contact Us</a></li>
+                <li class="lang-switch-item"><a href="javascript:void(0)" onclick="switchLanguage('zh')" class="lang-btn" title="切换至中文"><span class="flag">🇨🇳</span> 中文</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero section-bg" style="background-image: url('../images/partner-background.jpeg');">
+            <div class="container">
+                <h1>Your Capabilities + QiKun Expertise = Mutual Success</h1>
+                <p class="subtitle">启坤的专业能力与政府资源，可以补全您的业务版图，共同服务客户，实现价值最大化。</p>
+            </div>
+            <div class="container">
+                <ul class="principles-list">
+                    <li>客户归属明确</li>
+                    <li>透明利益分配</li>
+                    <li>交付品质保障</li>
+                    <li>信息保密</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="partner-types-section">
+            <div class="container">
+                <h2>How We Deliver Value to Strategic Partners</h2>
+                <div class="grid-3" style="margin-top: 50px;">
+                    <div class="partner-card">
+                        <div class="icon">⚖️</div>
+                        <h3>致 律师 / 律所</h3>
+                        <p class="intro">互为资源，共创价值。</p>
+                        <ul>
+                            <li><strong>技术能力补足：</strong>解决您在面对<strong>产能瓶颈</strong>、<strong>专业领域差异</strong>或<strong>利冲客户</strong>时的痛点。</li>
+                            <li><strong>诉讼与变现协作：</strong>提供审查员级别的<strong>无效检索和技术分析</strong>，提升诉讼胜率；共同推进<strong>专利变现项目</strong>落地。</li>
+                        </ul>
+                    </div>
+                    <div class="partner-card">
+                        <div class="icon">🤝</div>
+                        <h3>致 企业服务咨询机构</h3>
+                        <p class="intro">您稳定可靠的IP交付伙伴。</p>
+                        <ul>
+                            <li><strong>一站式IP服务：</strong>提供从专利申请、技术转化到IP资产管理的<strong>全流程专业服务</strong>，确保交付品质和时间节点。</li>
+                            <li><strong>项目进度透明：</strong>实时同步项目进展，<strong>让您对客户始终有交代</strong>。</li>
+                        </ul>
+                    </div>
+                    <div class="partner-card">
+                        <div class="icon">📈</div>
+                        <h3>致 专利运营 / 交易 / 转化机构</h3>
+                        <p class="intro">不只对接资源，更创造交易价值。</p>
+                        <ul>
+                            <li><strong>深度执行支持：</strong>提供<strong>专利盘点评估、专利变现全流程执行</strong>等服务，显著提升专利可交易性与成交率。</li>
+                            <li><strong>零风险合作模式：</strong>支持<strong>按项目分成或成功收费</strong>，我们先行投入，与您共担风险、共享收益。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-section">
+            <div class="container">
+                <h2>Unique Strengths QiKun Brings to Partnerships</h2>
+                <div class="grid-3" style="margin-top: 50px;">
+                    <div class="partner-card">
+                        <div class="icon"><i class="fas fa-brain"></i></div>
+                        <h3>顶尖的专业能力</h3>
+                        <p>由前国家局审查员、红圈所合伙人、跨国企业IP负责人组成的专家团队，为您的业务提供强有力的专业和资源支持。</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="icon"><i class="fas fa-handshake"></i></div>
+                        <h3>灵活的商业模式</h3>
+                        <p>除了传统渠道合作外，还提供全风险代理变现模式，帮助您承担风险、分享收益，最大化您的商业回报。</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="icon"><i class="fas fa-lock"></i></div>
+                        <h3>绝对的诚信保障</h3>
+                        <p>我们郑重承诺，严格遵守合作协议，坚守职业道德底线，100%保护您的客户资源与商业信息安全。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="commitment-section">
+            <div class="container">
+                <h2>合作流程</h2>
+                 <div class="grid-3" style="margin-top: 50px;">
+                    <div class="commitment-item">
+                        <div class="icon">1</div>
+                        <h3>初步接洽</h3>
+                        <p>通过邮件或电话联系我们，表达您的合作意向与业务背景。</p>
+                    </div>
+                    <div class="commitment-item">
+                        <div class="icon">2</div>
+                        <h3>深度沟通</h3>
+                        <p>我们的合伙人将与您一对一交流，探讨具体的合作模式与场景。</p>
+                    </div>
+                    <div class="commitment-item">
+                        <div class="icon">3</div>
+                        <h3>开启合作</h3>
+                        <p>从单个项目开始，或签订战略合作协议，共同开启价值之旅。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="final-cta">
+            <div class="container">
+                <h2>让我们的专业能力，成为您业务增长的加速器。</h2>
+                <p style="margin: 20px 0 30px;">立即联系我们，探讨合作的可能性。</p>
+                <a href="#" class="btn-main open-contact-modal-trigger">发送合作意向</a>
+            </div>
+        </section>
+    </main>
+    
+    <div class="floating-contact-btn">
+        <button id="open-contact-modal" aria-label="联系我们">
+            <i class="fab fa-weixin"></i>
+        </button>
+    </div>
+
+    <div class="contact-modal-overlay" id="contact-modal">
+        <div class="contact-modal-content">
+            <button class="contact-modal-close" id="close-contact-modal" aria-label="关闭">&times;</button>
+            <h3>Contact Senior Counsel</h3>
+            <img src="../images/微信二维码.jpg" alt="启坤顾问微信二维码">
+            <p><strong>Scan WeChat QR Code or Reach Us Directly</strong></p>
+            <p>Telephone: <a href="tel:010-82696906">010-8269 6906</a></p>
+            <p>Email: <br><a href="mailto:contact@qikunip.com">contact@qikunip.com</a></p>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 18px;">
+                <img src="../images/qikun-logo-dark.png" alt="QiKun Intellectual Property Logo" style="height: 38px; width: auto; opacity: 0.92;">
+                <span style="font-size: 20px; font-weight: bold; color: #ffffff; letter-spacing: 0.5px;">启坤知识产权<sup style="font-size: 10px; font-weight: normal; color: #60a5fa; margin-left: 2px; vertical-align: top;">®</sup></span>
+            </div>
+            <p style="margin-bottom: 8px; font-size: 14px; color: #d1d5db;">
+                Beijing QiKun Intellectual Property Agency Co., Ltd. | Licensed by CNIPA <a href="credentials.html" style="color: #60a5fa; text-decoration: underline;">Agency Code: 11655</a> ｜ <a href="credentials.html" style="color: #60a5fa; text-decoration: underline;">Precision Service Guarantee List Agency</a>
+            </p>
+            <p style="font-size: 13px; color: #9ca3af; margin: 4px 0;">
+                Beijing HQ: 7th Floor, Wangfu International Center, No. 219 Wangfujing St, Dongcheng District, Beijing | Shanghai Office: 5th Floor, Ascendas Plaza, No. 333 Tianyaoqiao Rd, Xuhui District, Shanghai
+            </p>
+            <p style="font-size: 13px; color: #9ca3af; margin: 4px 0 16px 0;">
+                Telephone: <a href="tel:010-82696906" style="color: #d1d5db; text-decoration: none;">010-8269 6906</a> ｜ Email: <a href="mailto:contact@qikunip.com" style="color: #d1d5db; text-decoration: none;">contact@qikunip.com</a>
+            </p>
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 14px; font-size: 12px; color: #6b7280;">
+                “QiKun” and associated marks are registered trademarks of Beijing QiKun Intellectual Property Agency Co., Ltd. All rights reserved. ｜ <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #6b7280; text-decoration: none;">京ICP备19020611号-1</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- START: Mobile Navigation Toggle Logic ---
+        const navToggle = document.querySelector('.nav-toggle');
+        const body = document.body;
+        if(navToggle) {
+            navToggle.addEventListener('click', () => {
+                body.classList.toggle('nav-open');
+            });
+        }
+        // --- END: Mobile Navigation Toggle Logic ---
+
+        // --- START: 客户服务弹窗逻辑 ---
+        const contactModal = document.getElementById('contact-modal');
+        const openModalTriggers = document.querySelectorAll('.open-contact-modal-trigger, #open-contact-modal');
+        const closeModalBtn = document.getElementById('close-contact-modal');
+
+        const openModal = () => {
+            if (contactModal) {
+                contactModal.classList.add('active');
+            }
+        }
+
+        const closeModal = () => {
+            if (contactModal) {
+                contactModal.classList.remove('active');
+            }
+        }
+
+        openModalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault(); // Stop link default behavior
+                openModal();
+            });
+        });
+        
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', closeModal);
+        }
+        
+        if (contactModal) {
+            contactModal.addEventListener('click', (event) => {
+                if (event.target === contactModal) {
+                    closeModal();
+                }
+            });
+        }
+        // --- END: 客户服务弹窗逻辑 ---
+    </script>
+
+</body>
+</html>

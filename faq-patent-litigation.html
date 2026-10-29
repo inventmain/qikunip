@@ -130,6 +130,36 @@
     }
     /* --- END: 新增客户服务入口样式 --- */
         
+    
+        /* --- Language Switcher Button --- */
+        .lang-switch-item { display: inline-flex; align-items: center; margin-left: 10px; }
+        .lang-btn {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 20px !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            color: #ffffff !important;
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            transition: all 0.25s ease !important;
+            text-decoration: none !important;
+            cursor: pointer !important;
+            line-height: 1.4 !important;
+        }
+        .lang-btn:hover {
+            background: rgba(186, 154, 62, 0.25) !important;
+            border-color: #ba9a3e !important;
+            color: #ba9a3e !important;
+            transform: translateY(-1px);
+        }
+        .lang-btn .flag { font-size: 14px; line-height: 1; }
+        @media (max-width: 768px) {
+            .lang-switch-item { margin: 12px 0 5px 0; justify-content: center; }
+        }
+
     </style>
     <script type="application/ld+json">
     {
@@ -145,6 +175,7 @@
         {"@type":"Question","name":"什么是“诉前禁令”？","acceptedAnswer":{"@type":"Answer","text":"也叫诉前行为保全，是指在正式起诉前，如果情况紧急，不立即制止侵权行为将会给权利人造成难以弥补的损害，可以向法院申请裁定，要求对方立即停止侵权行为。申请诉前禁令需要提供担保，且法院审查非常严格。"}}]
     }
     </script>
+    <script src="js/lang-detector.js"></script>
 </head>
 <body>
     <header class="navbar">
@@ -153,7 +184,7 @@
                 <img src="images/qikun-logo-dark.png" alt="启坤知识产权 Logo">
                 <div class="logo-text"><h1 style="font-size:24px; color:#fff; margin:0;"><strong>启坤知识产权</strong></h1></div>
             </a>
-            <a href="#" class="open-contact-modal-trigger" style="padding: 10px 25px; border-radius: 5px; background: var(--cta-color); color: var(--light-color); font-weight: bold; text-decoration: none;">联系我们</a>
+            <a href="#" class="open-contact-modal-trigger" style="padding: 10px 25px; border-radius: 5px; background: var(--cta-color); color: var(--light-color); font-weight: bold; text-decoration: none;">联系我们</a> <a href="javascript:void(0)" onclick="switchLanguage(\'en\')" class="lang-btn" style="margin-left:15px; border-color:#ba9a3e; color:#fff;"><span class="flag">🇬🇧</span> English</a>
         </div>
     </header>
 

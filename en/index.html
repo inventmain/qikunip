@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beijing QiKun Intellectual Property Agency Co., Ltd. (CNIPA Code: 11655) - Led by former King & Wood Mallesons partners and former CNIPA examiners, specializing in high-value patent prosecution, judicial invalidation, and contingency-fee monetization. Offices in Beijing & Shanghai.">
+    <meta name="keywords" content="专利代理, 专利申请, 授权率提升, 专利保护, 高价值专利, 知识产权代理, 专利布局, 专利挖掘, 专利变现, Claim Chart, 启坤知识产权">
+    <title>QiKun IP - High-Value Patent Prosecution & Monetization | Redefining Quality & Cost-Effectiveness</title>
+    <link rel="icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* --- 1. 原有样式完全保留 --- */
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #ba9a3e;
+            --cta-color: #ff6f61;
+            --dark-color: #222831;
+            --light-color: #ffffff;
+            --gray-color: #f4f4f4;
+            --text-color: #333;
+            --header-bg: #000;
+            --footer-bg: #1C1C1C;
+        }
+        body { font-family: 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif; margin: 0; line-height: 1.6; color: var(--text-color); background-color: var(--light-color); }
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+        h1, h2, h3 { margin-bottom: 20px; color: var(--dark-color); }
+        h2 { text-align: center; font-size: 2.2em; }
+        .text-center { text-align: center; }
+
+        /* Header & Navigation */
+        .navbar { background: var(--header-bg); color: var(--light-color); padding: 15px 0; position: sticky; top: 0; z-index: 1000; width: 100%; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo-area { display: flex; align-items: center; text-decoration: none; }
+        .logo-area img { max-height: 50px; margin-right: 15px; }
+        .logo-text h1 { font-size: 24px; color: var(--light-color); margin: 0; font-weight: bold; }
+        .nav-links { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; }
+        .nav-links > li { margin-left: 30px; position: relative; }
+        .nav-links a, .nav-links .dropdown-toggle { text-decoration: none; color: var(--light-color); font-weight: 500; padding: 10px 0; transition: color 0.3s; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+        .nav-links > li > a:hover, .dropdown:hover .dropdown-toggle { color: var(--secondary-color); }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--header-bg); border-radius: 4px; padding: 10px 0; list-style: none; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu a { display: block; padding: 10px 20px; color: var(--light-color); white-space: nowrap; }
+        .dropdown-menu a:hover { background-color: rgba(255, 255, 255, 0.1); }
+        
+        .btn-main { background: var(--cta-color); color: var(--light-color); padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; transition: background 0.3s; border: none; cursor: pointer; }
+        .btn-main:hover { background: #e65a4c; }
+        .nav-contact-btn { padding: 12px 40px; margin-left: 20px; border-radius: 5px; background: var(--cta-color); color: var(--light-color); font-weight: bold; text-decoration: none; white-space: nowrap; transition: background .3s; }
+        .nav-contact-btn:hover { background: #e65a4c; }
+
+        .section-bg { position: relative; background-size: cover; background-position: center; color: var(--light-color); }
+        .section-bg::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.65); z-index: 1; }
+        .section-bg > .container { position: relative; z-index: 2; }
+        .section-bg h1, .section-bg h2, .section-bg .subtitle { color: var(--light-color); }
+        
+        /* Hero 基础样式 */
+        .hero { padding: 80px 0 100px 0; text-align: center; } 
+        .hero h1 { font-size: 3em; margin-bottom: 20px; line-height: 1.2; }
+        .hero .subtitle { font-size: 1.2em; max-width: 800px; margin: 0 auto 30px auto; font-weight: 300; opacity: 0.9; }
+
+        /* --- 2. 新增/修改：针对您需求的定点 CSS 补充 --- */
+        
+        /* Hero Tag 变为链接后的样式修正 */
+        a.hero-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 10px 30px; /* 增加内边距 */
+            border-radius: 50px;
+            margin-bottom: 50px;
+            backdrop-filter: blur(5px);
+            text-decoration: none; /* 去掉下划线 */
+            transition: transform 0.3s, background 0.3s;
+            cursor: pointer;
+        }
+        a.hero-tag:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        /* Hero Card 变为链接后的样式修正 */
+        a.hero-card {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            color: var(--dark-color);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none; /* 去掉链接下划线 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        a.hero-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .hero-card h2 { text-align: left; font-size: 1.6em; margin-bottom: 10px; color: var(--dark-color); }
+        .hero-card p { color: #555; margin-bottom: 20px; font-size: 1em; line-height: 1.8; }
+        
+        .value-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* --- 3. 后续板块 --- */
+        .logo-wall-section { padding: 60px 0; background-color: var(--light-color); }
+        .logo-wall-section h3 { text-align: center; font-style: italic; color: #777; margin-bottom: 40px; font-weight: normal; }
+        .logo-wall { overflow: hidden; position: relative; }
+        .logo-slider { display: flex; width: fit-content; }
+        .logo-slider.row-1 { animation: scroll-left 40s linear infinite; }
+        .logo-slider.row-2 { animation: scroll-right 40s linear infinite; }
+        .logo-slider img { height: 70px; margin: 0 40px; filter: grayscale(30%); opacity: 0.85; transition: all 0.3s ease; }
+        .logo-slider img:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
+        @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes scroll-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+
+        /* Trust Section: 紧凑精致布局 */
+        .trust-section { padding: 42px 0; background: #fffcf5; border-bottom: 1px solid #eee; }
+        
+        /* 信任板块链接样式 */
+        a.trust-link {
+            text-decoration: none;
+            color: var(--cta-color);
+            font-size: 1.18em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+        a.trust-link:hover {
+            color: #e65a4c;
+        }
+
+        .team-section { background: var(--gray-color); padding: 80px 0; }
+        .main-partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px; margin-top: 40px; }
+        .partner-card { background: var(--light-color); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        .partner-card .header { display: flex; align-items: center; margin-bottom: 20px; }
+        .partner-card .header img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-right: 20px; }
+        .partner-card .header h3 { margin: 0 0 5px 0; font-size: 1.5em; }
+        .partner-card .header .title { color: #555; font-weight: bold; }
+        
+        .other-partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; text-align: center; }
+        .partner-card-simple { background: var(--light-color); padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .partner-card-simple h3 { font-size: 1.3em; margin-top: 0; margin-bottom: 5px; }
+        .partner-card-simple .title { font-size: 0.9em; color: var(--primary-color); font-weight: bold; margin-left: 8px; }
+        .partner-card-simple p { font-size: 0.95em; color: #444; margin-bottom: 0; }
+
+        .final-cta { padding: 80px 0; background: var(--dark-color); color: var(--light-color); text-align: center; }
+        .final-cta h2 { color: var(--light-color); }
+        
+        footer { background-color: var(--footer-bg); color: #ccc; padding: 40px 0; text-align: center; font-size: 14px; }
+        footer p { margin: 5px 0; }
+        footer a { color: #ccc; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* Mobile Nav & Responsive */
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 10px; }
+        .nav-toggle .hamburger { display: block; width: 25px; height: 2px; background-color: var(--light-color); position: relative; transition: transform 0.3s ease; }
+        .nav-toggle .hamburger::before, .nav-toggle .hamburger::after { content: ''; position: absolute; left: 0; width: 100%; height: 2px; background-color: var(--light-color); transition: top 0.3s ease, bottom 0.3s ease, transform 0.3s ease; }
+        .nav-toggle .hamburger::before { top: -8px; }
+        .nav-toggle .hamburger::after { bottom: -8px; }
+        .nav-open .nav-toggle .hamburger { transform: rotate(45deg); }
+        .nav-open .nav-toggle .hamburger::before { top: 0; transform: rotate(90deg); }
+        .nav-open .nav-toggle .hamburger::after { bottom: 0; transform: rotate(90deg); }
+
+        @media (max-width: 992px) {
+            .nav-toggle { display: block; z-index: 1001; }
+            .nav-links { position: fixed; top: 0; right: 0; height: 100vh; width: 280px; background: var(--header-bg); flex-direction: column; align-items: flex-start; padding: 80px 30px 30px; transform: translateX(100%); transition: transform 0.3s ease-in-out; }
+            .nav-open .nav-links { transform: translateX(0); }
+            .nav-links > li { margin: 15px 0; width: 100%; }
+            .nav-links a.nav-contact-btn { margin: 20px 0 0 0; text-align: center; display: block; }
+            .dropdown-menu { position: static; display: none; background: #111; box-shadow: none; padding-left: 15px;}
+            .dropdown:hover .dropdown-menu { display: block; }
+        }
+        @media (max-width: 768px) {
+            h2 { font-size: 1.8em; }
+            .hero { padding: 60px 0; }
+            .hero h1 { font-size: 2em; }
+            .hero-grid { grid-template-columns: 1fr; }
+            /* Mobile adjustments */
+        }
+
+        /* Contact Modal & Floating Button */
+        .floating-contact-btn { position: fixed; right: 25px; bottom: 25px; z-index: 1050; }
+        .floating-contact-btn button { background: #07C160; border: none; border-radius: 50%; width: 60px; height: 60px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); color: var(--light-color); font-size: 24px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background-color 0.3s; }
+        .floating-contact-btn button:hover { background: #06AD56; }
+        .contact-modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1100; justify-content: center; align-items: center; }
+        .contact-modal-overlay.active { display: flex; }
+        .contact-modal-content { background: var(--light-color); padding: 30px; border-radius: 8px; text-align: center; width: 90%; max-width: 320px; position: relative; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+        .contact-modal-close { position: absolute; top: 10px; right: 15px; font-size: 24px; color: #888; cursor: pointer; border: none; background: none; }
+        .contact-modal-content h3 { margin-top: 0; margin-bottom: 20px; font-size: 1.5em; color: var(--dark-color); }
+        .contact-modal-content img { max-width: 180px; width: 100%; margin-bottom: 15px; }
+        .contact-modal-content p { margin: 10px 0; font-size: 1.1em; }
+        .contact-modal-content a { color: var(--primary-color); text-decoration: none; font-weight: bold; }
+
+        /* --- 新增：移植自原主页的案例板块样式 --- */
+        .case-studies { padding: 80px 0; background: var(--light-color); }
+        .case-studies .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        /* 移动端适配：单栏显示 */
+        @media (max-width: 768px) {
+            .case-studies .grid { grid-template-columns: 1fr; }
+        }
+        .case-card { background: var(--light-color); padding: 25px; border-left: 5px solid var(--primary-color); border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .case-card h4 { margin-top: 0; font-size: 1.2em; color: var(--dark-color); }
+        .case-card p { color: #555; margin-bottom: 0; }
+
+    
+        /* --- Language Switcher Button --- */
+        .lang-switch-item { display: inline-flex; align-items: center; margin-left: 10px; }
+        .lang-btn {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 20px !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            color: #ffffff !important;
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            transition: all 0.25s ease !important;
+            text-decoration: none !important;
+            cursor: pointer !important;
+            line-height: 1.4 !important;
+        }
+        .lang-btn:hover {
+            background: rgba(186, 154, 62, 0.25) !important;
+            border-color: #ba9a3e !important;
+            color: #ba9a3e !important;
+            transform: translateY(-1px);
+        }
+        .lang-btn .flag { font-size: 14px; line-height: 1; }
+        @media (max-width: 768px) {
+            .lang-switch-item { margin: 12px 0 5px 0; justify-content: center; }
+        }
+
+    </style>
+    <script src="../js/lang-detector.js"></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-area">
+                <img src="../images/qikun-logo-dark.png" alt="QiKun Intellectual Property Logo">
+                <div class="logo-text"><h1><strong>QiKun IP</strong></h1></div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <span class="dropdown-toggle">Services <i class="fas fa-chevron-down fa-xs"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="high-value-patent-layout.html">High-Value Prosecution (Domestic & PCT)</a></li>
+                        <li><a href="patent-monetization.html">Patent Monetization (Sales | Licensing | Litigation)</a></li>
+                        <li><a href="patent-consulting.html">Patent Consulting (Invalidation | FTO | Appeals)</a></li>
+                        <li><a href="http://www.inventmain.com" target="_blank">ZhuanSuTong™️</a></li>
+                    </ul>
+                </li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="credentials.html">Credentials</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#" class="nav-contact-btn open-contact-modal-trigger">Contact Us</a></li>
+                <li class="lang-switch-item"><a href="javascript:void(0)" onclick="switchLanguage('zh')" class="lang-btn" title="切换至中文"><span class="flag">🇨🇳</span> 中文</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <main>
+<section class="hero section-bg" style="background-image: url('../images/hero-background.jpg');">
+    <div class="container">
+        <h1 style="margin-bottom: 15px;">
+            Redefining <span style="color: var(--cta-color);">High Quality</span> & <span style="color: var(--secondary-color);">Cost-Effectiveness</span> in Patent Prosecution
+        </h1>
+        <p class="subtitle" style="font-size: 1.3em; margin-bottom: 35px; color: #f0f0f0;">
+            Making Quality Visible, Bringing Sincerity to Value.
+        </p>
+        
+        <div style="margin-bottom: 50px;">
+            <a href="#" class="open-contact-modal-trigger" style="text-decoration: none; display: inline-block;">
+                <div style="
+                    background: rgba(96, 165, 250, 0.14); 
+                    border: 1px solid rgba(96, 165, 250, 0.6); 
+                    padding: 13px 38px; 
+                    border-radius: 50px; 
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), inset 0 0 14px rgba(96, 165, 250, 0.12);
+                    backdrop-filter: blur(10px);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                " onmouseover="this.style.transform='translateY(-2px)'; this.style.background='rgba(96, 165, 250, 0.22)'; this.style.borderColor='rgba(96, 165, 250, 0.95)'; this.style.boxShadow='0 8px 25px rgba(96, 165, 250, 0.35), inset 0 0 16px rgba(96, 165, 250, 0.2)';" 
+                   onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(96, 165, 250, 0.14)'; this.style.borderColor='rgba(96, 165, 250, 0.6)'; this.style.boxShadow='0 4px 20px rgba(0, 0, 0, 0.25), inset 0 0 14px rgba(96, 165, 250, 0.12)';">
+                    <span style="font-size: 1.15em; font-weight: 600; color: #ffffff; letter-spacing: 0.5px;">
+                        <i class="fas fa-feather-alt" style="color: #60a5fa; margin-right: 8px;"></i>签约前 · 支持首件试写体验
+                    </span>
+                </div>
+            </a>
+            <div style="font-size: 0.85em; color: rgba(224, 242, 254, 0.85); margin-top: 10px; letter-spacing: 0.5px;">
+                面向高新技术企业 · 满意后再签约长期合作
+            </div>
+        </div>
+
+        <div class="hero-grid">
+            
+            <a href="#" class="hero-card open-contact-modal-trigger" style="border-top: 5px solid var(--cta-color);">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h2 style="margin: 0; font-size: 1.5em; color: var(--primary-color);">高质量，看得见</h2>
+                        <span style="background: #fff0f0; color: #d93025; padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold; white-space: nowrap;">业界独家</span>
+                    </div>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 20px;">
+                        注入<strong>诉讼变现经验</strong>，以终为始，只做高价值专利。<br>
+                        针对<strong>保护</strong>需求，免费提供 <strong>Claim Chart</strong> 清晰核验质量。<br>
+                        <strong>让专利交付质量，不再等于“开盲盒”。</strong>
+                    </p>
+                </div>
+                <div style="border-top: 1px solid #eee; padding-top: 15px; font-size: 0.95em; color: #666; display: flex; align-items: center; font-weight: 500;">
+                    <i class="fas fa-search-plus" style="color: var(--cta-color); margin-right: 8px;"></i>
+                    <span>支持低成本盘点和全风险变现，兑现专利价值</span>
+                </div>
+            </a>
+
+            <a href="#" class="hero-card open-contact-modal-trigger" style="border-top: 5px solid var(--primary-color);">
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h2 style="margin: 0; font-size: 1.5em; color: var(--primary-color);">性价比，很极致</h2>
+                        <span style="background: #e8f0fe; color: var(--primary-color); padding: 4px 10px; border-radius: 4px; font-size: 0.8em; font-weight: bold; white-space: nowrap;">降本增效</span>
+                    </div>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 20px;">
+                        红圈所Partner与前审查员把关，<strong>无需承担大所溢价</strong>。<br>
+                        针对<strong>获权</strong>需求，依审查尺度严控驳回风险，显著提升授权率。<br>
+                        <strong>以务实商业定价，享受顶尖一线交付品质。</strong>
+                    </p>
+                </div>
+                <div style="border-top: 1px solid #eee; padding-top: 15px; font-size: 0.95em; color: #666; display: flex; align-items: center; font-weight: 500;">
+                    <i class="fas fa-hand-holding-usd" style="color: var(--primary-color); margin-right: 8px;"></i>
+                    <span>支持专利布局、加快授权和全风险代理模式</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+        <section class="trust-section">
+            <div class="container text-center" style="max-width: 860px;">
+                <h2 style="font-size: 1.45em; margin-bottom: 10px; font-weight: 600;">敢于接受检验，源于对交付品质的自信</h2>
+                
+                <a href="#" class="trust-link open-contact-modal-trigger" style="color: var(--primary-color);">
+                    <i class="fas fa-shield-alt" style="color: var(--secondary-color);"></i> 签约前 · 接受首件试写体验
+                </a>
+                
+                <p style="font-size: 0.98em; color: #475569; line-height: 1.6; margin: 0 auto;">
+                    面向高新技术企业：先行出具保密承诺，签合同前支持首件核心技术试写。<br>
+                    由前审查员与专利律师联合交付，贵司满意后再签约长期合作。
+                </p>
+            </div>
+        </section>
+        
+        <section class="logo-wall-section">
+            <div class="container">
+                <h3>我们服务的客户与合作伙伴</h3>
+                <div class="logo-wall">
+                    <div class="logo-slider row-1">
+                        <img src="../images/client-logo-a.png" alt="客户A公司Logo"><img src="../images/client-logo-b.png" alt="客户B公司Logo"><img src="../images/client-logo-c.png" alt="客户C公司Logo"><img src="../images/client-logo-d.png" alt="客户D公司Logo"><img src="../images/client-logo-e.png" alt="客户E公司Logo"><img src="../images/client-logo-f.png" alt="客户F公司Logo">
+                        <img src="../images/client-logo-a.png" alt="客户A公司Logo"><img src="../images/client-logo-b.png" alt="客户B公司Logo"><img src="../images/client-logo-c.png" alt="客户C公司Logo"><img src="../images/client-logo-d.png" alt="客户D公司Logo"><img src="../images/client-logo-e.png" alt="客户E公司Logo"><img src="../images/client-logo-f.png" alt="客户F公司Logo">
+                    </div>
+                    <div style="height: 20px;"></div>
+                    <div class="logo-slider row-2">
+                         <img src="../images/partner-logo-g.png" alt="合作伙伴G公司Logo"><img src="../images/partner-logo-h.png" alt="合作伙伴H公司Logo"><img src="../images/partner-logo-i.png" alt="合作伙伴I公司Logo"><img src="../images/partner-logo-j.png" alt="合作伙伴J公司Logo"><img src="../images/partner-logo-k.png" alt="合作伙伴K公司Logo"><img src="../images/partner-logo-l.png" alt="合作伙伴L公司Logo">
+                         <img src="../images/partner-logo-g.png" alt="合作伙伴G公司Logo"><img src="../images/partner-logo-h.png" alt="合作伙伴H公司Logo"><img src="../images/partner-logo-i.png" alt="合作伙伴I公司Logo"><img src="../images/partner-logo-j.png" alt="合作伙伴J公司Logo"><img src="../images/partner-logo-k.png" alt="合作伙伴K公司Logo"><img src="../images/partner-logo-l.png" alt="合作伙伴L公司Logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="team-section">
+            <div class="container">
+                <h2 class="text-center">一群真正懂得如何将专利变为财富的专家</h2>
+                
+                <div class="main-partners-grid">
+                    <div class="partner-card">
+                        <div class="header">
+                            <img src="../images/team-luo-peng.jpg" alt="罗朋, 启坤Founding Partner">
+                            <div>
+                                <h3>罗朋</h3>
+                                <div class="title">Founding Partner</div>
+                            </div>
+                        </div>
+                        <p>27年行业经验，曾任金杜律师事务所Partner。他将服务跨国巨头的顶尖标准和全球视野带入启坤，确保您的每一项专利资产都能获得最大化的商业价值和最坚实的法律保障。</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="header">
+                            <img src="../images/team-wang-fei.jpg" alt="王飞, 启坤Managing Partner">
+                            <div>
+                                <h3>王飞</h3>
+                                <div class="title">Managing Partner</div>
+                            </div>
+                        </div>
+                        <p>18 years of IP experience, former CNIPA patent examiner, former Chief IP Counsel at leading tech unicorns. Master of balancing commercial goals, regulatory policies, and judicial enforcement to architect optimal monetization and portfolio strategies.</p>
+                    </div>
+                </div>
+
+                <div class="other-partners-grid">
+                    <div class="partner-card-simple">
+                        <h3>谭梁镌<span class="title">Partner</span></h3>
+                        <p>Attorney at Law and Patent Attorney with triple background: Ericsson telecommunications R&D engineer, CNIPA patent examiner, and corporate IP counsel. Unique dual pedigree as both technological inventor and courtroom trial advocate; lead appellate counsel before Supreme People's Court.</p>
+                    </div>
+                    <div class="partner-card-simple">
+                        <h3>吴晓佟<span class="title">Partner</span></h3>
+                        <p>13 years of enterprise client service with dual technical and legal expertise. Oversees end-to-end operational execution of cross-border patent monetization and prosecution programs.</p>
+                    </div>
+                    <div class="partner-card-simple">
+                        <h3>黄可峻<span class="title">Partner</span></h3>
+                        <p>Preeminent life sciences IP litigator in China; lead trial counsel in the landmark Pfizer Viagra patent litigation. Renowned for mastering high-stakes, high-complexity pharma patent disputes.</p>
+                    </div>
+                     <div class="partner-card-simple">
+                        <h3>王璐<span class="title">Partner</span></h3>
+                        <p>16年行业经验，深耕生物化学领域。曾担任知名代理机构Partner与独角兽企业IP总监，擅长将高价值专利布局与商业竞争结合。代理案件曾获中国专利奖银奖。 </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section class="case-studies">
+    <div class="container">
+        <h2 class="text-center">成功案例</h2>
+        <div class="grid">
+            <div class="case-card">
+                <h4>Case 1: Strategic High-Value Patent Portfolio</h4>
+                <p>Engineered an uncircumventable patent moat for a publicly listed technology corporation, enabling commercial monetization and defensive market dominance.</p>
+            </div>
+            <div class="case-card">
+                <h4>Case 2: Tiered Prosecution & 40%+ Cost Optimization</h4>
+                <p>Implemented tiered strategy ("fortified defense for core patents + streamlined prosecution for defensive filings") for a scaling tech enterprise, cutting <strong>over 40% of annual patent expenditures</strong> while reinforcing judicial validity.</p>
+            </div>
+            <div class="case-card">
+                <h4>Case 3: Standard Essential Patent (SEP) Acquisition</h4>
+                <p>Advised and facilitated the strategic acquisition of pool-accepted Standard Essential Patents (SEPs), generating sustained long-term international royalty revenue streams.</p>
+            </div>
+            <div class="case-card">
+                <h4>Case 4: Corporate IP Monetization & Value Proof</h4>
+                <p>Audited and monetized dormant assets for an enterprise investing tens of millions annually in R&D, demonstrating tangible cash ROI to executive leadership.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+        <section id="contact" class="final-cta">
+            <div class="container">
+                <h2>Exceptional Quality Speaks for Itself.</h2>
+                <p style="margin: 20px 0 30px; font-size: 1.2em; opacity: 0.9;">Contact our senior counsel today to schedule a confidential consultation.</p>
+                <a href="#" class="btn-main open-contact-modal-trigger">Contact Senior Counsel</a>
+            </div>
+        </section>
+    </main>
+    
+    <div class="floating-contact-btn">
+        <button id="open-contact-modal" aria-label="联系我们"><i class="fab fa-weixin"></i></button>
+    </div>
+
+    <div class="contact-modal-overlay" id="contact-modal">
+        <div class="contact-modal-content">
+            <button class="contact-modal-close" id="close-contact-modal" aria-label="关闭">&times;</button>
+            <h3>Contact Senior Counsel</h3>
+            <img src="../images/微信二维码.jpg" alt="启坤顾问微信二维码">
+            <p><strong>Scan WeChat QR Code or Reach Us Directly</strong></p>
+            <p>Telephone: <a href="tel:010-82696906">010-8269 6906</a></p>
+            <p>Email: <br><a href="mailto:contact@qikunip.com">contact@qikunip.com</a></p>
+            <p style="font-size: 0.82em; color: #64748b; margin-top: 12px; line-height: 1.5; border-top: 1px solid #eee; padding-top: 10px;">
+                For corporate trial drafting inquiries (NDA protected), please specify <strong>Company Name + R&D Domain</strong>.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 18px;">
+                <img src="../images/qikun-logo-dark.png" alt="QiKun Intellectual Property Logo" style="height: 38px; width: auto; opacity: 0.92;">
+                <span style="font-size: 20px; font-weight: bold; color: #ffffff; letter-spacing: 0.5px;">启坤知识产权<sup style="font-size: 10px; font-weight: normal; color: #60a5fa; margin-left: 2px; vertical-align: top;">®</sup></span>
+            </div>
+            <p style="margin-bottom: 8px; font-size: 14px; color: #d1d5db;">
+                Beijing QiKun Intellectual Property Agency Co., Ltd. | Licensed by CNIPA <a href="credentials.html" style="color: #60a5fa; text-decoration: underline;">Agency Code: 11655</a> ｜ <a href="credentials.html" style="color: #60a5fa; text-decoration: underline;">Precision Service Guarantee List Agency</a>
+            </p>
+            <p style="font-size: 13px; color: #9ca3af; margin: 4px 0;">
+                Beijing HQ: 7th Floor, Wangfu International Center, No. 219 Wangfujing St, Dongcheng District, Beijing | Shanghai Office: 5th Floor, Ascendas Plaza, No. 333 Tianyaoqiao Rd, Xuhui District, Shanghai
+            </p>
+            <p style="font-size: 13px; color: #9ca3af; margin: 4px 0 16px 0;">
+                Telephone: <a href="tel:010-82696906" style="color: #d1d5db; text-decoration: none;">010-8269 6906</a> ｜ Email: <a href="mailto:contact@qikunip.com" style="color: #d1d5db; text-decoration: none;">contact@qikunip.com</a>
+            </p>
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 14px; font-size: 12px; color: #6b7280;">
+                “QiKun” and associated marks are registered trademarks of Beijing QiKun Intellectual Property Agency Co., Ltd. All rights reserved. ｜ <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #6b7280; text-decoration: none;">京ICP备19020611号-1</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // 移动端菜单
+        const navToggle = document.querySelector('.nav-toggle');
+        const body = document.body;
+        navToggle.addEventListener('click', () => { body.classList.toggle('nav-open'); });
+
+        // 弹窗逻辑
+        const contactModal = document.getElementById('contact-modal');
+        const openModalTriggers = document.querySelectorAll('.open-contact-modal-trigger, #open-contact-modal');
+        const closeModalBtn = document.getElementById('close-contact-modal');
+        const openModal = () => { if (contactModal) contactModal.classList.add('active'); }
+        const closeModal = () => { if (contactModal) contactModal.classList.remove('active'); }
+        openModalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+        });
+        if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+        if (contactModal) contactModal.addEventListener('click', (event) => { if (event.target === contactModal) closeModal(); });
+    </script>
+
+</body>
+</html>

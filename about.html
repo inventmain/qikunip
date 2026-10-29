@@ -225,6 +225,36 @@
             .partner-card img { margin-right: 0; margin-bottom: 15px; }
         }
         /* --- END: 响应式适配 --- */
+    
+        /* --- Language Switcher Button --- */
+        .lang-switch-item { display: inline-flex; align-items: center; margin-left: 10px; }
+        .lang-btn {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 20px !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            color: #ffffff !important;
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            transition: all 0.25s ease !important;
+            text-decoration: none !important;
+            cursor: pointer !important;
+            line-height: 1.4 !important;
+        }
+        .lang-btn:hover {
+            background: rgba(186, 154, 62, 0.25) !important;
+            border-color: #ba9a3e !important;
+            color: #ba9a3e !important;
+            transform: translateY(-1px);
+        }
+        .lang-btn .flag { font-size: 14px; line-height: 1; }
+        @media (max-width: 768px) {
+            .lang-switch-item { margin: 12px 0 5px 0; justify-content: center; }
+        }
+
     </style>
 
 <script type="application/ld+json">
@@ -284,6 +314,7 @@
 </script>
 
 
+    <script src="js/lang-detector.js"></script>
 </head>
 <body>
 
@@ -311,6 +342,7 @@
                 <li><a href="insights.html">专业观点</a></li>
                 <li><a href="faq.html">常见问题</a></li>
                 <li><a href="#" class="nav-contact-btn open-contact-modal-trigger">联系我们</a></li>
+                <li class="lang-switch-item"><a href="javascript:void(0)" onclick="switchLanguage('en')" class="lang-btn" title="Switch to English"><span class="flag">🇬🇧</span> English</a></li>
             </ul>
         </div>
     </header>

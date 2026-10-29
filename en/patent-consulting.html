@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Specialized patent consulting: invalidation defense, FTO clearance, prior art searches, and complex CNIPA reexamination appeals.">
+    <meta name="keywords" content="专利咨询, 专利无效, FTO, 专利检索, 疑难案件处理, 启坤知识产权">
+    <title>Patent Consulting & Invalidation Services - QiKun IP</title>
+    <link rel="icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0056b3; --secondary-color: #ba9a3e; --cta-color: #ff6f61;
+            --dark-color: #222831; --light-color: #ffffff; --gray-color: #f4f4f4;
+            --text-color: #333; --header-bg: #000; --footer-bg: #1C1C1C;
+        }
+        body { font-family: 'Microsoft YaHei', sans-serif; margin: 0; line-height: 1.6; color: var(--text-color); }
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        h1, h2, h3 { margin-bottom: 20px; color: var(--dark-color); }
+        h2 { text-align: center; font-size: 2.2em; }
+        .text-center { text-align: center; }
+
+        /* --- START: 标准化 Header & Navigation --- */
+        .navbar { background: var(--header-bg); color: var(--light-color); padding: 15px 0; position: sticky; top: 0; z-index: 1000; width: 100%; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo-area { display: flex; align-items: center; text-decoration: none; }
+        .logo-area img { max-height: 50px; margin-right: 15px; }
+        .logo-text h1 { font-size: 24px; color: var(--light-color); margin: 0; font-weight: bold; }
+        .nav-links { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; }
+        .nav-links > li { margin-left: 30px; position: relative; }
+        .nav-links a, .nav-links .dropdown-toggle { text-decoration: none; color: var(--light-color); font-weight: 500; padding: 10px 0; transition: color 0.3s; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+        .nav-links > li > a:hover, .dropdown:hover .dropdown-toggle { color: var(--secondary-color); }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--header-bg); border-radius: 4px; padding: 10px 0; list-style: none; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu a { display: block; padding: 10px 20px; color: var(--light-color); white-space: nowrap; }
+        .dropdown-menu a:hover { background-color: rgba(255, 255, 255, 0.1); }
+        .nav-contact-btn {
+            padding: 12px 40px; margin-left: 20px; border-radius: 5px; background: var(--cta-color);
+            color: var(--light-color); font-weight: bold; text-decoration: none; white-space: nowrap; transition: background .3s;
+        }
+        .nav-contact-btn:hover { background: #e65a4c; }
+        .btn-main { background: var(--cta-color); color: var(--light-color); padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; transition: background 0.3s; }
+        .btn-main:hover { background: #e65a4c; }
+        /* --- END: 标准化 Header & Navigation --- */
+        
+        .hero { 
+            background: rgba(0,0,0,.6) url('../images/consulting-hero.jpg'); background-size: cover; background-position: center; background-blend-mode: darken;
+            color: var(--light-color); text-align: center; padding: 100px 0; 
+        }
+        .hero h1 { font-size: 3em; color: var(--light-color); }
+        .hero .subtitle { font-size: 1.2em; max-width: 800px; margin: 0 auto 30px auto; opacity: 0.9; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .service-item { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .service-item .icon { font-size: 2.5em; color: var(--primary-color); margin-bottom: 15px; }
+        .service-item h3 { font-size: 1.5em; margin-bottom: 10px; }
+        .service-item p { color: #555; }
+        .service-item ul { padding-left: 20px; color: #555; }
+
+        .final-cta { background: var(--dark-color); color: var(--light-color); text-align: center; }
+        .final-cta h2 { color: var(--light-color); }
+        
+        footer { background-color: var(--footer-bg); color: #ccc; padding: 40px 0; text-align: center; font-size: 14px; }
+        footer p, footer a { margin: 5px 0; color: #ccc; text-decoration: none; }
+
+        /* --- START: 新增客户服务入口样式 --- */
+        .floating-contact-btn {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 1050;
+        }
+        .floating-contact-btn button {
+            background: #07C160;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            color: var(--light-color);
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .floating-contact-btn button:hover {
+            background: #06AD56;
+        }
+        .contact-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1100;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-modal-overlay.active {
+            display: flex;
+        }
+        .contact-modal-content {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            width: 90%;
+            max-width: 320px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        .contact-modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: #888;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        .contact-modal-content h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: var(--dark-color);
+        }
+        .contact-modal-content img {
+            max-width: 180px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .contact-modal-content p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .contact-modal-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-modal-content a:hover {
+            text-decoration: underline;
+        }
+        /* --- END: 新增客户服务入口样式 --- */
+        
+        /* --- START: 移动端汉堡菜单按钮 --- */
+        .nav-toggle {
+            display: none; /* 默认隐藏 */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .nav-toggle .hamburger {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--light-color);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .nav-toggle .hamburger::before,
+        .nav-toggle .hamburger::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--light-color);
+            transition: top 0.3s ease, bottom 0.3s ease, transform 0.3s ease;
+        }
+        .nav-toggle .hamburger::before { top: -8px; }
+        .nav-toggle .hamburger::after { bottom: -8px; }
+        .nav-open .nav-toggle .hamburger { transform: rotate(45deg); }
+        .nav-open .nav-toggle .hamburger::before { top: 0; transform: rotate(90deg); }
+        .nav-open .nav-toggle .hamburger::after { bottom: 0; transform: rotate(90deg); }
+        /* --- END: 移动端汉堡菜单按钮 --- */
+
+        /* --- START: 响应式适配 --- */
+        @media (max-width: 992px) {
+            .nav-toggle { display: block; z-index: 1001; }
+            .navbar .container { flex-wrap: nowrap; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 280px;
+                background: var(--header-bg);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 80px 30px 30px;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+            }
+            .nav-open .nav-links { transform: translateX(0); }
+            .nav-links > li { margin: 15px 0; width: 100%; }
+            .nav-links a.nav-contact-btn { margin: 20px 0 0 0; text-align: center; display: block; }
+            .dropdown-menu { position: static; display: none; background: #111; box-shadow: none; border-radius: 0; padding-left: 15px;}
+            .dropdown:hover .dropdown-menu { display: block; }
+        }
+
+        @media (max-width: 768px) {
+            h2 { font-size: 1.8em; }
+            .hero { padding: 60px 20px; }
+            .hero h1 { font-size: 2.2em; }
+            .hero .subtitle { font-size: 1em; }
+            .problem-section, .services-section, .how-we-work-section, .case-studies, .value-promise-section, .team-section, .final-cta { padding: 60px 0; }
+            .services-section .grid, .case-studies .grid { grid-template-columns: 1fr; gap: 20px; }
+            .workflow-container { flex-direction: column; align-items: center; gap: 30px; }
+            .workflow-step { width: 80%; }
+            .workflow-container::before { left: 50%; transform: translateX(-50%); top: 25px; bottom: 25px; width: 4px; height: auto; right: auto; }
+            .main-partners-grid { grid-template-columns: 1fr; gap: 20px; }
+            .partner-card .header { flex-direction: column; text-align: center; }
+            .partner-card .header img { margin-right: 0; margin-bottom: 15px; }
+            .logo-slider img { height: 45px; margin: 0 20px; }
+        }
+        /* --- END: 响应式适配 --- */
+    
+        /* --- Language Switcher Button --- */
+        .lang-switch-item { display: inline-flex; align-items: center; margin-left: 10px; }
+        .lang-btn {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 20px !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            color: #ffffff !important;
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            transition: all 0.25s ease !important;
+            text-decoration: none !important;
+            cursor: pointer !important;
+            line-height: 1.4 !important;
+        }
+        .lang-btn:hover {
+            background: rgba(186, 154, 62, 0.25) !important;
+            border-color: #ba9a3e !important;
+            color: #ba9a3e !important;
+            transform: translateY(-1px);
+        }
+        .lang-btn .flag { font-size: 14px; line-height: 1; }
+        @media (max-width: 768px) {
+            .lang-switch-item { margin: 12px 0 5px 0; justify-content: center; }
+        }
+
+    </style>
+    <script src="../js/lang-detector.js"></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-area">
+                <img src="../images/qikun-logo-dark.png" alt="QiKun Intellectual Property Logo">
+                <div class="logo-text"><h1><strong>QiKun IP</strong></h1></div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <span class="dropdown-toggle">Services <i class="fas fa-chevron-down fa-xs"></i></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="high-value-patent-layout.html">High-Value Prosecution (Domestic & PCT)</a></li>
+                        <li><a href="patent-monetization.html">Patent Monetization (Sales | Licensing | Litigation)</a></li>
+                        <li><a href="patent-consulting.html">Patent Consulting (Invalidation | FTO | Appeals)</a></li>
+                        <li><a href="http://www.inventmain.com" target="_blank">ZhuanSuTong™️</a></li>
+                    </ul>
+                </li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="credentials.html">Credentials</a></li>
+                <li><a href="insights.html">专业观点</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#" class="nav-contact-btn open-contact-modal-trigger">Contact Us</a></li>
+                <li class="lang-switch-item"><a href="javascript:void(0)" onclick="switchLanguage('zh')" class="lang-btn" title="切换至中文"><span class="flag">🇨🇳</span> 中文</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero section-bg" style="background-image: url('../images/consultant-background.png');">
+            <div class="container">
+                <h1>Comprehensive Patent Consulting Matrix</h1>
+                <p class="subtitle">在知识产权领域，无论遇到什么挑战，启坤的专家团队都能为您提供强有力的支持。</p>
+            </div>
+        </section>
+
+        <section style="background: var(--gray-color);">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>专利无效宣告</h3>
+                        <p>当您的核心专利遭遇挑战，或您需要扫清市场上的专利壁垒时，我们的专家（前审查员、资深律师）将是您最可靠的后盾。</p>
+                        <ul>
+                            <li>无效证据检索与分析</li>
+                            <li>无效理由精准剖析</li>
+                            <li>口头审理策略制定</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon"><i class="fas fa-search-dollar"></i></div>
+                        <h3>自由实施分析 (FTO)</h3>
+                        <p>产品上市前的“临门一脚”，也是规避重大侵权风险的关键一步。我们为您提供全面的FTO报告，确保您的商业活动安全无虞。</p>
+                         <ul>
+                            <li>全面专利风险排查</li>
+                            <li>产品技术特征拆解对比</li>
+                            <li>规避设计方案建议</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon"><i class="fas fa-database"></i></div>
+                        <h3>专利检索与分析</h3>
+                        <p>超越简单的关键词搜索。我们利用专业数据库和前审查员的独特视角，为您挖掘数据背后的战略价值。</p>
+                         <ul>
+                            <li>查新检索</li>
+                            <li>技术主题跟踪与分析</li>
+                            <li>竞争对手专利监控</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon"><i class="fas fa-globe-asia"></i></div>
+                        <h3>国际专利策略</h3>
+                        <p>全球市场需要全球化的知识产权视野。我们帮助您规划最高效、最具成本效益的国际专利申请路径。</p>
+                         <ul>
+                            <li>PCT国际申请</li>
+                            <li>巴黎公约途径</li>
+                            <li>重点国家/地区布局策略</li>
+                            <li><a href="high-value-patent-layout.html">了解更多高价值布局 &gt;</a></li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <div class="icon"><i class="fas fa-puzzle-piece"></i></div>
+                        <h3>疑难案件处理</h3>
+                        <p>面对多次驳回、复审程序复杂或涉及多方利益纠葛的棘手案件，我们擅长找到突破口，为您争取最大化的权益。</p>
+                    </div>
+                     <div class="service-item">
+                        <div class="icon"><i class="fas fa-briefcase"></i></div>
+                        <h3>企业IP顾问</h3>
+                        <p>为高速成长的科技企业提供常年知识产权顾问服务，内容涵盖体系搭建、风险防控、价值管理等，成为您外部的“知识产权合伙人”。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="final-cta">
+            <div class="container">
+                <h2>Facing Critical Patent Challenges?</h2>
+                <p>立即联系启坤专家团队，获取一对一的专业咨询。</p>
+                <a href="#" class="btn-main open-contact-modal-trigger" style="margin-top: 20px;">预约咨询</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="floating-contact-btn">
+        <button id="open-contact-modal" aria-label="联系我们">
+            <i class="fab fa-weixin"></i>
+        </button>
+    </div>
+
+    <div class="contact-modal-overlay" id="contact-modal">
+        <div class="contact-modal-content">
+            <button class="contact-modal-close" id="close-contact-modal" aria-label="关闭">&times;</button>
+            <h3>Contact Senior Counsel</h3>
+            <img src="../images/微信二维码.jpg" alt="启坤顾问微信二维码">
+            <p><strong>Scan WeChat QR Code or Reach Us Directly</strong></p>
+            <p>Telephone: <a href="tel:010-82696906">010-8269 6906</a></p>
+            <p>Email: <br><a href="mailto:contact@qikunip.com">contact@qikunip.com</a></p>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 18px;">
+                <img src="../images/qikun-logo-dark.png" alt="QiKun Intellectual Property Logo" style="height: 38px; width: auto; opacity: 0.92;">
+                <span style="font-size: 20px; font-weight: bold; color: #ffffff; letter-spacing: 0.5px;">启坤知识产权<sup style="font-size: 10px; font-weight: normal; color: #60a5fa; margin-left: 2px; vertical-align: top;">®</sup></span>
+            </div>
+            <p style="margin-bottom: 8px; font-size: 14px; color: #d1d5db;">
+                Beijing QiKun Intellectual Property Agency Co., Ltd. | Licensed by CNIPA <a href="credentials.html" style="color: #60a5fa; text-decoration: underline;">Agency Code: 11655</a> ｜ <a href="credentials.html" style="color: #60a5fa; text-decoration: underline;">Precision Service Guarantee List Agency</a>
+            </p>
+            <p style="font-size: 13px; color: #9ca3af; margin: 4px 0;">
+                Beijing HQ: 7th Floor, Wangfu International Center, No. 219 Wangfujing St, Dongcheng District, Beijing | Shanghai Office: 5th Floor, Ascendas Plaza, No. 333 Tianyaoqiao Rd, Xuhui District, Shanghai
+            </p>
+            <p style="font-size: 13px; color: #9ca3af; margin: 4px 0 16px 0;">
+                Telephone: <a href="tel:010-82696906" style="color: #d1d5db; text-decoration: none;">010-8269 6906</a> ｜ Email: <a href="mailto:contact@qikunip.com" style="color: #d1d5db; text-decoration: none;">contact@qikunip.com</a>
+            </p>
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 14px; font-size: 12px; color: #6b7280;">
+                “QiKun” and associated marks are registered trademarks of Beijing QiKun Intellectual Property Agency Co., Ltd. All rights reserved. ｜ <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #6b7280; text-decoration: none;">京ICP备19020611号-1</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- START: 客户服务弹窗逻辑 ---
+        const contactModal = document.getElementById('contact-modal');
+        const openModalTriggers = document.querySelectorAll('.open-contact-modal-trigger, #open-contact-modal');
+        const closeModalBtn = document.getElementById('close-contact-modal');
+
+        const openModal = () => {
+            if (contactModal) {
+                contactModal.classList.add('active');
+            }
+        }
+
+        const closeModal = () => {
+            if (contactModal) {
+                contactModal.classList.remove('active');
+            }
+        }
+
+        openModalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault(); // Stop link default behavior
+                openModal();
+            });
+        });
+
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', closeModal);
+        }
+        
+        if (contactModal) {
+            contactModal.addEventListener('click', (event) => {
+                if (event.target === contactModal) {
+                    closeModal();
+                }
+            });
+        }
+        // --- END: 客户服务弹窗逻辑 ---
+
+        // --- START: Mobile Navigation Toggle Logic ---
+        const navToggle = document.querySelector('.nav-toggle');
+        const body = document.body;
+
+        navToggle.addEventListener('click', () => {
+            body.classList.toggle('nav-open');
+        });
+        // --- END: Mobile Navigation Toggle Logic ---
+
+        
+    </script>
+</body>
+</html>

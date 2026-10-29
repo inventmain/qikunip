@@ -121,6 +121,36 @@
             .timeline::before { display: none; } /* Hide line on mobile for cleaner look */
             .main-nav { display: none; } /* Could be replaced with a hamburger menu */
         }
+    
+        /* --- Language Switcher Button --- */
+        .lang-switch-item { display: inline-flex; align-items: center; margin-left: 10px; }
+        .lang-btn {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 20px !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            color: #ffffff !important;
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            transition: all 0.25s ease !important;
+            text-decoration: none !important;
+            cursor: pointer !important;
+            line-height: 1.4 !important;
+        }
+        .lang-btn:hover {
+            background: rgba(186, 154, 62, 0.25) !important;
+            border-color: #ba9a3e !important;
+            color: #ba9a3e !important;
+            transform: translateY(-1px);
+        }
+        .lang-btn .flag { font-size: 14px; line-height: 1; }
+        @media (max-width: 768px) {
+            .lang-switch-item { margin: 12px 0 5px 0; justify-content: center; }
+        }
+
     </style>
     <script type="application/ld+json">
     {
@@ -137,6 +167,7 @@
       "url": "https://www.inventhub.cn"
     }
     </script>
+    <script src="js/lang-detector.js"></script>
 </head>
 
 <body>
@@ -148,7 +179,8 @@
                 <a href="#how-it-works">运作方式</a>
                 <a href="#process">合作流程</a>
                 <a href="https://www.qikunip.com" target="_blank" rel="noopener">由 启坤 运营</a>
-            </nav>
+                <a href="javascript:void(0)" onclick="switchLanguage('en')" class="lang-btn" style="margin-left:15px;"><span class="flag">🇬🇧</span> English</a>
+        </nav>
         </div>
     </header>
 

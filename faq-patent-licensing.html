@@ -129,6 +129,36 @@
         text-decoration: underline;
     }
     /* --- END: 新增客户服务入口样式 --- */
+    
+        /* --- Language Switcher Button --- */
+        .lang-switch-item { display: inline-flex; align-items: center; margin-left: 10px; }
+        .lang-btn {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 20px !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            color: #ffffff !important;
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            transition: all 0.25s ease !important;
+            text-decoration: none !important;
+            cursor: pointer !important;
+            line-height: 1.4 !important;
+        }
+        .lang-btn:hover {
+            background: rgba(186, 154, 62, 0.25) !important;
+            border-color: #ba9a3e !important;
+            color: #ba9a3e !important;
+            transform: translateY(-1px);
+        }
+        .lang-btn .flag { font-size: 14px; line-height: 1; }
+        @media (max-width: 768px) {
+            .lang-switch-item { margin: 12px 0 5px 0; justify-content: center; }
+        }
+
     </style>
     <script type="application/ld+json">
     {
@@ -144,6 +174,7 @@
         {"@type":"Question","name":"在谈判中，除了价格还有哪些关键条款？","acceptedAnswer":{"@type":"Answer","text":"非常多，例如：许可范围（地域、期限、使用方式）、分许可权、改进技术的归属、保密义务、违约责任、争议解决方式等。一份严谨的合同是保障交易安全和收益的关键，必须由经验丰富的专业人士把关。"}}]
     }
     </script>
+    <script src="js/lang-detector.js"></script>
 </head>
 <body>
     <header class="navbar">
@@ -152,7 +183,7 @@
                 <img src="images/qikun-logo-dark.png" alt="启坤知识产权 Logo">
                 <div class="logo-text"><h1 style="font-size:24px; color:#fff; margin:0;"><strong>启坤知识产权</strong></h1></div>
             </a>
-            <a href="#" class="open-contact-modal-trigger" style="padding: 10px 25px; border-radius: 5px; background: var(--cta-color); color: var(--light-color); font-weight: bold; text-decoration: none;">联系我们</a>
+            <a href="#" class="open-contact-modal-trigger" style="padding: 10px 25px; border-radius: 5px; background: var(--cta-color); color: var(--light-color); font-weight: bold; text-decoration: none;">联系我们</a> <a href="javascript:void(0)" onclick="switchLanguage(\'en\')" class="lang-btn" style="margin-left:15px; border-color:#ba9a3e; color:#fff;"><span class="flag">🇬🇧</span> English</a>
         </div>
     </header>
 
