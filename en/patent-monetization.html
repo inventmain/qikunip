@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Full contingency-fee representation: We invest upfront, monetize patents through licensing, sales, and litigation, and share revenues upon success. Zero risk for clients.">
-    <meta name="keywords" content="Patent Transactions & Sales, Patent Licensing Programs, 专利诉讼, 全风险代理, 专利价值评估, 知识产权变现">
+    <meta name="keywords" content="Patent Transactions, Patent Sales, Patent Licensing, Patent Litigation, Contingency Monetization, Patent Valuation, IP Monetization">
     <title>Patent Monetization & Contingency Representation - QiKun IP</title>
     <link rel="icon" href="../images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -27,7 +27,7 @@
         h2 { text-align: center; font-size: 2.2em; }
         .text-center { text-align: center; }
 
-        /* --- START: 标准化 Header & Navigation --- */
+        /* --- Standardized Header & Navigation --- */
         .navbar { background: var(--header-bg); color: var(--light-color); padding: 15px 0; position: sticky; top: 0; z-index: 1000; width: 100%; }
         .navbar .container { display: flex; justify-content: space-between; align-items: center; }
         .logo-area { display: flex; align-items: center; text-decoration: none; }
@@ -55,9 +55,9 @@
         .nav-contact-btn:hover { background: #e65a4c; }
         .btn-main { background: var(--cta-color); color: var(--light-color); padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; transition: background 0.3s; }
         .btn-main:hover { background: #e65a4c; }
-        /* --- END: 标准化 Header & Navigation --- */
+        /* --- End Standardized Header & Navigation --- */
 
-        /* --- START: 背景图片预留口 --- */
+        /* --- Background image container --- */
         .hero { 
             background: var(--dark-color); 
             background-image: url('../images/your-monetization-background.jpg'); 
@@ -67,11 +67,11 @@
             text-align: center; 
             padding: 100px 0; 
         }
-        /* --- END: 背景图片预留口 --- */
+        /* --- End Background image --- */
 
-        /* 1. 让 .hero 成为定位容器 */
+        /* 1. Hero relative container */
         .hero {
-            position: relative;          /* 关键：给伪元素当坐标系 */
+            position: relative;          /* Pseudo-element positioning */
             background-image: url('../images/your-monetization-background.jpg');
             background-size: cover;
             background-position: center;
@@ -80,16 +80,16 @@
             padding: 100px 0;
         }
 
-        /* 2. 蒙版层 */
+        /* 2. Overlay layer */
         .hero::before {
             content: '';
             position: absolute;
-            inset: 0;                    /* 上右下左全 0，铺满容器 */
-            background: rgba(0,0,0,.60); /* 50 % 黑 = 灰色蒙版；想再暗改 0.6 */
-            z-index: 0;                  /* 盖住背景图，但低于文字 */
+            inset: 0;                    /* Cover full container */
+            background: rgba(0,0,0,.60); /* Overlay opacity */
+            z-index: 0;                  /* Cover background below text */
         }
 
-        /* 3. 让文字容器浮在蒙版上方 */
+        /* Text above overlay */
         .hero .container {
             position: relative;
             z-index: 2;
@@ -102,7 +102,7 @@
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
         .card { background: var(--light-color); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
         
-        /* 新增：可点击卡片的悬停效果 */
+        /* Card hover effect */
         a.card-link { text-decoration: none; color: inherit; }
         a.card-link .card:hover {
             transform: translateY(-5px);
@@ -114,7 +114,7 @@
         .card ul { list-style: none; padding-left: 0; margin-top: 15px; color: #555;}
         .card ul li::before { content: '✓'; margin-right: 8px; color: var(--primary-color); }
         
-        /* 修改：流程布局，电脑端默认为2x2网格 */
+        /* Process flow 2x2 grid */
         .process-flow { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; align-items: start; margin-top: 50px;}
         .process-step { margin-bottom: 20px; padding: 20px; border-left: 3px solid var(--secondary-color); }
         .process-step strong { color: var(--dark-color); }
@@ -123,9 +123,9 @@
         .testimonial-card blockquote { border-left: 4px solid var(--primary-color); padding-left: 20px; margin: 0; font-style: italic; font-size: 1.1em;}
         .testimonial-card .author { text-align: right; margin-top: 15px; font-weight: bold; }
         
-        /* --- 修改后 --- */
+        /* Process flow updated */
         .final-cta { background: var(--dark-color); color: var(--light-color); text-align: center; }
-        /* 确保里面的标题是白色的 */
+        /* Ensure white text */
         .final-cta h2 { color: var(--light-color); }
         
         footer { background-color: var(--footer-bg); color: #ccc; padding: 40px 0; text-align: center; font-size: 14px; }
@@ -133,7 +133,7 @@
         footer a { color: #ccc; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
 
-        /* --- START: 移动端汉堡菜单按钮 --- */
+        /* --- Mobile Hamburger --- */
         .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 10px; }
         .nav-toggle .hamburger { display: block; width: 25px; height: 2px; background-color: var(--light-color); position: relative; transition: transform 0.3s ease; }
         .nav-toggle .hamburger::before, .nav-toggle .hamburger::after { content: ''; position: absolute; left: 0; width: 100%; height: 2px; background-color: var(--light-color); transition: top 0.3s ease, bottom 0.3s ease, transform 0.3s ease; }
@@ -142,9 +142,9 @@
         body.nav-open .nav-toggle .hamburger { transform: rotate(45deg); }
         body.nav-open .nav-toggle .hamburger::before { top: 0; transform: rotate(90deg); }
         body.nav-open .nav-toggle .hamburger::after { bottom: 0; transform: rotate(90deg); }
-        /* --- END: 移动端汉堡菜单按钮 --- */
+        /* --- End Mobile Hamburger --- */
 
-        /* --- START: 新增客户服务入口样式 --- */
+        /* --- Floating Contact Button --- */
         .floating-contact-btn {
             position: fixed;
             right: 25px;
@@ -227,9 +227,9 @@
         .contact-modal-content a:hover {
             text-decoration: underline;
         }
-        /* --- END: 新增客户服务入口样式 --- */
+        /* --- End Floating Contact Button --- */
 
-        /* --- START: 响应式适配 --- */
+        /* --- Responsive Design --- */
         @media (max-width: 992px) {
             .nav-toggle { display: block; z-index: 1001; }
             .navbar .container { flex-wrap: nowrap; }
@@ -248,10 +248,10 @@
             .hero h1 { font-size: 1.8em; }
             .grid-3, .process-flow { grid-template-columns: 1fr; } 
         }
-        /* --- END: 响应式适配 --- */
+        /* --- End Responsive Design --- */
 
-                /* --- 新增：移植自原主页的痛点与承诺样式 --- */
-        .problem-section { background: #fff; } /* 确保背景色与其他区分 */
+                /* --- Pain Points & Value Promise Styles --- */
+        .problem-section { background: #fff; } /* Background contrast */
         .problem-section .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; text-align: center; }
         .problem-item .icon { font-size: 3em; color: var(--primary-color); margin-bottom: 15px; }
 
@@ -315,7 +315,7 @@
                 <li><a href="partners.html">Partners</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="credentials.html">Credentials</a></li>
-                <li><a href="insights.html">专业观点</a></li>
+                <li><a href="insights.html">Insights</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="#" class="nav-contact-btn open-contact-modal-trigger">Contact Us</a></li>
                 <li class="lang-switch-item"><a href="javascript:void(0)" onclick="switchLanguage('zh')" class="lang-btn" title="切换至中文"><span class="flag">🇨🇳</span> 中文</a></li>
@@ -328,9 +328,9 @@
         <section class="hero">
             <div class="container">
                 <h1>Contingency-Fee Model: We Invest Upfront, Share Revenue Upon Success. Zero Risk for You.</h1>
-                <p class="subtitle">沉睡的专利是成本，流动的专利是资产。启坤为您承担前期费用与风险，包括分析、评估、谈判、诉讼等所有环节，直到您的专利成功变现。我们只在您获益后，才分享收益。</p>
-                <a href="#" class="btn-main open-contact-modal-trigger">立即免费评估您的专利组合</a>
-                <p class="disclaimer">最快24小时内获得初步AI评估报告</p>
+                <p class="subtitle">Dormant patents are ongoing costs; monetized patents are revenue-generating assets. QiKun shoulders all upfront expenses and operational risks—spanning technical triage, reverse engineering, buyer negotiations, and litigation—until transaction close. We only share upside after you succeed.</p>
+                <a href="#" class="btn-main open-contact-modal-trigger">Request Complimentary Portfolio Valuation</a>
+                <p class="disclaimer">Receive initial AI & expert valuation report within 24 hours</p>
             </div>
         </section>
 
@@ -340,22 +340,22 @@
                 <div class="grid">
                     <div class="problem-item">
                         <div class="icon">📜</div>
-                        <h3>专利年费高昂？</h3>
-                        <p>每年投入大量资金维护，却不见回报。</p>
+                        <h3>Escalating Annuity Fees?</h3>
+                        <p>Substantial annual maintenance budgets expended year after year with zero commercial return.</p>
                     </div>
                     <div class="problem-item">
                         <div class="icon">📦</div>
-                        <h3>只是“证书”而非“资产”？</h3>
-                        <p>大量专利束之高阁，价值不断流失。</p>
+                        <h3>Nominal Certificates Rather than Assets?</h3>
+                        <p>Dozens of granted patents sit idle on warehouse shelves, their commercial shelf-life steadily decaying.</p>
                     </div>
                     <div class="problem-item">
                         <div class="icon">❓</div>
-                        <h3>不知如何利用？</h3>
-                        <p>空有宝山，却找不到挖掘价值的路径。</p>
+                        <h3>No Clear Monetization Pathway?</h3>
+                        <p>Possessing an untapped goldmine of IP, yet lacking the broker network, buyers, or litigators to realize returns.</p>
                     </div>
                 </div>
                 <div class="text-center" style="margin-top: 40px;">
-                    <p style="font-size: 1.2em;">专利盘点是解决这些问题的第一步。</p>
+                    <p style="font-size: 1.2em;">A strategic patent audit is the foundational first step to unlocking liquidity.</p>
                 </div>
             </div>
         </section>
@@ -363,22 +363,20 @@
         <section style="background: var(--gray-color);">
             <div class="container">
                 <h2 class="text-center">Three Proven Pathways to Monetize Dormant Patents</h2>
-                <p class="text-center" style="max-width: 800px; margin: 0 auto 40px auto;">我们精通所有主流的专利变现路径，并根据您的资产特性与商业目标，量身定制最合适的变现策略。</p>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 40px auto;">We specialize across all premier monetization channels, customizing optimal liquidity strategies aligned with your portfolio dynamics and commercial goals.</p>
                 <div class="grid-3">
                     <a href="https://www.inventhunt.com" target="_blank" rel="noopener noreferrer" class="card-link">
                         <div class="card">
                             <div class="icon">🔄</div>
                             <h3>Patent Transactions & Sales</h3>
-                            <p>无论是“标准必要专利”还是具备诉讼潜力的“高价值专利”，我们都能通过全球网络，精准匹配最具购买意愿和实力的受让方，为您实现最大化的交易价值。</p>
+                            <p>Whether standard essential patents (SEPs) or high-stakes assertion candidates, we leverage our global broker and buyer network to match vetted acquirers and maximize deal value.</p>
                             <ul>
-                                <li>海量买家数据库</li>
-                                <li>资深交易谈判专家</li>
-                                <li>擅长复杂交易的处理</li>
+                                <li>Extensive Global Buyer Intelligence Database</li>
+                                <li>Seasoned Transaction & Deal Negotiators</li>
+                                <li>Complex Cross-Border Structuring Expertise</li>
                             </ul>
                             <p style="margin-top:15px;text-decoration: underline;">
-  访问 
-      <span style="color:#1A1A1A;">Invent</span><span style="color:#2F80ED;">Hunt</span>
-  了解详情
+  Visit <span style="color:#1A1A1A;">Invent</span><span style="color:#2F80ED;">Hunt</span> to Learn More &rarr;
 </p>
                         </div>
                     </a>
@@ -386,27 +384,25 @@
                         <div class="card">
                             <div class="icon">🤝</div>
                             <h3>Patent Licensing Programs</h3>
-                            <p>将您的专利技术授权给他人使用，是创造长期、稳定收益的绝佳方式。我们为您识别潜在被许可方，设计灵活许可模式，将专利变为持续不断的许可收入。</p>
+                            <p>Licensing proprietary technologies to market players generates sustained, recurring royalty streams. We identify prospective licensees, architect tiered rate schedules, and negotiate recurring agreements.</p>
                             <ul>
-                                <li>精准的潜在许可方分析</li>
-                                <li>灵活的许可方案设计</li>
-                                <li>丰富的许可谈判经验</li>
+                                <li>Targeted Licensee Mapping & Evidence of Use</li>
+                                <li>Flexible Tiered Royalty Structuring</li>
+                                <li>Decades of Bilateral Licensing Negotiation Experience</li>
                             </ul>
                             <p style="margin-top:15px;text-decoration: underline;">
-  访问 
-    <span style="color:#1A1A1A;">Invent</span><span style="color:#2F80ED;">Hub</span>
-  了解详情
+  Visit <span style="color:#1A1A1A;">Invent</span><span style="color:#2F80ED;">Hub</span> to Learn More &rarr;
 </p>
                         </div>
                     </a>
                     <div class="card">
                         <div class="icon">⚖️</div>
-                        <h3>专利诉讼</h3>
-                        <p>当您的专利权遭遇侵犯，果断的法律行动是捍卫市场和获取高额赔偿的终极武器。我们承担所有费用，与优质律所携手，为您争取最大回报。</p>
+                        <h3>Patent Assertion & Litigation</h3>
+                        <p>When core claims are willfully infringed, decisive judicial assertion is the ultimate weapon to defend market share and recover statutory damages. We advance all trial disbursements, teaming with premier litigators to secure maximum recoveries.</p>
                         <ul>
-                            <li>优质诉讼律师网络</li>
-                            <li>顶尖的诉讼策略制定</li>
-                            <li>诉讼与谈判的完美结合</li>
+                            <li>Top-Tier Trial Attorney & Litigator Network</li>
+                            <li>Litigation Tactics & Forum Selection Strategy</li>
+                            <li>Seamless Convergence of Trial & Settlement Leverage</li>
                         </ul>
                     </div>
                 </div>
@@ -415,24 +411,24 @@
 
         <section>
             <div class="container">
-                <h2 class="text-center">“全风险代理”如何为您扫除一切障碍？</h2>
-                <p class="text-center" style="max-width: 800px; margin: 0 auto 40px auto;">传统模式下，专利变现的每一步都充满不确定性和高昂成本。启坤的模式彻底改变了游戏规则。</p>
+                <h2 class="text-center">How Does Full Contingency Representation Eliminate All Obstacles?</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 40px auto;">In traditional models, every monetization milestone brings severe uncertainty and prohibitive legal expense. QiKun’s contingency model shifts all risks to us.</p>
                 <div class="process-flow">
                     <div class="process-step">
-                        <h4>第1步：免费价值评估 (Zero Cost)</h4>
-                        <p><strong>您仅需：</strong>提供专利清单或技术交底。<br><strong>我们来做：</strong>利用AI+专家团队，筛选出最具变现潜力的“种子选手”。</p>
+                        <h4>Step 1: Complimentary Valuation (Zero Cost)</h4>
+                        <p><strong>You Provide:</strong> Patent numbers or technical disclosures.<br><strong>We Deliver:</strong> AI-powered claim screening paired with expert review to identify high-probability monetization targets.</p>
                     </div>
                     <div class="process-step">
-                        <h4>第2步：共识与合作 (Zero Risk)</h4>
-                        <p><strong>您仅需：</strong>与我们共同确认变现目标与策略。<br><strong>我们来做：</strong>为您量身定制详细方案，签订合作协议，您无需支付任何前期费用。</p>
+                        <h4>Step 2: Strategy Alignment & Retainer (Zero Risk)</h4>
+                        <p><strong>You Provide:</strong> Alignment on commercial goals and acceptable settlement parameters.<br><strong>We Deliver:</strong> Tailored execution plan and formal contingency agreement. You incur zero upfront fees.</p>
                     </div>
                     <div class="process-step">
-                        <h4>第3步：全权投入执行 (We Invest)</h4>
-                        <p><strong>我们来做：</strong>投入所有资金、人力和时间，全权负责执行方案，并定期向您汇报进展。</p>
+                        <h4>Step 3: Full-Scale Execution (We Invest)</h4>
+                        <p><strong>We Deliver:</strong> QiKun commits all technical capital, claim chart reverse engineering, buyer outreach, and legal expenses, providing transparent milestone reports throughout.</p>
                     </div>
                     <div class="process-step">
-                        <h4>第4步：成功与分享 (Shared Success)</h4>
-                        <p><strong>您将获得：</strong>成功变现后的大部分收益。<br><strong>我们来做：</strong>按照协议约定分享一小部分收益作为回报。</p>
+                        <h4>Step 4: Realized Liquidity & Shared Upside (Shared Success)</h4>
+                        <p><strong>You Receive:</strong> The majority share of cash divestment proceeds, running royalties, or litigation damage awards.<br><strong>We Receive:</strong> An agreed performance-based contingency fee upon successful closing.</p>
                     </div>
                 </div>
             </div>
@@ -441,14 +437,14 @@
 
         <section style="background: var(--gray-color);">
             <div class="container">
-                <h2 class="text-center">听听我们的客户怎么说</h2>
+                <h2 class="text-center">Client Success Story</h2>
                 <div class="case-study-slider">
                     <div class="testimonial-card">
-                        <h4>案例：某大型科技企业</h4>
-                        <p><strong>痛点：</strong>每年在专利上花费数千万元，但此前未实现收入。而变现动作又需要支付高昂的前期法律成本。</p>
-                        <p><strong>启坤方案：</strong>通过启坤的全风险代理模式，以极低的投入启动变现事宜。</p>
-                        <p><strong>最终成果：</strong>达成许可收入，专利业务整体收支平衡不再是不可预期的。虽然目前尚未实现收支平衡，但启坤帮助我们看到了希望，也让我们可以向公司管理层交代进展。</p>
-                        <blockquote>“启坤团队的专业性让我们放心。通过启坤的帮助，我们可以以低投入启动专利变现，没有前期法律费用。虽然还未达到收支平衡，但我们看到了未来的希望。”</blockquote>
+                        <h4>Case Study: Tier-1 Enterprise Tech Conglomerate</h4>
+                        <p><strong>Challenge:</strong> Disbursing tens of millions of RMB annually in portfolio maintenance with zero commercial return, while facing daunting external legal fees to launch assertion campaigns.</p>
+                        <p><strong>QiKun Solution:</strong> Deployed our full contingency framework, underwriting reverse engineering, claim chart construction, and bilateral licensing without client capital outlays.</p>
+                        <p><strong>Outcome:</strong> Successfully closed bilateral licensing agreements generating multi-million RMB cash royalties, turning cost-center maintenance into predictable revenue while delivering tangible progress to corporate leadership.</p>
+                        <blockquote>“QiKun’s elite technical rigor gave our board complete confidence. By eliminating upfront legal expense and advancing all technical capital, QiKun transformed our patent division from an open-ended cost center into an active liquidity generator.”</blockquote>
 
                     </div>
                 </div>
@@ -457,35 +453,35 @@
 
 <section class="value-promise-section">
     <div class="container text-center">
-        <h2>我们的核心价值承诺</h2>
+        <h2>Our Core Value Commitments</h2>
         <ul>
-            <li>专业评估 - AI+专家双重保障</li>
-            <li>风险代理 - 不成功不收费</li>
-            <li>保密交易 - 匿名代理保护客户利益</li>
-            <li>全程服务 - 从评估到成交一站式解决</li>
+            <li>Rigorous Valuation — AI analytics paired with senior examiner scrutiny</li>
+            <li>Contingency Alignment — Zero upfront cost; no success, no fee</li>
+            <li>Confidential Brokerage — Anonymous representation protecting client market reputation</li>
+            <li>End-to-End Execution — Seamless lifecycle from triage to final cash closing</li>
         </ul>
     </div>
 </section>
 
         <section id="contact" class="final-cta">
             <div class="container">
-                <h2>准备好让您的专利组合创造价值了吗？</h2>
-                <a href="#" class="btn-main open-contact-modal-trigger" style="margin-top: 20px;">立即联系我们的变现专家</a>
+                <h2>Ready to Transform Your Dormant Patents into Liquid Assets?</h2>
+                <a href="#" class="btn-main open-contact-modal-trigger" style="margin-top: 20px;">Connect with Our Monetization Partners Today</a>
             </div>
         </section>
     </main>
 
     <div class="floating-contact-btn">
-        <button id="open-contact-modal" aria-label="联系我们">
+        <button id="open-contact-modal" aria-label="Contact Us">
             <i class="fab fa-weixin"></i>
         </button>
     </div>
 
     <div class="contact-modal-overlay" id="contact-modal">
         <div class="contact-modal-content">
-            <button class="contact-modal-close" id="close-contact-modal" aria-label="关闭">&times;</button>
+            <button class="contact-modal-close" id="close-contact-modal" aria-label="Close">&times;</button>
             <h3>Contact Senior Counsel</h3>
-            <img src="../images/微信二维码.jpg" alt="启坤顾问微信二维码">
+            <img src="../images/微信二维码.jpg" alt="QiKun Senior Counsel WeChat QR Code">
             <p><strong>Scan WeChat QR Code or Reach Us Directly</strong></p>
             <p>Telephone: <a href="tel:010-82696906">010-8269 6906</a></p>
             <p>Email: <br><a href="mailto:contact@qikunip.com">contact@qikunip.com</a></p>
@@ -495,7 +491,7 @@
         <div class="container">
             <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 18px;">
                 <img src="../images/qikun-logo-dark.png" alt="QiKun Intellectual Property Logo" style="height: 38px; width: auto; opacity: 0.92;">
-                <span style="font-size: 20px; font-weight: bold; color: #ffffff; letter-spacing: 0.5px;">启坤知识产权<sup style="font-size: 10px; font-weight: normal; color: #60a5fa; margin-left: 2px; vertical-align: top;">®</sup></span>
+                <span style="font-size: 20px; font-weight: bold; color: #ffffff; letter-spacing: 0.5px;">QiKun Intellectual Property<sup style="font-size: 10px; font-weight: normal; color: #60a5fa; margin-left: 2px; vertical-align: top;">®</sup></span>
             </div>
             <p style="margin-bottom: 8px; font-size: 14px; color: #d1d5db;">
                 Beijing QiKun Intellectual Property Agency Co., Ltd. | Licensed by CNIPA <a href="credentials.html" style="color: #60a5fa; text-decoration: underline;">Agency Code: 11655</a> ｜ <a href="credentials.html" style="color: #60a5fa; text-decoration: underline;">Precision Service Guarantee List Agency</a>
@@ -507,7 +503,7 @@
                 Telephone: <a href="tel:010-82696906" style="color: #d1d5db; text-decoration: none;">010-8269 6906</a> ｜ Email: <a href="mailto:contact@qikunip.com" style="color: #d1d5db; text-decoration: none;">contact@qikunip.com</a>
             </p>
             <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 14px; font-size: 12px; color: #6b7280;">
-                “QiKun” and associated marks are registered trademarks of Beijing QiKun Intellectual Property Agency Co., Ltd. All rights reserved. ｜ <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #6b7280; text-decoration: none;">京ICP备19020611号-1</a>
+                “QiKun” and associated marks are registered trademarks of Beijing QiKun Intellectual Property Agency Co., Ltd. All rights reserved. ｜ <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #6b7280; text-decoration: none;">Beijing ICP No. 19020611-1</a>
             </div>
         </div>
     </footer>
@@ -521,7 +517,7 @@
         });
         // --- END: Mobile Navigation Toggle Logic ---
 
-        // --- START: 客户服务弹窗逻辑 ---
+        // --- Contact Modal Logic ---
         const contactModal = document.getElementById('contact-modal');
         const openModalTriggers = document.querySelectorAll('.open-contact-modal-trigger, #open-contact-modal');
         const closeModalBtn = document.getElementById('close-contact-modal');
@@ -556,7 +552,7 @@
                 }
             });
         }
-        // --- END: 客户服务弹窗逻辑 ---
+        // --- End Contact Modal Logic ---
     </script>
 </body>
 </html>

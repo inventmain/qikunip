@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Comprehensive FAQs on patent monetization, high-value prosecution, invalidation defense, and consulting services.">
-    <meta name="keywords" content="知识产权FAQ, 专利常见问题, 启坤, 专利申请, 专利咨询, 专利诉讼, 专利转让, 专利变现">
+    <meta name="keywords" content="IP FAQ, Patent FAQ, QiKun IP, Patent Prosecution, Patent Invalidation, Patent Litigation, Patent Licensing, Patent Monetization">
     <title>Frequently Asked Questions (FAQ) - QiKun IP</title>
     <link rel="icon" href="../images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -54,7 +54,7 @@
         .hub-card p { color: #555; margin-bottom: 25px; font-size: 0.95em; }
         .hub-card .hub-link { display: inline-block; padding: 10px 25px; background-color: var(--primary-color); color: var(--light-color); text-decoration: none; border-radius: 5px; font-weight: bold; }
         
-        /* --- START: 新增客户服务入口样式 --- */
+        /* --- Floating Contact Button --- */
         .floating-contact-btn {
             position: fixed;
             right: 25px;
@@ -137,11 +137,11 @@
         .contact-modal-content a:hover {
             text-decoration: underline;
         }
-        /* --- END: 新增客户服务入口样式 --- */
+        /* --- End Floating Contact Button --- */
 
-        /* --- START: 移动端汉堡菜单按钮 --- */
+        /* --- Mobile Hamburger --- */
         .nav-toggle {
-            display: none; /* 默认隐藏 */
+            display: none; /* Hidden by default */
             background: none;
             border: none;
             cursor: pointer;
@@ -170,9 +170,9 @@
         .nav-open .nav-toggle .hamburger { transform: rotate(45deg); }
         .nav-open .nav-toggle .hamburger::before { top: 0; transform: rotate(90deg); }
         .nav-open .nav-toggle .hamburger::after { bottom: 0; transform: rotate(90deg); }
-        /* --- END: 移动端汉堡菜单按钮 --- */
+        /* --- End Mobile Hamburger --- */
 
-        /* --- START: 响应式适配 --- */
+        /* --- Responsive Design --- */
         @media (max-width: 992px) {
             .nav-toggle { display: block; z-index: 1001; }
             .navbar .container { flex-wrap: nowrap; }
@@ -211,22 +211,22 @@
             .partner-card .header img { margin-right: 0; margin-bottom: 15px; }
             .logo-slider img { height: 45px; margin: 0 20px; }
         }
-        /* --- END: 响应式适配 --- */
+        /* --- End Responsive Design --- */
 
 @media (max-width: 768px) {
-    /* 保证容器不超屏 */
+    /* Prevent container overflow */
     .container {
         padding: 0 15px;
         max-width: 100%;
     }
 
-    /* FAQ 基础知识库改为单列纵向排布 */
+    /* FAQ Hub Grid Mobile Layout */
     .hub-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    /* 页脚适配小屏 */
+    /* Footer Mobile Layout */
     footer .container {
         padding: 0 15px;
         text-align: left;
@@ -290,7 +290,7 @@
                 <li><a href="partners.html">Partners</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="credentials.html">Credentials</a></li>
-                <li><a href="insights.html">专业观点</a></li>
+                <li><a href="insights.html">Insights</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="#" class="nav-contact-btn open-contact-modal-trigger">Contact Us</a></li>
                 <li class="lang-switch-item"><a href="javascript:void(0)" onclick="switchLanguage('zh')" class="lang-btn" title="切换至中文"><span class="flag">🇨🇳</span> 中文</a></li>
@@ -302,7 +302,7 @@
         <div class="page-header">
             <div class="container">
                 <h1>Frequently Asked Questions (FAQ)</h1>
-                <p>我们整理了客户最关心的问题，希望能为您答疑解惑。如需更深入的探讨，欢迎随时联系我们。</p>
+                <p>We have compiled key questions frequently raised by our corporate clients and inventors. For personalized advisory, please connect with our senior counsel.</p>
             </div>
         </div>
 
@@ -311,48 +311,48 @@
                 <div class="faq-category">
                     <h2>About Patent Monetization</h2>
                     <div class="faq-item">
-                        <button class="faq-question">我的专利能卖多少钱？启坤如何进行价值评估？<span class="icon fas fa-plus"></span></button>
-                        <div class="faq-answer"><p>专利的价值受技术领域、权利稳定性、市场需求、侵权证据等多种因素影响。启坤会通过AI大数据初步筛选，再由我们位于北京的专家团队（前审查员、资深律师）进行深度分析，为您提供一份详细的专利价值评估报告。初步评估是免费的。</p></div>
+                        <button class="faq-question">What is my patent portfolio worth, and how does QiKun evaluate its market value?<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer"><p>Patent valuation depends on technical relevance, claim validity, market demand, competitor footprint, and demonstrable evidence of infringement. QiKun combines AI big-data screening with rigorous review by our senior Beijing team (former CNIPA examiners and seasoned trial attorneys) to produce a comprehensive valuation report. Initial triage is conducted at no cost.</p></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">专利变现主要有哪几种方式？哪种最适合我？<span class="icon fas fa-plus"></span></button>
-                        <div class="faq-answer"><p>主要方式包括专利交易（直接出售）、专利许可（授权他人使用并收取许可费）和专利诉讼（在侵权发生时维权获赔）。启坤的专家会根据您的专利特性和商业目标，为您量身定制最合适的变现策略。</p></div>
+                        <button class="faq-question">What are the primary monetization avenues, and which strategy best suits my assets?<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer"><p>The primary models are direct divestment (outright asset sales), licensing programs (granting rights in exchange for ongoing royalties), and patent assertion/litigation (recovering damages upon infringement). QiKun’s experts assess your portfolio dynamics and commercial goals to architect a tailored monetization pathway.</p></div>
                     </div>
                 </div>
 
                 <div class="faq-category">
                     <h2>About High-Value Patent Prosecution</h2>
                     <div class="faq-item">
-                        <button class="faq-question">“高价值专利布局”和普通专利申请有什么不同？<span class="icon fas fa-plus"></span></button>
-                        <div class="faq-answer"><p>普通专利申请的目标是“获得证书”，而高价值专利布局的目标是“创造资产”。我们以终为始，从商业竞争和未来变现的角度出发，不仅是撰写技术文件，更是主动为您规划能够形成技术壁垒、具备强大商业价值的专利组合。</p></div>
+                        <button class="faq-question">How does "High-Value Patent Prosecution" differ from standard patent filing?<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer"><p>Standard patent filing merely aims to obtain a certificate; high-value prosecution aims to engineer monetizable commercial assets. Starting with the end in mind—competitive blocking and future transactions—we draft claim sets that establish formidable technical moats and withstand litigation-level invalidation challenges.</p></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">为什么需要进行专利布局，而不是申请单个专利？<span class="icon fas fa-plus"></span></button>
-                        <div class="faq-answer"><p>单个专利很容易被竞争对手规避。一个设计精良的专利组合（或称专利包）能形成一张保护网，从核心技术到外围应用进行全面保护，构建真正的技术护城河，这在未来的市场竞争和价值变现中至关重要。</p></div>
+                        <button class="faq-question">Why invest in strategic portfolio prosecution rather than filing isolated patents?<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer"><p>An isolated patent is easily designed around by competitors. A meticulously architected patent cluster creates multi-layered protection spanning fundamental mechanisms, peripheral implementations, and substitute embodiments—establishing an impenetrable technical moat critical for commercial dominance and high-value transactions.</p></div>
                     </div>
                 </div>
 
                 <div class="faq-category">
-                    <h2>About Patent Consulting & Defense服务</h2>
+                    <h2>About Patent Consulting & Invalidation Defense</h2>
                     <div class="faq-item">
-                        <button class="faq-question">我的产品要上市了，如何确定是否侵权？(FTO)<span class="icon fas fa-plus"></span></button>
-                        <div class="faq-answer"><p>这就是自由实施分析（FTO）要解决的问题。它能帮助您在产品上市前排查专利侵权风险。启坤的专家会对您产品的技术方案进行拆解，并在全球范围内进行专利检索与对比分析，出具专业的FTO报告，确保您的产品安全上市，避免后续法律纠纷。</p></div>
+                        <button class="faq-question">Our product is launching soon. How do we ensure freedom to operate (FTO) without infringement risk?<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer"><p>This is precisely the purpose of Freedom to Operate (FTO) clearance. QiKun deconstructs your product's technical architecture, executes exhaustive worldwide patent searches, maps all claim elements, and delivers formal legal clearance opinions—ensuring safe market entry and mitigating costly litigation risks.</p></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">我的核心专利被人提无效了，怎么办？<span class="icon fas fa-plus"></span></button>
-                        <div class="faq-answer"><p>这是常见的商业竞争手段，不必过分担忧。收到无效宣告请求后，您需要积极应对。启坤拥有经验丰富的诉讼律师（包括处理过“伟哥”专利案的专家），我们会深入分析对方提出的无效理由和证据，帮您准备有力的答辩材料，在口头审理中据理力争，全力维护您的专利权稳定性。</p></div>
+                        <button class="faq-question">A competitor filed an invalidation request against our core patent. How should we respond?<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer"><p>Patent invalidation petitions are common tactical maneuvers in commercial competition. Upon receiving CNIPA's notice, prompt response is essential. QiKun’s litigators (including veterans of landmark patent disputes such as the Viagra patent defense) dissect the petitioner's prior art combinations, draft rigorous rebuttal arguments, and fiercely defend your claim scope in oral hearings.</p></div>
                     </div>
                 </div>
                 
                 <div class="faq-category">
-                    <h2>关于启坤服务模式</h2>
+                    <h2>About QiKun Engagement & Business Models</h2>
                     <div class="faq-item">
-                        <button class="faq-question">“全风险代理”是什么意思？我需要预付费用吗？<span class="icon fas fa-plus"></span></button>
-                        <div class="faq-answer"><p>“全风险代理”是我们的核心模式。意味着在整个专利变现过程，包括分析、评估、谈判乃至诉讼的所有费用都由启坤承担。您无需支付任何前期费用，我们只在您的专利成功变现后，按照约定分享一部分收益。</p></div>
+                        <button class="faq-question">What does "Full Contingency Engagement" mean, and do I need to pay upfront fees?<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer"><p>"Full Contingency Engagement" is our signature commercial model. QiKun absorbs all upfront costs across evaluation, reverse engineering, buyer outreach, negotiations, and formal litigation. Clients incur zero upfront expense; we only share an agreed percentage of the proceeds upon successful monetization.</p></div>
                     </div>
                      <div class="faq-item">
-                        <button class="faq-question">与启坤合作的流程是怎样的？<span class="icon fas fa-plus"></span></button>
-                        <div class="faq-answer"><p>第一步是联系我们进行初步沟通和免费的价值评估；第二步，如果您的专利具备变现潜力，我们将为您定制详细的合作方案；第三步，签订合作协议后，我们便会投入资源开始执行；第四步，成功变现，分享收益。</p></div>
+                        <button class="faq-question">What is the step-by-step workflow for partnering with QiKun?<span class="icon fas fa-plus"></span></button>
+                        <div class="faq-answer"><p>Step 1: Contact us for confidential preliminary consultation and complimentary triage. Step 2: If the portfolio demonstrates commercial viability, we structure a customized transaction plan. Step 3: Upon executing the partnership agreement, we deploy technical and legal resources. Step 4: Successful closing and proceeds distribution.</p></div>
                     </div>
                 </div>
             </div>
@@ -360,25 +360,25 @@
 
         <section class="faq-hub-section">
             <div class="container">
-                <h2 class="section-title">专利基础知识库</h2>
+                <h2 class="section-title">Patent Knowledge Base & In-Depth Guides</h2>
                 <div class="hub-grid">
                     <div class="hub-card">
                         <div class="icon"><i class="fas fa-file-alt"></i></div>
-                        <h3>专利申请基础</h3>
-                        <p>了解专利类型、申请流程、周期、费用以及高价值专利布局的核心策略。</p>
-                        <a href="faq-patent-application.html" class="hub-link">查看详情</a>
+                        <h3>Patent Application Fundamentals</h3>
+                        <p>Master patent categories, examination timelines, official fee schedules, and high-value strategic filing blueprints.</p>
+                        <a href="faq-patent-application.html" class="hub-link">Explore Guide &rarr;</a>
                     </div>
                     <div class="hub-card">
                         <div class="icon"><i class="fas fa-exchange-alt"></i></div>
-                        <h3>专利转让与许可</h3>
-                        <p>探索专利价值评估方法、交易流程、许可模式和合同中的关键法律实务。</p>
-                        <a href="faq-patent-licensing.html" class="hub-link">查看详情</a>
+                        <h3>Patent Licensing & Transactions</h3>
+                        <p>Explore valuation methodologies, due diligence workflows, royalty structures, and key transactional clauses.</p>
+                        <a href="faq-patent-licensing.html" class="hub-link">Explore Guide &rarr;</a>
                     </div>
                     <div class="hub-card">
                         <div class="icon"><i class="fas fa-gavel"></i></div>
-                        <h3>专利诉讼基础</h3>
-                        <p>学习如何判定侵权、诉讼流程、赔偿计算方式以及常见的风险与应对策略。</p>
-                        <a href="faq-patent-litigation.html" class="hub-link">查看详情</a>
+                        <h3>Patent Litigation & Dispute Defense</h3>
+                        <p>Examine infringement claim charts, judicial proceedings, statutory damage formulas, and defense strategies.</p>
+                        <a href="faq-patent-litigation.html" class="hub-link">Explore Guide &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -386,16 +386,16 @@
     </main>
 
     <div class="floating-contact-btn">
-        <button id="open-contact-modal" aria-label="联系我们">
+        <button id="open-contact-modal" aria-label="Contact Us">
             <i class="fab fa-weixin"></i>
         </button>
     </div>
 
     <div class="contact-modal-overlay" id="contact-modal">
         <div class="contact-modal-content">
-            <button class="contact-modal-close" id="close-contact-modal" aria-label="关闭">&times;</button>
+            <button class="contact-modal-close" id="close-contact-modal" aria-label="Close">&times;</button>
             <h3>Contact Senior Counsel</h3>
-            <img src="../images/微信二维码.jpg" alt="启坤顾问微信二维码">
+            <img src="../images/微信二维码.jpg" alt="QiKun Senior Counsel WeChat QR Code">
             <p><strong>Scan WeChat QR Code or Reach Us Directly</strong></p>
             <p>Telephone: <a href="tel:010-82696906">010-8269 6906</a></p>
             <p>Email: <br><a href="mailto:contact@qikunip.com">contact@qikunip.com</a></p>
@@ -405,7 +405,7 @@
         <div class="container">
             <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 18px;">
                 <img src="../images/qikun-logo-dark.png" alt="QiKun Intellectual Property Logo" style="height: 38px; width: auto; opacity: 0.92;">
-                <span style="font-size: 20px; font-weight: bold; color: #ffffff; letter-spacing: 0.5px;">启坤知识产权<sup style="font-size: 10px; font-weight: normal; color: #60a5fa; margin-left: 2px; vertical-align: top;">®</sup></span>
+                <span style="font-size: 20px; font-weight: bold; color: #ffffff; letter-spacing: 0.5px;">QiKun Intellectual Property<sup style="font-size: 10px; font-weight: normal; color: #60a5fa; margin-left: 2px; vertical-align: top;">®</sup></span>
             </div>
             <p style="margin-bottom: 8px; font-size: 14px; color: #d1d5db;">
                 Beijing QiKun Intellectual Property Agency Co., Ltd. | Licensed by CNIPA <a href="credentials.html" style="color: #60a5fa; text-decoration: underline;">Agency Code: 11655</a> ｜ <a href="credentials.html" style="color: #60a5fa; text-decoration: underline;">Precision Service Guarantee List Agency</a>
@@ -417,7 +417,7 @@
                 Telephone: <a href="tel:010-82696906" style="color: #d1d5db; text-decoration: none;">010-8269 6906</a> ｜ Email: <a href="mailto:contact@qikunip.com" style="color: #d1d5db; text-decoration: none;">contact@qikunip.com</a>
             </p>
             <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 14px; font-size: 12px; color: #6b7280;">
-                “QiKun” and associated marks are registered trademarks of Beijing QiKun Intellectual Property Agency Co., Ltd. All rights reserved. ｜ <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #6b7280; text-decoration: none;">京ICP备19020611号-1</a>
+                “QiKun” and associated marks are registered trademarks of Beijing QiKun Intellectual Property Agency Co., Ltd. All rights reserved. ｜ <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #6b7280; text-decoration: none;">Beijing ICP No. 19020611-1</a>
             </div>
         </div>
     </footer>
@@ -440,7 +440,7 @@
         });
         // --- END: FAQ Accordion Logic ---
 
-        // --- START: 客户服务弹窗逻辑 ---
+        // --- Contact Modal Logic ---
         const contactModal = document.getElementById('contact-modal');
         const openModalTriggers = document.querySelectorAll('.open-contact-modal-trigger, #open-contact-modal');
         const closeModalBtn = document.getElementById('close-contact-modal');
@@ -475,7 +475,7 @@
                 }
             });
         }
-        // --- END: 客户服务弹窗逻辑 ---
+        // --- End Contact Modal Logic ---
 
         // --- START: Mobile Navigation Toggle Logic ---
         const navToggle = document.querySelector('.nav-toggle');
